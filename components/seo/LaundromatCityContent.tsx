@@ -1,0 +1,107 @@
+"use client";
+
+import Link from "next/link";
+import { useTranslation } from "@/contexts/LanguageContext";
+import { interpolate } from "@/lib/interpolate";
+import SeoFaq from "@/components/seo/SeoFaq";
+import SeoCta from "@/components/seo/SeoCta";
+import SeoWhyCleanMax from "@/components/seo/SeoWhyCleanMax";
+import type { City } from "@/data/cities";
+
+interface Props {
+  city: City;
+}
+
+export default function LaundromatCityContent({ city }: Props) {
+  const { t } = useTranslation();
+  const vars = { city: city.name, county: city.county, desc: city.description };
+  const ip = (key: Parameters<typeof t>[0]) => interpolate(t(key), vars);
+
+  const details = [
+    { label: "Hours", value: t("seo_laundromat_hours") },
+    { label: "Equipment", value: t("seo_laundromat_machines") },
+    { label: "Payment", value: t("seo_laundromat_payment") },
+  ];
+
+  const faqItems = [
+    { q: ip("seo_laundromat_faq_q1"), a: ip("seo_laundromat_faq_a1") },
+    { q: ip("seo_laundromat_faq_q2"), a: ip("seo_laundromat_faq_a2") },
+    { q: ip("seo_laundromat_faq_q3"), a: ip("seo_laundromat_faq_a3") },
+    { q: ip("seo_laundromat_faq_q4"), a: ip("seo_laundromat_faq_a4") },
+    { q: ip("seo_laundromat_faq_q5"), a: ip("seo_laundromat_faq_a5") },
+  ];
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="pt-32 pb-16 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
+            {city.name}, CA
+          </p>
+          <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
+            Laundromat Near {city.name}, CA
+          </h1>
+          <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
+            {ip("seo_laundromat_intro")}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <a
+              href="https://share.google/qOCjH4ihGEyqeLJLT"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
+            >
+              {t("seo_cta_directions")}
+            </a>
+            <Link
+              href="/wash-and-fold/pricing"
+              className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
+            >
+              {t("seo_view_pricing")}
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Details */}
+      <section className="py-12 bg-brand-surface border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-display font-black text-3xl uppercase text-brand-dark leading-none mb-8">
+            {t("seo_laundromat_details_heading")}
+          </h2>
+          <dl className="space-y-4">
+            {details.map((d) => (
+              <div key={d.label} className="flex flex-col sm:flex-row sm:gap-6">
+                <dt className="font-sans font-semibold text-sm text-brand-dark/40 w-28 shrink-0 uppercase tracking-wide">
+                  {d.label}
+                </dt>
+                <dd className="font-sans text-base text-brand-dark/80">{d.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* City paragraph */}
+      <section className="py-12 bg-white border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="font-sans text-brand-dark/70 text-base leading-relaxed">
+            {ip("seo_laundromat_city_para")}
+          </p>
+        </div>
+      </section>
+
+      <SeoWhyCleanMax />
+
+      <SeoFaq
+        items={faqItems}
+        eyebrow={t("faq_eyebrow")}
+        heading={t("faq_heading")}
+      />
+
+      <SeoCta />
+    </>
+  );
+}

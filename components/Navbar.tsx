@@ -1,16 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation, type Language } from "@/contexts/LanguageContext";
+import { cities } from "@/data/cities";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [locationsOpen, setLocationsOpen] = useState(false);
   const { language, setLanguage, t } = useTranslation();
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const locationsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -18,25 +23,47 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close dropdowns on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (servicesRef.current && !servicesRef.current.contains(e.target as Node)) {
+        setServicesOpen(false);
+      }
+      if (locationsRef.current && !locationsRef.current.contains(e.target as Node)) {
+        setLocationsOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, []);
+
   const textColor = scrolled ? "text-brand-dark" : "text-white";
   const borderColor = scrolled ? "border-brand-dark/10" : "border-white/10";
+  const bgBase = scrolled ? "bg-white shadow-sm" : "bg-transparent";
 
-  const navLinks = [
-    { label: t("nav_services"), href: "#services" },
-    { label: t("nav_commercial"), href: "#commercial" },
-    { label: t("nav_about"), href: "#about" },
-    { label: t("nav_contact"), href: "#contact" },
+  const serviceLinks = [
+    { label: t("nav_self_service_laundry"), href: "/laundromat/pomona" },
+    { label: t("nav_wash_and_fold"), href: "/wash-and-fold/pomona" },
+    { label: t("nav_wash_fold_pricing"), href: "/wash-and-fold/pricing" },
+    { label: t("nav_commercial_laundry"), href: "/commercial-laundry" },
   ];
+
+  // Top 5 cities for the dropdown, rest accessible via footer
+  const topCities = cities.slice(0, 10);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-sm" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${bgBase}`}
     >
-      <nav className={`max-w-7xl mx-auto px-6 h-16 flex items-center justify-between border-b ${borderColor}`}>
+      <nav
+        className={`max-w-7xl mx-auto px-6 h-16 flex items-center justify-between border-b ${borderColor}`}
+      >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="CleanMax Laundry home">
+        <Link
+          href="/"
+          className="flex items-center gap-2 shrink-0"
+          aria-label="CleanMax Laundry home"
+        >
           <Image
             src="/images/logo.png"
             alt="CleanMax Laundry"
@@ -45,25 +72,111 @@ export default function Navbar() {
             className="w-10 h-10 object-contain"
             priority
           />
-          <span className={`font-display font-black text-xl uppercase tracking-tight hidden sm:inline ${textColor}`}>
+          <span
+            className={`font-display font-black text-xl uppercase tracking-tight hidden sm:inline ${textColor}`}
+          >
             CleanMax
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+        <div className="hidden md:flex items-center gap-6">
+          {/* Services dropdown */}
+          <div ref={servicesRef} className="relative">
+            <button
+              className={`flex items-center gap-1 font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+              onClick={() => {
+                setServicesOpen(!servicesOpen);
+                setLocationsOpen(false);
+              }}
+              aria-expanded={servicesOpen}
             >
-              {link.label}
-            </a>
-          ))}
+              {t("nav_services")}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {servicesOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg border border-brand-dark/10 z-50">
+                {serviceLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-5 py-3 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5 last:border-b-0"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Locations dropdown */}
+          <div ref={locationsRef} className="relative">
+            <button
+              className={`flex items-center gap-1 font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+              onClick={() => {
+                setLocationsOpen(!locationsOpen);
+                setServicesOpen(false);
+              }}
+              aria-expanded={locationsOpen}
+            >
+              {t("nav_locations")}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+                className={`w-3.5 h-3.5 transition-transform ${locationsOpen ? "rotate-180" : ""}`}
+                aria-hidden="true"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            {locationsOpen && (
+              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg border border-brand-dark/10 z-50 max-h-80 overflow-y-auto">
+                {topCities.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`/locations/${city.slug}`}
+                    onClick={() => setLocationsOpen(false)}
+                    className="block px-5 py-3 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5 last:border-b-0"
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/locations/pomona"
+                  onClick={() => setLocationsOpen(false)}
+                  className="block px-5 py-3 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:bg-brand-surface transition-colors"
+                >
+                  {t("nav_view_all_cities")}
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <a
+            href="#contact"
+            className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+          >
+            {t("nav_contact")}
+          </a>
         </div>
 
-        {/* Desktop right: language toggle + phone */}
+        {/* Desktop right */}
         <div className="hidden md:flex items-center gap-5">
           <LanguageToggle language={language} setLanguage={setLanguage} scrolled={scrolled} />
           <a
@@ -95,11 +208,25 @@ export default function Navbar() {
           aria-expanded={menuOpen}
         >
           {menuOpen ? (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           )}
@@ -109,25 +236,49 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t border-brand-dark/10 shadow-md">
-          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <a
+          <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col gap-0">
+            {/* Services */}
+            <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-dark/40 mt-4 mb-2 px-0">
+              {t("nav_services")}
+            </p>
+            {serviceLinks.map((link) => (
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="font-sans font-semibold text-sm uppercase tracking-widest text-brand-dark hover:text-brand-blue transition-colors"
+                className="font-sans text-sm text-brand-dark hover:text-brand-blue transition-colors py-2 border-b border-brand-dark/5"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <div className="mt-2 pt-4 border-t border-brand-dark/10 flex items-center justify-between">
+
+            {/* Locations */}
+            <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-dark/40 mt-6 mb-2">
+              {t("nav_locations")}
+            </p>
+            {topCities.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/locations/${city.slug}`}
+                onClick={() => setMenuOpen(false)}
+                className="font-sans text-sm text-brand-dark hover:text-brand-blue transition-colors py-2 border-b border-brand-dark/5"
+              >
+                {city.name}
+              </Link>
+            ))}
+
+            <div className="mt-4 pt-4 border-t border-brand-dark/10 flex items-center justify-between">
               <a
                 href="tel:9092487305"
                 className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors"
               >
                 (909) 248-7305
               </a>
-              <LanguageToggle language={language} setLanguage={setLanguage} scrolled={true} />
+              <LanguageToggle
+                language={language}
+                setLanguage={setLanguage}
+                scrolled={true}
+              />
             </div>
           </div>
         </div>
@@ -145,23 +296,31 @@ function LanguageToggle({
   setLanguage: (l: Language) => void;
   scrolled: boolean;
 }) {
-  const inactiveColor = scrolled ? "text-brand-dark/35 hover:text-brand-dark/60" : "text-white/40 hover:text-white/70";
+  const inactiveColor = scrolled
+    ? "text-brand-dark/35 hover:text-brand-dark/60"
+    : "text-white/40 hover:text-white/70";
   const dividerColor = scrolled ? "text-brand-dark/20" : "text-white/20";
 
   return (
     <div className="flex items-center gap-1.5 font-sans font-semibold text-sm uppercase tracking-widest">
       <button
         onClick={() => setLanguage("en")}
-        className={`transition-colors ${language === "en" ? "text-brand-blue font-bold" : inactiveColor}`}
+        className={`transition-colors ${
+          language === "en" ? "text-brand-blue font-bold" : inactiveColor
+        }`}
         aria-label="Switch to English"
         aria-pressed={language === "en"}
       >
         EN
       </button>
-      <span className={dividerColor} aria-hidden="true">|</span>
+      <span className={dividerColor} aria-hidden="true">
+        |
+      </span>
       <button
         onClick={() => setLanguage("es")}
-        className={`transition-colors ${language === "es" ? "text-brand-blue font-bold" : inactiveColor}`}
+        className={`transition-colors ${
+          language === "es" ? "text-brand-blue font-bold" : inactiveColor
+        }`}
         aria-label="Cambiar a Español"
         aria-pressed={language === "es"}
       >

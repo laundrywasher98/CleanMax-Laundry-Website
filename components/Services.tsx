@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation, type TranslationKey } from "@/contexts/LanguageContext";
 
 const serviceData: Array<{
@@ -9,6 +10,8 @@ const serviceData: Array<{
   detailKey: TranslationKey;
   photo: string;
   alt: string;
+  href: string;
+  pricingLinkKey?: TranslationKey;
 }> = [
   {
     titleKey: "services_self_title",
@@ -16,6 +19,7 @@ const serviceData: Array<{
     detailKey: "services_self_detail",
     photo: "/images/IMG_8784-2.jpg",
     alt: "Row of Wascomat washing machines at CleanMax Laundry",
+    href: "/laundromat/pomona",
   },
   {
     titleKey: "services_wf_title",
@@ -23,6 +27,8 @@ const serviceData: Array<{
     detailKey: "services_wf_detail",
     photo: "/images/IMG_8833.jpg",
     alt: "Wash and fold service area at CleanMax Laundry",
+    href: "/wash-and-fold/pomona",
+    pricingLinkKey: "services_wf_pricing_link",
   },
   {
     titleKey: "services_commercial_title",
@@ -30,6 +36,7 @@ const serviceData: Array<{
     detailKey: "services_commercial_detail",
     photo: "/images/IMG_8857.jpg",
     alt: "CleanMax Laundry exterior at 1009 E Holt Ave, Pomona CA",
+    href: "/commercial-laundry",
   },
 ];
 
@@ -75,10 +82,18 @@ export default function Services() {
                 <p className="font-sans text-brand-dark/70 text-base leading-relaxed mb-5 flex-1">
                   {t(service.descKey)}
                 </p>
-                <div className="pt-5 border-t border-brand-dark/10">
+                <div className="pt-5 border-t border-brand-dark/10 flex items-center justify-between gap-2">
                   <span className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue">
                     {t(service.detailKey)}
                   </span>
+                  {service.pricingLinkKey && (
+                    <Link
+                      href="/wash-and-fold/pricing"
+                      className="font-sans font-semibold text-xs text-brand-dark/40 hover:text-brand-blue transition-colors whitespace-nowrap"
+                    >
+                      {t(service.pricingLinkKey)}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

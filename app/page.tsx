@@ -6,6 +6,7 @@ import PhotoStrip from "@/components/PhotoStrip";
 import CommercialCallout from "@/components/CommercialCallout";
 import AppDownload from "@/components/AppDownload";
 import FAQ from "@/components/FAQ";
+import NearbyLocations from "@/components/NearbyLocations";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -20,6 +21,7 @@ export default function Home() {
         <CommercialCallout />
         <AppDownload />
         <FAQ />
+        <NearbyLocations />
       </main>
       <Footer />
     </>

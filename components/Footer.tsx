@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
+import { cities } from "@/data/cities";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
@@ -52,7 +54,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand column */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/images/logo.png"
@@ -87,7 +89,7 @@ export default function Footer() {
           </div>
 
           {/* Visit Us */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <h3 className="font-display font-black text-sm uppercase tracking-widest text-white/40 mb-5">
               {t("footer_visit_heading")}
             </h3>
@@ -125,20 +127,43 @@ export default function Footer() {
           </div>
 
           {/* Hours */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-3">
             <h3 className="font-display font-black text-sm uppercase tracking-widest text-white/40 mb-5">
               {t("footer_hours_heading")}
             </h3>
             <ul className="space-y-3">
               <li className="font-sans text-sm text-white/70">
-                <span className="font-semibold text-white/90 block">{t("footer_self_service_label")}</span>
+                <span className="font-semibold text-white/90 block">
+                  {t("footer_self_service_label")}
+                </span>
                 {t("footer_self_service_hours_line1")}<br />
                 {t("footer_self_service_hours_line2")}
               </li>
               <li className="font-sans text-sm text-white/70">
-                <span className="font-semibold text-white/90 block mt-4">{t("footer_wf_label")}</span>
+                <span className="font-semibold text-white/90 block mt-4">
+                  {t("footer_wf_label")}
+                </span>
                 {t("footer_wf_hours")}
               </li>
+            </ul>
+          </div>
+
+          {/* Service Areas */}
+          <div className="md:col-span-3">
+            <h3 className="font-display font-black text-sm uppercase tracking-widest text-white/40 mb-5">
+              {t("footer_service_areas")}
+            </h3>
+            <ul className="space-y-1.5 columns-2 gap-4">
+              {cities.map((city) => (
+                <li key={city.slug}>
+                  <Link
+                    href={`/locations/${city.slug}`}
+                    className="font-sans text-sm text-white/50 hover:text-brand-blue transition-colors"
+                  >
+                    {city.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -147,12 +172,8 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="font-sans text-xs text-white/30">
-            {t("footer_copyright")}
-          </p>
-          <p className="font-sans text-xs text-white/20">
-            {t("footer_address_line")}
-          </p>
+          <p className="font-sans text-xs text-white/30">{t("footer_copyright")}</p>
+          <p className="font-sans text-xs text-white/20">{t("footer_address_line")}</p>
         </div>
       </div>
     </footer>
