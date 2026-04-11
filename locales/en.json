@@ -234,9 +234,12 @@
 
   "testimonials_heading": "What Our Customers Say",
   "testimonials_rating_text": "Rated 5 Stars on Google by Pomona's Community",
-  "testimonials_disclaimer": "Reviews from Google Business Profile.",
+  "testimonials_disclaimer": "Reviews sourced from Google Business Profile.",
   "testimonials_cta_read": "Read All Reviews on Google",
   "testimonials_cta_leave": "Leave Us a Review",
   "testimonials_closing_heading": "Your Experience Matters",
-  "testimonials_closing_text": "CleanMax Laundry is built on the trust of our community. Every review helps us improve and helps your neighbors find a laundromat they can count on."
+  "testimonials_closing_text": "CleanMax Laundry is built on the trust of our community. Every review helps us improve and helps your neighbors find a laundromat they can count on.",
+
+  "reviews_preview_heading": "What Our Customers Say",
+  "reviews_preview_link": "Read All Reviews →"
 }

@@ -234,9 +234,12 @@
 
   "testimonials_heading": "Lo Que Dicen Nuestros Clientes",
   "testimonials_rating_text": "Calificado con 5 Estrellas en Google por la Comunidad de Pomona",
-  "testimonials_disclaimer": "Reseñas de Google Business Profile.",
+  "testimonials_disclaimer": "Reseñas obtenidas de Google Business Profile.",
   "testimonials_cta_read": "Leer Todas las Reseñas en Google",
   "testimonials_cta_leave": "Déjanos una Reseña",
   "testimonials_closing_heading": "Tu Experiencia Importa",
-  "testimonials_closing_text": "CleanMax Laundry se construye sobre la confianza de nuestra comunidad. Cada reseña nos ayuda a mejorar y ayuda a tus vecinos a encontrar una lavandería en la que puedan confiar."
+  "testimonials_closing_text": "CleanMax Laundry se construye sobre la confianza de nuestra comunidad. Cada reseña nos ayuda a mejorar y ayuda a tus vecinos a encontrar una lavandería en la que puedan confiar.",
+
+  "reviews_preview_heading": "Lo Que Dicen Nuestros Clientes",
+  "reviews_preview_link": "Leer Todas las Reseñas →"
 }
