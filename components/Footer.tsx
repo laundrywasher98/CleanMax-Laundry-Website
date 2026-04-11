@@ -1,4 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslation } from "@/contexts/LanguageContext";
+
+const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
 const socialLinks = [
   {
@@ -40,9 +45,10 @@ const socialLinks = [
 ];
 
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer id="contact" className="bg-brand-dark text-white">
-      {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
           {/* Brand column */}
@@ -60,8 +66,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="font-sans text-white/50 text-sm leading-relaxed max-w-xs">
-              Pomona&apos;s laundromat for self-service, wash &amp; fold, and
-              commercial laundry. Locally owned. Open daily.
+              {t("footer_tagline")}
             </p>
 
             {/* Social */}
@@ -81,10 +86,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Info columns */}
+          {/* Visit Us */}
           <div className="md:col-span-4">
             <h3 className="font-display font-black text-sm uppercase tracking-widest text-white/40 mb-5">
-              Visit Us
+              {t("footer_visit_heading")}
             </h3>
             <ul className="space-y-3">
               <li className="font-sans text-sm text-white/70">
@@ -108,30 +113,31 @@ export default function Footer() {
               </li>
               <li className="pt-2">
                 <a
-                  href="https://maps.google.com/?q=1009+E+Holt+Ave,+Pomona,+CA+91767"
+                  href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
                 >
-                  Get Directions →
+                  {t("footer_directions_link")}
                 </a>
               </li>
             </ul>
           </div>
 
+          {/* Hours */}
           <div className="md:col-span-4">
             <h3 className="font-display font-black text-sm uppercase tracking-widest text-white/40 mb-5">
-              Hours
+              {t("footer_hours_heading")}
             </h3>
             <ul className="space-y-3">
               <li className="font-sans text-sm text-white/70">
-                <span className="font-semibold text-white/90 block">Self-Service Laundry</span>
-                Daily 6:00 AM – 10:00 PM<br />
-                Last wash at 9:00 PM
+                <span className="font-semibold text-white/90 block">{t("footer_self_service_label")}</span>
+                {t("footer_self_service_hours_line1")}<br />
+                {t("footer_self_service_hours_line2")}
               </li>
               <li className="font-sans text-sm text-white/70">
-                <span className="font-semibold text-white/90 block mt-4">Wash &amp; Fold Drop-Off</span>
-                Daily 6:00 AM – 9:00 PM
+                <span className="font-semibold text-white/90 block mt-4">{t("footer_wf_label")}</span>
+                {t("footer_wf_hours")}
               </li>
             </ul>
           </div>
@@ -142,10 +148,10 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-sans text-xs text-white/30">
-            © 2025 CleanMax Laundry. All rights reserved.
+            {t("footer_copyright")}
           </p>
           <p className="font-sans text-xs text-white/20">
-            1009 E Holt Ave, Pomona, CA 91767
+            {t("footer_address_line")}
           </p>
         </div>
       </div>
