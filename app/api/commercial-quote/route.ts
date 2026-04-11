@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const REQUIRED_FIELDS = [
   "businessName",
   "contactName",
@@ -55,6 +53,15 @@ const VOLUME_LABELS: Record<string, string> = {
 };
 
 export async function POST(request: NextRequest) {
+  if (!process.env.RESEND_API_KEY) {
+    console.error("RESEND_API_KEY environment variable is not set");
+    return Response.json(
+      { error: "Email service not configured" },
+      { status: 500 }
+    );
+  }
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   if (request.method !== "POST") {
     return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
   }
