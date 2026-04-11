@@ -123,6 +123,14 @@ export default function Footer() {
                   {t("footer_directions_link")}
                 </a>
               </li>
+              <li className="pt-1">
+                <Link
+                  href="/testimonials"
+                  className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
+                >
+                  {t("footer_reviews")}
+                </Link>
+              </li>
             </ul>
           </div>
 

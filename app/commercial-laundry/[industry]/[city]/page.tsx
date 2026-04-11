@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import CommercialIndustryCityContent from "@/components/seo/CommercialIndustryCityContent";
 import { cities } from "@/data/cities";
 import { industries } from "@/data/industries";
@@ -56,12 +54,8 @@ export default async function Page({
   if (!city || !industry) notFound();
 
   return (
-    <>
-      <Navbar />
-      <main>
-        <CommercialIndustryCityContent city={city} industry={industry} />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <CommercialIndustryCityContent city={city} industry={industry} />
+    </main>
   );
 }

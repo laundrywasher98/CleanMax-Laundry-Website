@@ -14,6 +14,7 @@ interface Props {
 
 export default function LocationHubContent({ city, nearbyCities }: Props) {
   const { t, language } = useTranslation();
+  const isPomona = city.slug === "pomona";
   const vars = { city: city.name, county: city.county, desc: city.description };
   const ip = (key: Parameters<typeof t>[0]) => interpolate(t(key), vars);
 
@@ -47,7 +48,9 @@ export default function LocationHubContent({ city, nearbyCities }: Props) {
             {city.county} County
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
-            Laundry Services in {city.name}, CA
+            {isPomona
+              ? `Laundry Services in Pomona, CA`
+              : ip("seo_hub_serving_h1")}
           </h1>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
             {ip("seo_hub_intro")}

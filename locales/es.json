@@ -3,7 +3,7 @@
   "nav_commercial": "Comercial",
   "nav_about": "Nosotros",
   "nav_contact": "Contacto",
-  "nav_locations": "Ubicaciones",
+  "nav_locations": "Áreas de Servicio",
   "nav_self_service_laundry": "Autoservicio",
   "nav_wash_and_fold": "Lavado y Doblado",
   "nav_wash_fold_pricing": "Precios",
@@ -218,5 +218,25 @@
   "commercial_overview_cta_heading": "Solicitar Cotización Comercial",
   "commercial_overview_cta_text": "¿Listo para dejar de preocuparse por la lavandería? Contáctenos para un plan comercial personalizado.",
   "commercial_overview_email_cta": "Envíenos un Correo",
-  "commercial_overview_call_cta": "Línea Comercial"
+  "commercial_overview_call_cta": "Línea Comercial",
+
+  "nav_reviews": "Reseñas",
+  "footer_reviews": "Reseñas",
+
+  "seo_laundromat_pomona_callout": "CleanMax Laundry está ubicada en Pomona, CA — fácilmente accesible desde {city}. Nuestra instalación moderna cuenta con máquinas Wascomat Clarus Vibe, estacionamiento y servicio de lavado y doblado.",
+  "seo_laundromat_how_it_works_heading": "Cómo Funciona para los Residentes de {city}",
+  "seo_laundromat_path_a_heading": "Visítenos",
+  "seo_laundromat_path_a_desc": "Nuestra lavandería está ubicada en Pomona, a corta distancia de {city}. Visítenos en cualquier momento durante nuestro horario de atención — sin cita previa.",
+  "seo_laundromat_path_b_heading": "Vamos a Usted",
+  "seo_laundromat_path_b_desc": "Para clientes comerciales en {city}, ofrecemos recogida y entrega programada. Nunca necesita salir de su ubicación.",
+
+  "seo_hub_serving_h1": "Servicios de Lavandería en las Cercanías de {city}, CA",
+
+  "testimonials_heading": "Lo Que Dicen Nuestros Clientes",
+  "testimonials_rating_text": "Calificado con 5 Estrellas en Google por la Comunidad de Pomona",
+  "testimonials_disclaimer": "Reseñas de Google Business Profile.",
+  "testimonials_cta_read": "Leer Todas las Reseñas en Google",
+  "testimonials_cta_leave": "Déjanos una Reseña",
+  "testimonials_closing_heading": "Tu Experiencia Importa",
+  "testimonials_closing_text": "CleanMax Laundry se construye sobre la confianza de nuestra comunidad. Cada reseña nos ayuda a mejorar y ayuda a tus vecinos a encontrar una lavandería en la que puedan confiar."
 }

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import WashFoldCityContent from "@/components/seo/WashFoldCityContent";
 import { cities } from "@/data/cities";
 
@@ -47,12 +45,8 @@ export default async function Page({
   if (!city) notFound();
 
   return (
-    <>
-      <Navbar />
-      <main>
-        <WashFoldCityContent city={city} />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <WashFoldCityContent city={city} />
+    </main>
   );
 }

@@ -168,6 +168,13 @@ export default function Navbar() {
             )}
           </div>
 
+          <Link
+            href="/testimonials"
+            className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+          >
+            {t("nav_reviews")}
+          </Link>
+
           <a
             href="#contact"
             className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
@@ -266,6 +273,14 @@ export default function Navbar() {
                 {city.name}
               </Link>
             ))}
+
+            <Link
+              href="/testimonials"
+              onClick={() => setMenuOpen(false)}
+              className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5 mt-2"
+            >
+              {t("nav_reviews")}
+            </Link>
 
             <div className="mt-4 pt-4 border-t border-brand-dark/10 flex items-center justify-between">
               <a

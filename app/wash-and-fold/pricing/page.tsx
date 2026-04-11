@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import WashFoldPricingContent from "@/components/seo/WashFoldPricingContent";
 
 export const metadata: Metadata = {
@@ -23,12 +21,8 @@ export const metadata: Metadata = {
 
 export default function PricingPage() {
   return (
-    <>
-      <Navbar />
-      <main>
-        <WashFoldPricingContent />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <WashFoldPricingContent />
+    </main>
   );
 }

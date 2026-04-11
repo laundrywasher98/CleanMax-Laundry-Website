@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import LaundromatCityContent from "@/components/seo/LaundromatCityContent";
 import { cities } from "@/data/cities";
 
@@ -18,13 +16,20 @@ export async function generateMetadata({
   const city = cities.find((c) => c.slug === slug);
   if (!city) return {};
 
-  const title = `Laundromat Near ${city.name}, CA | CleanMax Laundry`;
-  const description = `Looking for a laundromat near ${city.name}, CA? CleanMax Laundry in Pomona is open daily 6 AM–10 PM. Modern Wascomat machines, free parking, app payment. First wash free.`;
+  const isPomona = slug === "pomona";
+  const title = isPomona
+    ? `Self-Service Laundromat in Pomona, CA | CleanMax Laundry`
+    : `Laundromat Near ${city.name}, CA | CleanMax Laundry`;
+  const description = isPomona
+    ? `CleanMax Laundry is Pomona's self-service laundromat at 1009 E Holt Ave. Open daily 6 AM–10 PM. Modern Wascomat machines, free parking, app payment. First wash free.`
+    : `Looking for a laundromat near ${city.name}, CA? CleanMax Laundry in Pomona is open daily 6 AM–10 PM. Modern Wascomat machines, free parking, app payment. First wash free.`;
 
   return {
     title,
     description,
-    keywords: `laundromat near ${city.name}, coin laundry ${city.name} CA, self service laundry ${city.name}, lavanderia ${city.name}`,
+    keywords: isPomona
+      ? `laundromat Pomona CA, coin laundry Pomona, self service laundry Pomona, lavanderia Pomona`
+      : `laundromat near ${city.name}, coin laundry ${city.name} CA, self service laundry ${city.name}, lavanderia ${city.name}`,
     openGraph: {
       title,
       description,
@@ -47,12 +52,8 @@ export default async function Page({
   if (!city) notFound();
 
   return (
-    <>
-      <Navbar />
-      <main>
-        <LaundromatCityContent city={city} />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <LaundromatCityContent city={city} />
+    </main>
   );
 }

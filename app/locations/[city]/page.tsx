@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import LocationHubContent from "@/components/seo/LocationHubContent";
 import { cities } from "@/data/cities";
 
@@ -18,8 +16,13 @@ export async function generateMetadata({
   const city = cities.find((c) => c.slug === slug);
   if (!city) return {};
 
-  const title = `Laundry Services in ${city.name}, CA | CleanMax Laundry`;
-  const description = `CleanMax Laundry serves ${city.name}, CA with self-service laundry, wash & fold drop-off, and commercial pickup & delivery. Open daily. Located at 1009 E Holt Ave, Pomona.`;
+  const isPomona = slug === "pomona";
+  const title = isPomona
+    ? `CleanMax Laundry — Pomona, CA | Laundry Services`
+    : `CleanMax Laundry — Serving ${city.name}, CA`;
+  const description = isPomona
+    ? `CleanMax Laundry in Pomona, CA offers self-service laundry, wash & fold drop-off, and commercial pickup & delivery. Open daily. Located at 1009 E Holt Ave.`
+    : `CleanMax Laundry serves ${city.name}, CA with self-service laundry, wash & fold drop-off, and commercial pickup & delivery. Open daily. Located at 1009 E Holt Ave, Pomona.`;
 
   return {
     title,
@@ -52,12 +55,8 @@ export default async function Page({
     .slice(0, 5);
 
   return (
-    <>
-      <Navbar />
-      <main>
-        <LocationHubContent city={city} nearbyCities={nearbyCities} />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <LocationHubContent city={city} nearbyCities={nearbyCities} />
+    </main>
   );
 }

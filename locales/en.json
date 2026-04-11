@@ -3,7 +3,7 @@
   "nav_commercial": "Commercial",
   "nav_about": "About",
   "nav_contact": "Contact",
-  "nav_locations": "Locations",
+  "nav_locations": "Service Areas",
   "nav_self_service_laundry": "Self-Service Laundry",
   "nav_wash_and_fold": "Wash & Fold",
   "nav_wash_fold_pricing": "Pricing",
@@ -218,5 +218,25 @@
   "commercial_overview_cta_heading": "Get a Commercial Quote",
   "commercial_overview_cta_text": "Ready to stop worrying about laundry? Contact us for a custom commercial plan.",
   "commercial_overview_email_cta": "Email Us",
-  "commercial_overview_call_cta": "Call Commercial Line"
+  "commercial_overview_call_cta": "Call Commercial Line",
+
+  "nav_reviews": "Reviews",
+  "footer_reviews": "Reviews",
+
+  "seo_laundromat_pomona_callout": "CleanMax Laundry is located in Pomona, CA — conveniently accessible from {city}. Our modern facility features Wascomat Clarus Vibe machines, on-site parking, and wash & fold drop-off service.",
+  "seo_laundromat_how_it_works_heading": "How It Works for {city} Residents",
+  "seo_laundromat_path_a_heading": "Visit Us",
+  "seo_laundromat_path_a_desc": "Our laundromat is located in Pomona, just a short drive from {city}. Come in anytime during our open hours — no appointment needed.",
+  "seo_laundromat_path_b_heading": "We Come to You",
+  "seo_laundromat_path_b_desc": "For business customers in {city}, we offer scheduled pickup and delivery. You never need to leave your location.",
+
+  "seo_hub_serving_h1": "Laundry Services Serving {city}, CA",
+
+  "testimonials_heading": "What Our Customers Say",
+  "testimonials_rating_text": "Rated 5 Stars on Google by Pomona's Community",
+  "testimonials_disclaimer": "Reviews from Google Business Profile.",
+  "testimonials_cta_read": "Read All Reviews on Google",
+  "testimonials_cta_leave": "Leave Us a Review",
+  "testimonials_closing_heading": "Your Experience Matters",
+  "testimonials_closing_text": "CleanMax Laundry is built on the trust of our community. Every review helps us improve and helps your neighbors find a laundromat they can count on."
 }
