@@ -243,5 +243,62 @@
   "reviews_preview_heading": "Lo Que Dicen Nuestros Clientes",
   "reviews_preview_link": "Leer Todas las Reseñas →",
 
-  "fluff_fold_also_known": "También conocido como servicio de lavado y doblado."
+  "fluff_fold_also_known": "También conocido como servicio de lavado y doblado.",
+
+  "quote_page_heading": "Solicitar Cotización de Lavandería Comercial",
+  "quote_page_intro": "Servimos a negocios en Pomona y el Inland Empire con servicio de recogida y entrega de lavandería. Complete el formulario y le responderemos en 1 día hábil. ¿Prefiere hablar? Llámenos al (626) 340-3098.",
+
+  "form_business_name": "Nombre del Negocio",
+  "form_contact_name": "Su Nombre",
+  "form_email": "Correo Electrónico",
+  "form_phone": "Número de Teléfono",
+  "form_business_address": "Dirección del Negocio",
+  "form_business_type": "Tipo de Negocio",
+  "form_frequency": "¿Con qué frecuencia necesita el servicio?",
+  "form_volume": "Volumen Estimado de Ropa por Recogida",
+  "form_notes": "Notas Adicionales",
+  "form_submit": "Solicitar Cotización Gratis",
+  "form_sending": "Enviando...",
+  "form_error_required": "Este campo es obligatorio.",
+  "form_error_email": "Por favor ingrese un correo electrónico válido.",
+  "form_error_phone": "Por favor ingrese un número de teléfono válido (mínimo 10 dígitos).",
+  "form_success_title": "¡Gracias!",
+  "form_success_message": "Recibimos su solicitud y nos pondremos en contacto en 1 día hábil.",
+  "form_success_call": "¿Preguntas? Llámenos al (626) 340-3098.",
+  "form_success_confirmation": "Se ha enviado una confirmación a su correo electrónico.",
+  "form_error_submit": "Algo salió mal. Por favor intente de nuevo o llámenos directamente al (626) 340-3098.",
+
+  "about_heading": "Sobre CleanMax Laundry",
+  "about_p1": "CleanMax Laundry es la lavandería moderna más nueva de Pomona, diseñada desde cero pensando en nuestros clientes. Ubicados en 1009 E Holt Ave, ofrecemos instalaciones limpias, seguras y cómodas equipadas con las últimas máquinas comerciales Wascomat Clarus Vibe.",
+  "about_p2": "Creemos que todos merecen acceso a una lavandería que sea genuinamente limpia, honesta con sus precios y acogedora para todos. Nuestra instalación es bilingüe — inglés y español — y nuestro equipo está aquí para ayudar con cualquier pregunta sobre autoservicio, lavado y doblado, o servicio comercial.",
+  "about_p3": "CleanMax Laundry es un negocio local comprometido con servir a las familias y negocios de Pomona y el Inland Empire con servicio confiable, equipo moderno y un espacio en el que realmente quiera estar.",
+  "about_mission_heading": "Nuestra Misión",
+  "about_mission_text": "Nuestra misión es simple: hacer la lavandería más fácil. Lo logramos con máquinas Wascomat Clarus Vibe que limpian mejor y más rápido, precios honestos sin cargos ocultos, un servicio confiable de lavado y doblado, y un espacio limpio y acogedor en el que cada cliente — desde familias ocupadas hasta negocios locales — puede contar.",
+  "about_different_heading": "Lo Que Nos Hace Diferentes",
+  "about_diff_1": "Máquinas modernas Wascomat Clarus Vibe",
+  "about_diff_2": "Servicio bilingüe — inglés y español",
+  "about_diff_3": "Instalación limpia, segura y siempre atendida",
+  "about_diff_4": "Servicio completo: autoservicio, lavado y doblado, recogida comercial",
+  "about_serve_heading": "Orgullosos de Servir a Pomona y el Inland Empire",
+  "about_serve_text": "CleanMax Laundry atiende a clientes de Pomona, Ontario, Chino, Rancho Cucamonga, Upland, Claremont, Diamond Bar, Chino Hills y las comunidades circundantes del Inland Empire. Ya sea que venga para un lavado rápido, deje su ropa en nuestro servicio de lavado y doblado, o use nuestra recogida y entrega comercial para su negocio — usted es parte de la comunidad CleanMax.",
+  "about_cta_heading": "Visítenos",
+  "about_address": "1009 E Holt Ave, Pomona, CA 91767",
+  "about_hours": "Abierto todos los días 6:00 AM – 10:00 PM",
+  "about_directions_btn": "Cómo Llegar",
+
+  "blog_heading": "Consejos de Lavandería y Guías Locales",
+  "blog_subtitle": "Guías útiles para residentes y negocios de Pomona",
+  "blog_read_more": "Leer Más →",
+  "blog_back": "← Volver al Blog",
+  "blog_related_heading": "Servicios Relacionados",
+
+  "nav_blog": "Blog",
+  "nav_get_quote": "Solicitar Cotización",
+
+  "footer_blog": "Blog",
+  "footer_about": "Nosotros",
+  "footer_get_quote": "Solicitar Cotización Comercial",
+
+  "commercial_quote_cta": "Solicitar Cotización Gratis →",
+  "commercial_quote_form_heading": "Solicite su Cotización Gratis"
 }

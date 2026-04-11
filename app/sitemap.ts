@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { cities } from "@/data/cities";
 import { industries } from "@/data/industries";
+import { blogPosts } from "@/data/blogPosts";
 
 const BASE_URL = "https://cleanmaxlaundry.com";
 
@@ -21,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${BASE_URL}/commercial-quote`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/wash-and-fold/pricing`,
       lastModified: now,
       changeFrequency: "monthly",
@@ -32,7 +39,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE_URL}/about`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
   ];
+
+  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.publishDate),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
 
   const laundromatPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${BASE_URL}/laundromat/${city.slug}`,
@@ -78,5 +104,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...commercialCityPages,
     ...locationHubPages,
     ...industryPages,
+    ...blogPostPages,
   ];
 }

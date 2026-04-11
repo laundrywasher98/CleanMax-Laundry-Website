@@ -46,6 +46,7 @@ export default function Navbar() {
     { label: t("nav_wash_and_fold"), href: "/wash-and-fold/pomona" },
     { label: t("nav_wash_fold_pricing"), href: "/wash-and-fold/pricing" },
     { label: t("nav_commercial_laundry"), href: "/commercial-laundry" },
+    { label: t("nav_get_quote"), href: "/commercial-quote" },
   ];
 
   // Top 5 cities for the dropdown, rest accessible via footer
@@ -175,6 +176,20 @@ export default function Navbar() {
             {t("nav_reviews")}
           </Link>
 
+          <Link
+            href="/blog"
+            className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+          >
+            {t("nav_blog")}
+          </Link>
+
+          <Link
+            href="/about"
+            className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
+          >
+            {t("nav_about")}
+          </Link>
+
           <a
             href="#contact"
             className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
@@ -280,6 +295,30 @@ export default function Navbar() {
               className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5 mt-2"
             >
               {t("nav_reviews")}
+            </Link>
+
+            <Link
+              href="/blog"
+              onClick={() => setMenuOpen(false)}
+              className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5"
+            >
+              {t("nav_blog")}
+            </Link>
+
+            <Link
+              href="/about"
+              onClick={() => setMenuOpen(false)}
+              className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5"
+            >
+              {t("nav_about")}
+            </Link>
+
+            <Link
+              href="/commercial-quote"
+              onClick={() => setMenuOpen(false)}
+              className="font-sans font-semibold text-sm text-brand-blue hover:opacity-70 transition-opacity py-3 border-b border-brand-dark/5"
+            >
+              {t("nav_get_quote")}
             </Link>
 
             <div className="mt-4 pt-4 border-t border-brand-dark/10 flex items-center justify-between">

@@ -243,5 +243,62 @@
   "reviews_preview_heading": "What Our Customers Say",
   "reviews_preview_link": "Read All Reviews →",
 
-  "fluff_fold_also_known": "Also known as fluff and fold or wash dry fold service."
+  "fluff_fold_also_known": "Also known as fluff and fold or wash dry fold service.",
+
+  "quote_page_heading": "Request a Commercial Laundry Quote",
+  "quote_page_intro": "We serve businesses across Pomona and the Inland Empire with scheduled pickup and delivery laundry service. Fill out the form below and we will respond within 1 business day. Prefer to talk? Call us at (626) 340-3098.",
+
+  "form_business_name": "Business Name",
+  "form_contact_name": "Your Name",
+  "form_email": "Email Address",
+  "form_phone": "Phone Number",
+  "form_business_address": "Business Address",
+  "form_business_type": "Type of Business",
+  "form_frequency": "How often do you need service?",
+  "form_volume": "Estimated Laundry Volume per Pickup",
+  "form_notes": "Additional Notes",
+  "form_submit": "Request a Free Quote",
+  "form_sending": "Sending...",
+  "form_error_required": "This field is required.",
+  "form_error_email": "Please enter a valid email address.",
+  "form_error_phone": "Please enter a valid phone number (at least 10 digits).",
+  "form_success_title": "Thank you!",
+  "form_success_message": "We received your request and will be in touch within 1 business day.",
+  "form_success_call": "Questions? Call us at (626) 340-3098.",
+  "form_success_confirmation": "A confirmation has been sent to your email.",
+  "form_error_submit": "Something went wrong. Please try again or call us directly at (626) 340-3098.",
+
+  "about_heading": "About CleanMax Laundry",
+  "about_p1": "CleanMax Laundry is Pomona's newest modern laundromat, designed from the ground up with our customers in mind. Located at 1009 E Holt Ave, we offer clean, safe, and comfortable facilities equipped with the latest Wascomat Clarus Vibe commercial machines — the same equipment used by top laundry operations across the country.",
+  "about_p2": "We believe everyone deserves access to a laundromat that is genuinely clean, honest about pricing, and welcoming to all. Our facility is bilingual — English and Spanish — and our team is here to help with any questions about self-service laundry, wash and fold drop-off, or commercial laundry service for your business.",
+  "about_p3": "CleanMax Laundry is locally owned and committed to serving the families and businesses of Pomona and the Inland Empire with dependable service, modern equipment, and a space you will actually want to visit.",
+  "about_mission_heading": "Our Mission",
+  "about_mission_text": "Our mission is simple: make laundry easier. We accomplish that through Wascomat Clarus Vibe equipment that cleans better and faster, honest transparent pricing with no hidden fees, a dependable wash and fold service, and a clean welcoming space that every customer — from busy families to local businesses — can count on.",
+  "about_different_heading": "What Makes CleanMax Different",
+  "about_diff_1": "Modern Wascomat Clarus Vibe machines",
+  "about_diff_2": "Bilingual service — English and Spanish",
+  "about_diff_3": "Clean, safe, always-attended facility",
+  "about_diff_4": "Full service: self-service, wash & fold, commercial pickup",
+  "about_serve_heading": "Proud to Serve Pomona and the Inland Empire",
+  "about_serve_text": "CleanMax Laundry serves customers from Pomona, Ontario, Chino, Rancho Cucamonga, Upland, Claremont, Diamond Bar, Chino Hills, and the surrounding communities of the Inland Empire. Whether you stop by for a quick self-service wash, drop off laundry for our wash and fold service, or use our commercial pickup and delivery for your business — you are part of the CleanMax community.",
+  "about_cta_heading": "Come Visit Us",
+  "about_address": "1009 E Holt Ave, Pomona, CA 91767",
+  "about_hours": "Open daily 6:00 AM – 10:00 PM",
+  "about_directions_btn": "Get Directions",
+
+  "blog_heading": "Laundry Tips & Local Guides",
+  "blog_subtitle": "Helpful guides for Pomona residents and businesses",
+  "blog_read_more": "Read More →",
+  "blog_back": "← Back to Blog",
+  "blog_related_heading": "Related Services",
+
+  "nav_blog": "Blog",
+  "nav_get_quote": "Get a Quote",
+
+  "footer_blog": "Blog",
+  "footer_about": "About",
+  "footer_get_quote": "Get a Commercial Quote",
+
+  "commercial_quote_cta": "Request a Free Quote →",
+  "commercial_quote_form_heading": "Get Your Free Quote"
 }

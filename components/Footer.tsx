@@ -131,6 +131,30 @@ export default function Footer() {
                   {t("footer_reviews")}
                 </Link>
               </li>
+              <li className="pt-1">
+                <Link
+                  href="/blog"
+                  className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
+                >
+                  {t("footer_blog")}
+                </Link>
+              </li>
+              <li className="pt-1">
+                <Link
+                  href="/about"
+                  className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
+                >
+                  {t("footer_about")}
+                </Link>
+              </li>
+              <li className="pt-1">
+                <Link
+                  href="/commercial-quote"
+                  className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
+                >
+                  {t("footer_get_quote")}
+                </Link>
+              </li>
             </ul>
           </div>
 

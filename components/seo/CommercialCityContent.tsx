@@ -48,12 +48,12 @@ export default function CommercialCityContent({ city }: Props) {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <a
-              href="mailto:laundry@cleanmaxlaundry.com"
+            <Link
+              href="/commercial-quote"
               className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
             >
-              {t("commercial_cta")}
-            </a>
+              {t("commercial_quote_cta")}
+            </Link>
             <a
               href="tel:6263403098"
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"

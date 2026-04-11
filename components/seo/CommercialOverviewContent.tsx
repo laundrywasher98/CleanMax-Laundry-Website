@@ -2,6 +2,7 @@
 
 import { useTranslation } from "@/contexts/LanguageContext";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
+import CommercialQuoteForm from "@/components/CommercialQuoteForm";
 import { industries } from "@/data/industries";
 
 export default function CommercialOverviewContent() {
@@ -100,29 +101,13 @@ export default function CommercialOverviewContent() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 bg-white border-t border-brand-dark/10">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-display font-black text-4xl md:text-5xl uppercase text-brand-dark leading-none mb-4">
-            {t("commercial_overview_cta_heading")}
+      {/* Quote Form */}
+      <section className="py-16 bg-white border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-display font-black text-3xl md:text-4xl uppercase text-brand-dark leading-none mb-10">
+            {t("commercial_quote_form_heading")}
           </h2>
-          <p className="font-sans text-brand-dark/60 text-base mb-10">
-            {t("commercial_overview_cta_text")}
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="mailto:laundry@cleanmaxlaundry.com"
-              className="inline-flex items-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
-            >
-              {t("commercial_overview_email_cta")}
-            </a>
-            <a
-              href="tel:6263403098"
-              className="inline-flex items-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
-            >
-              {t("commercial_overview_call_cta")}
-            </a>
-          </div>
+          <CommercialQuoteForm />
         </div>
       </section>
     </>
