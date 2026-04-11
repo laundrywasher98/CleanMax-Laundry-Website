@@ -41,6 +41,9 @@ export default function WashFoldPricingContent() {
           <p className="font-sans text-brand-dark/50 text-base">
             {t("pricing_subtitle")}
           </p>
+          <p className="font-sans text-brand-dark/40 text-sm mt-2">
+            {t("fluff_fold_also_known")}
+          </p>
         </div>
       </section>
 

@@ -25,7 +25,7 @@
   "services_self_detail": "Abierto todos los días 6:00 AM – 10:00 PM · Última lavada 9:00 PM",
   "services_wf_pricing_link": "Ver precios completos →",
   "services_wf_title": "Lavado y Doblado",
-  "services_wf_desc": "Deje su ropa y nosotros nos encargamos de todo. Su ropa se lava, seca y dobla cuidadosamente — lista para recoger el mismo día o al siguiente.",
+  "services_wf_desc": "Deje su ropa y nosotros nos encargamos de todo. Su ropa se lava, seca y dobla cuidadosamente — lista para recoger el mismo día o al siguiente. También conocido como servicio de lavado y doblado.",
   "services_wf_detail": "Desde $1.50 por libra · Entrega de 6:00 AM – 9:00 PM",
   "services_commercial_title": "Lavandería Comercial",
   "services_commercial_desc": "Recogida y entrega programada para negocios de todo tamaño. Trabajamos con gimnasios, restaurantes, anfitriones de Airbnb, hoteles, salones y consultorios médicos con horarios personalizados.",
@@ -241,5 +241,7 @@
   "testimonials_closing_text": "CleanMax Laundry se construye sobre la confianza de nuestra comunidad. Cada reseña nos ayuda a mejorar y ayuda a tus vecinos a encontrar una lavandería en la que puedan confiar.",
 
   "reviews_preview_heading": "Lo Que Dicen Nuestros Clientes",
-  "reviews_preview_link": "Leer Todas las Reseñas →"
+  "reviews_preview_link": "Leer Todas las Reseñas →",
+
+  "fluff_fold_also_known": "También conocido como servicio de lavado y doblado."
 }

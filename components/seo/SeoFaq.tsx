@@ -16,8 +16,25 @@ interface SeoFaqProps {
 export default function SeoFaq({ items, eyebrow = "FAQ", heading }: SeoFaqProps) {
   const [open, setOpen] = useState<number | null>(null);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <section className="py-20 bg-brand-surface">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="max-w-3xl mx-auto px-6">
         {eyebrow && (
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">

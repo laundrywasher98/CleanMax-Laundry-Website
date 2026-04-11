@@ -3,6 +3,19 @@ import { notFound } from "next/navigation";
 import CommercialIndustryCityContent from "@/components/seo/CommercialIndustryCityContent";
 import { cities } from "@/data/cities";
 import { industries } from "@/data/industries";
+import { buildMetadata } from "@/lib/seo";
+
+// Short names for meta titles — keeps all titles under 60 chars
+const industryShortTitles: Record<string, string> = {
+  gyms: "Gym",
+  restaurants: "Restaurant",
+  "airbnb-vacation-rentals": "Airbnb",
+  "hotels-hospitality": "Hotel",
+  "salons-spas": "Salon",
+  "medical-offices": "Medical",
+  "schools-daycares": "School",
+  "auto-shops": "Auto Shop",
+};
 
 export function generateStaticParams() {
   const params: { industry: string; city: string }[] = [];
@@ -24,23 +37,14 @@ export async function generateMetadata({
   const industry = industries.find((i) => i.slug === industrySlug);
   if (!city || !industry) return {};
 
-  const title = `Laundry Service for ${industry.name} in ${city.name}, CA | CleanMax`;
-  const description = `CleanMax Laundry provides commercial laundry pickup and delivery for ${industry.name.toLowerCase()} in ${city.name}, CA. We handle ${industry.items}. Scheduled service, custom recurring plans. Call (626) 340-3098.`;
+  const shortName = industryShortTitles[industrySlug] ?? industry.name;
 
-  return {
-    title,
-    description,
+  return buildMetadata({
+    title: `${shortName} Laundry ${city.name}, CA | CleanMax`,
+    description: `Commercial laundry for ${industry.name} in ${city.name}, CA. CleanMax offers scheduled pickup & delivery. Call (909) 248-7305.`,
+    path: `/commercial-laundry/${industry.slug}/${city.slug}`,
     keywords: `laundry for ${industry.name.toLowerCase()} ${city.name}, commercial laundry ${city.name} CA, ${industry.name.toLowerCase()} linen service ${city.name}`,
-    openGraph: {
-      title,
-      description,
-      url: `https://cleanmaxlaundry.com/commercial-laundry/${industry.slug}/${city.slug}`,
-      siteName: "CleanMax Laundry",
-    },
-    alternates: {
-      canonical: `https://cleanmaxlaundry.com/commercial-laundry/${industry.slug}/${city.slug}`,
-    },
-  };
+  });
 }
 
 export default async function Page({

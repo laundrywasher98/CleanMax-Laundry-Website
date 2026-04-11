@@ -1,23 +1,15 @@
 import type { Metadata } from "next";
 import CommercialOverviewContent from "@/components/seo/CommercialOverviewContent";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Commercial Laundry Pickup & Delivery | CleanMax Laundry — Pomona, CA",
+export const metadata: Metadata = buildMetadata({
+  title: "Commercial Laundry Pomona | CleanMax",
   description:
-    "Scheduled commercial laundry pickup and delivery for gyms, restaurants, Airbnb hosts, hotels, salons, and medical offices. Custom recurring schedules. Serving the Inland Empire and San Gabriel Valley.",
+    "CleanMax Laundry offers commercial laundry pickup & delivery for businesses across Pomona and the Inland Empire. Call (626) 340-3098.",
+  path: "/commercial-laundry",
   keywords:
     "commercial laundry service Pomona, business laundry pickup delivery, linen service Inland Empire, commercial laundry Pomona CA",
-  openGraph: {
-    title: "Commercial Laundry Pickup & Delivery | CleanMax Laundry",
-    description:
-      "Scheduled commercial laundry pickup and delivery for businesses throughout the Inland Empire. Gyms, restaurants, hotels, Airbnb, salons, medical offices.",
-    url: "https://cleanmaxlaundry.com/commercial-laundry",
-    siteName: "CleanMax Laundry",
-  },
-  alternates: {
-    canonical: "https://cleanmaxlaundry.com/commercial-laundry",
-  },
-};
+});
 
 export default function CommercialLaundryPage() {
   return (

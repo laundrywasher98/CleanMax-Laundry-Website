@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { interpolate } from "@/lib/interpolate";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
@@ -92,17 +93,18 @@ export default function CommercialCityContent({ city }: Props) {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {industries.map((industry) => (
-              <div
+              <Link
                 key={industry.slug}
-                className="border border-brand-dark/10 p-5"
+                href={`/commercial-laundry/${industry.slug}/${city.slug}`}
+                className="group border border-brand-dark/10 p-5 hover:border-brand-blue transition-colors"
               >
-                <p className="font-sans font-semibold text-base text-brand-dark">
+                <p className="font-sans font-semibold text-base text-brand-dark group-hover:text-brand-blue transition-colors">
                   {language === "es" ? industry.nameEs : industry.name}
                 </p>
                 <p className="font-sans text-sm text-brand-dark/55 mt-1">
                   {language === "es" ? industry.itemsEs : industry.items}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

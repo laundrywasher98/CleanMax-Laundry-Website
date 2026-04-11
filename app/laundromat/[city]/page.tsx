@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import LaundromatCityContent from "@/components/seo/LaundromatCityContent";
 import { cities } from "@/data/cities";
+import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return cities.map((c) => ({ city: c.slug }));
@@ -21,25 +22,18 @@ export async function generateMetadata({
     ? `Self-Service Laundromat in Pomona, CA | CleanMax Laundry`
     : `Laundromat Near ${city.name}, CA | CleanMax Laundry`;
   const description = isPomona
-    ? `CleanMax Laundry is Pomona's self-service laundromat at 1009 E Holt Ave. Open daily 6 AM–10 PM. Modern Wascomat machines, free parking, app payment. First wash free.`
-    : `Looking for a laundromat near ${city.name}, CA? CleanMax Laundry in Pomona is open daily 6 AM–10 PM. Modern Wascomat machines, free parking, app payment. First wash free.`;
+    ? `Modern self-service laundromat in Pomona, CA. Open daily 6AM–10PM. Wascomat machines, free parking, app payment. CleanMax Laundry.`
+    : `Modern self-service laundromat serving ${city.name}, CA. Open daily 6AM–10PM. Wascomat machines, on-site parking. CleanMax Laundry in Pomona.`;
+  const keywords = isPomona
+    ? `laundromat Pomona CA, coin laundry Pomona, self service laundry Pomona, lavanderia Pomona`
+    : `laundromat near ${city.name}, coin laundry ${city.name} CA, self service laundry ${city.name}, lavanderia ${city.name}`;
 
-  return {
+  return buildMetadata({
     title,
     description,
-    keywords: isPomona
-      ? `laundromat Pomona CA, coin laundry Pomona, self service laundry Pomona, lavanderia Pomona`
-      : `laundromat near ${city.name}, coin laundry ${city.name} CA, self service laundry ${city.name}, lavanderia ${city.name}`,
-    openGraph: {
-      title,
-      description,
-      url: `https://cleanmaxlaundry.com/laundromat/${city.slug}`,
-      siteName: "CleanMax Laundry",
-    },
-    alternates: {
-      canonical: `https://cleanmaxlaundry.com/laundromat/${city.slug}`,
-    },
-  };
+    path: `/laundromat/${city.slug}`,
+    keywords,
+  });
 }
 
 export default async function Page({

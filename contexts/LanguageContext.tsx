@@ -1,5 +1,11 @@
 "use client";
 
+// FUTURE REFACTOR NOTE:
+// All content components currently use 'use client' because of this context.
+// If SSR/SSG performance becomes a concern, consider moving language detection
+// to middleware (reading Accept-Language or a cookie) and passing language as
+// a prop or via a server-compatible context so leaf components can be RSCs.
+
 import {
   createContext,
   useContext,

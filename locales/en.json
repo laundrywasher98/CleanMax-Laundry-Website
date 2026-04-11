@@ -24,7 +24,7 @@
   "services_self_desc": "Our modern Wascomat Clarus Vibe machines handle everything from a single load to oversized comforters. Fast cycle times, quiet operation, and app-based payment make it easy.",
   "services_self_detail": "Open daily 6:00 AM – 10:00 PM · Last wash 9:00 PM",
   "services_wf_title": "Wash & Fold",
-  "services_wf_desc": "Drop off your laundry and we take care of the rest. Your clothes are washed, dried, and neatly folded — ready for pickup the same day or next day.",
+  "services_wf_desc": "Drop off your laundry and we take care of the rest. Your clothes are washed, dried, and neatly folded — ready for pickup the same day or next day. Also known as fluff and fold service.",
   "services_wf_detail": "Starting at $1.50/lb · Drop-off 6:00 AM – 9:00 PM",
   "services_wf_pricing_link": "View full pricing →",
   "services_commercial_title": "Commercial Laundry",
@@ -79,7 +79,7 @@
   "faq_q6": "How do I get the free wash?",
   "faq_a6": "Download our mobile app through AirWallet and your first wash is free when you pay through the app.",
 
-  "footer_tagline": "Pomona's laundromat for self-service, wash & fold, and commercial laundry. Locally owned. Open daily.",
+  "footer_tagline": "Pomona's laundromat and lavandería for self-service, wash & fold, and commercial laundry. Locally owned. Open daily.",
   "footer_visit_heading": "Visit Us",
   "footer_directions_link": "Get Directions →",
   "footer_hours_heading": "Hours",
@@ -108,12 +108,12 @@
   "seo_view_pricing": "View Full Pricing →",
   "seo_view_pricing_label": "See all wash & fold pricing details",
 
-  "seo_laundromat_intro": "Looking for a clean, modern laundromat near {city}, CA? CleanMax Laundry is located at 1009 E Holt Ave in Pomona — {desc}. Our Wascomat Clarus Vibe machines handle everything from everyday loads to large comforters, open daily from 6:00 AM to 10:00 PM with easy app-based payment.",
+  "seo_laundromat_intro": "Looking for a clean, modern laundromat or lavandería near {city}, CA? CleanMax Laundry is located at 1009 E Holt Ave in Pomona — {desc}. Our Wascomat Clarus Vibe machines handle everything from everyday loads to large comforters, open daily from 6:00 AM to 10:00 PM with easy app-based payment.",
   "seo_laundromat_details_heading": "Laundromat Details",
   "seo_laundromat_hours": "Daily 6:00 AM – 10:00 PM (last wash 9:00 PM)",
   "seo_laundromat_machines": "Wascomat Clarus Vibe — fast, quiet, handles all load sizes",
   "seo_laundromat_payment": "AirWallet app payment — first wash free",
-  "seo_laundromat_city_para": "CleanMax Laundry proudly serves customers from {city} and throughout {county} County. Whether you need a quick wash or are tackling a full week of laundry, our Pomona location is conveniently accessible for {city} residents. We keep our facility clean, bright, and well-maintained — with on-site parking to make every visit comfortable.",
+  "seo_laundromat_city_para": "CleanMax Laundry proudly serves customers from {city} and throughout {county} County. Whether you call it a laundromat or lavandería, our Pomona location is conveniently accessible for {city} residents. We keep our facility clean, bright, and well-maintained — with on-site parking to make every visit comfortable.",
   "seo_laundromat_faq_q1": "Where can I find a laundromat near {city}, CA?",
   "seo_laundromat_faq_a1": "CleanMax Laundry at 1009 E Holt Ave in Pomona is one of the closest full-service laundromats to {city}. We're open daily from 6:00 AM to 10:00 PM.",
   "seo_laundromat_faq_q2": "What are the hours for a laundromat near {city}?",
@@ -125,7 +125,7 @@
   "seo_laundromat_faq_q5": "Can I pay with my phone at the laundromat near {city}?",
   "seo_laundromat_faq_a5": "Yes. CleanMax Laundry accepts payment through the AirWallet mobile app. Download the app and your first wash is free.",
 
-  "seo_wf_intro": "Need wash and fold drop-off service near {city}, CA? CleanMax Laundry makes laundry day effortless. Drop off your clothes at 1009 E Holt Ave in Pomona — {desc} — and we take care of the rest. Washed, dried, and neatly folded. Starting at $1.50/lb on weekdays with same-day and next-day options.",
+  "seo_wf_intro": "Need wash and fold (also called fluff and fold) drop-off service near {city}, CA? CleanMax Laundry makes laundry day effortless. Drop off your clothes at 1009 E Holt Ave in Pomona — {desc} — and we take care of the rest. Washed, dried, and neatly folded. Starting at $1.50/lb on weekdays with same-day and next-day options.",
   "seo_wf_how_it_works": "How It Works",
   "seo_wf_step1": "Drop off your laundry at our Pomona location (open 6:00 AM – 9:00 PM daily).",
   "seo_wf_step2": "We wash, dry, and neatly fold every item.",
@@ -241,5 +241,7 @@
   "testimonials_closing_text": "CleanMax Laundry is built on the trust of our community. Every review helps us improve and helps your neighbors find a laundromat they can count on.",
 
   "reviews_preview_heading": "What Our Customers Say",
-  "reviews_preview_link": "Read All Reviews →"
+  "reviews_preview_link": "Read All Reviews →",
+
+  "fluff_fold_also_known": "Also known as fluff and fold or wash dry fold service."
 }

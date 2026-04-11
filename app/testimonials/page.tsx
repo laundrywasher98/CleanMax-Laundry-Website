@@ -1,23 +1,14 @@
-import type { Metadata } from "next";
 import TestimonialsContent from "@/components/TestimonialsContent";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata = buildMetadata({
   title: "Customer Reviews | CleanMax Laundry Pomona, CA",
   description:
     "See what Pomona customers say about CleanMax Laundry. Rated 5 stars on Google. Self-service laundry, wash & fold, and commercial pickup at 1009 E Holt Ave.",
+  path: "/testimonials",
   keywords:
     "CleanMax Laundry reviews, laundromat reviews Pomona, laundry customer reviews Pomona CA",
-  openGraph: {
-    title: "Customer Reviews | CleanMax Laundry Pomona, CA",
-    description:
-      "See what Pomona customers say about CleanMax Laundry. Rated 5 stars on Google.",
-    url: "https://cleanmaxlaundry.com/testimonials",
-    siteName: "CleanMax Laundry",
-  },
-  alternates: {
-    canonical: "https://cleanmaxlaundry.com/testimonials",
-  },
-};
+});
 
 const reviewSchema = {
   "@context": "https://schema.org",

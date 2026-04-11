@@ -75,10 +75,7 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
           <h2 className="font-display font-black text-3xl uppercase text-brand-dark leading-none mb-6">
             {t("seo_industry_what_we_handle")}
           </h2>
-          <p className="font-sans text-base text-brand-dark/70 leading-relaxed">
-            {ip("seo_industry_intro")}
-          </p>
-          <div className="mt-6 flex items-center gap-3 bg-white border border-brand-dark/10 rounded px-5 py-4">
+          <div className="flex items-center gap-3 bg-white border border-brand-dark/10 rounded px-5 py-4 mt-0">
             <span
               className="w-1.5 h-1.5 rounded-full bg-brand-blue shrink-0"
               aria-hidden="true"
