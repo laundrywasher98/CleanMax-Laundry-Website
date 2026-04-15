@@ -168,7 +168,7 @@ export default function TestimonialsContent() {
               {t("testimonials_cta_read")}
             </a>
             <a
-              href="https://search.google.com/local/writereview?placeid=ChIJN1t_tDeuEmsRUsdiY1GsDSg"
+              href="https://g.page/r/Cf9yth4h9VXbEAE/review"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
