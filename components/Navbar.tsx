@@ -295,6 +295,13 @@ export default function Navbar() {
                 {city.name}
               </Link>
             ))}
+            <Link
+              href="/locations"
+              onClick={() => setMenuOpen(false)}
+              className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity py-3 border-b border-brand-dark/5"
+            >
+              {t("nav_view_all_cities")}
+            </Link>
 
             <Link
               href="/testimonials"

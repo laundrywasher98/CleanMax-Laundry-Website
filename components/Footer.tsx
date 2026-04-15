@@ -197,6 +197,12 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+            <Link
+              href="/locations"
+              className="inline-block mt-5 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
+            >
+              {t("nav_view_all_cities")}
+            </Link>
           </div>
         </div>
       </div>

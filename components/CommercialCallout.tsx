@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTranslation, type TranslationKey } from "@/contexts/LanguageContext";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
+import EmailUsButton from "@/components/EmailUsButton";
 
 const industryKeys: TranslationKey[] = [
   "commercial_industry_0",
@@ -46,8 +47,7 @@ export default function CommercialCallout() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-start gap-4">
-              <a
-                href="mailto:laundry@cleanmaxlaundry.com"
+              <EmailUsButton
                 className="inline-flex items-center gap-2 bg-brand-blue text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-white hover:text-brand-dark transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" aria-hidden="true">
@@ -55,7 +55,7 @@ export default function CommercialCallout() {
                   <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg>
                 {t("commercial_cta")}
-              </a>
+              </EmailUsButton>
               <a
                 href="tel:909-248-7305"
                 className="inline-flex items-center gap-2 text-white/60 font-sans font-semibold text-sm tracking-wide hover:text-white transition-colors py-4"

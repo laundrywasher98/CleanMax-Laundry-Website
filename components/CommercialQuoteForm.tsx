@@ -74,6 +74,7 @@ export default function CommercialQuoteForm() {
   const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  const [submitErrorCode, setSubmitErrorCode] = useState<string | null>(null);
 
   function validateField(name: string, value: string): string | undefined {
     const required = t("form_error_required");
@@ -139,6 +140,7 @@ export default function CommercialQuoteForm() {
     if (!validateAll()) return;
     setSubmitting(true);
     setSubmitError(false);
+    setSubmitErrorCode(null);
 
     try {
       const res = await fetch("/api/commercial-quote", {
@@ -150,9 +152,16 @@ export default function CommercialQuoteForm() {
         setSubmitted(true);
       } else {
         setSubmitError(true);
+        try {
+          const data = (await res.json()) as { code?: string; error?: string };
+          setSubmitErrorCode(data.code || data.error || `http_${res.status}`);
+        } catch {
+          setSubmitErrorCode(`http_${res.status}`);
+        }
       }
     } catch {
       setSubmitError(true);
+      setSubmitErrorCode("network_error");
     } finally {
       setSubmitting(false);
     }
@@ -455,9 +464,16 @@ export default function CommercialQuoteForm() {
           </button>
 
           {submitError && (
-            <p className="font-sans text-sm text-red-600 mt-4 max-w-lg">
-              {t("form_error_submit")}
-            </p>
+            <div className="mt-4 max-w-lg">
+              <p className="font-sans text-sm text-red-600">
+                {t("form_error_submit")}
+              </p>
+              {submitErrorCode && (
+                <p className="font-sans text-xs text-red-500/70 mt-1">
+                  Error ref: {submitErrorCode}
+                </p>
+              )}
+            </div>
           )}
         </div>
       </div>

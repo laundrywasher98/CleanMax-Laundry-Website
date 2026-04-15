@@ -56,11 +56,20 @@ export async function POST(request: NextRequest) {
   if (!process.env.RESEND_API_KEY) {
     console.error("RESEND_API_KEY environment variable is not set");
     return Response.json(
-      { error: "Email service not configured" },
+      { error: "Email service not configured", code: "missing_api_key" },
+      { status: 500 }
+    );
+  }
+  if (!process.env.RESEND_FROM_EMAIL) {
+    console.error("RESEND_FROM_EMAIL environment variable is not set");
+    return Response.json(
+      { error: "Email service not configured", code: "missing_from_address" },
       { status: 500 }
     );
   }
   const resend = new Resend(process.env.RESEND_API_KEY);
+  const FROM = process.env.RESEND_FROM_EMAIL;
+  const NOTIFY_TO = process.env.RESEND_NOTIFY_TO || "laundry@cleanmaxlaundry.com";
 
   if (request.method !== "POST") {
     return NextResponse.json({ error: "Method not allowed" }, { status: 405 });
@@ -223,30 +232,44 @@ export async function POST(request: NextRequest) {
 </html>`;
 
   try {
-    await resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "laundry@cleanmaxlaundry.com",
+    const notifyResult = await resend.emails.send({
+      from: FROM,
+      to: NOTIFY_TO,
       replyTo: email,
       subject: `New Commercial Quote Request — ${businessName}`,
       html: notificationHtml,
     });
+    if (notifyResult.error) {
+      throw notifyResult.error;
+    }
+  } catch (err) {
+    console.error("[commercial-quote] Notification email failed:", err);
+    return NextResponse.json(
+      {
+        error: "Failed to send notification email",
+        code: "notify_send_failed",
+        details: err instanceof Error ? err.message : String(err),
+      },
+      { status: 502 }
+    );
+  }
 
-    await resend.emails.send({
-      from: "onboarding@resend.dev",
+  try {
+    const confirmResult = await resend.emails.send({
+      from: FROM,
       to: email,
-      replyTo: "laundry@cleanmaxlaundry.com",
+      replyTo: NOTIFY_TO,
       subject: "We received your request — CleanMax Laundry",
       html: confirmationHtml,
     });
-
-    return NextResponse.json({ success: true, message: "Quote request sent" });
+    if (confirmResult.error) {
+      console.error("[commercial-quote] Confirmation email failed:", confirmResult.error);
+    }
   } catch (err) {
-    console.error("[commercial-quote] Email send error:", err);
-    return NextResponse.json(
-      { error: "Failed to send email", details: String(err) },
-      { status: 500 }
-    );
+    console.error("[commercial-quote] Confirmation email threw:", err);
   }
+
+  return NextResponse.json({ success: true, message: "Quote request sent" });
 }
 
 export async function GET() {

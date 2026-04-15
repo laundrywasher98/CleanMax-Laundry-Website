@@ -3,6 +3,7 @@
 import { useTranslation } from "@/contexts/LanguageContext";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
 import CommercialQuoteForm from "@/components/CommercialQuoteForm";
+import EmailUsButton from "@/components/EmailUsButton";
 import { industries } from "@/data/industries";
 
 export default function CommercialOverviewContent() {
@@ -30,12 +31,11 @@ export default function CommercialOverviewContent() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <a
-              href="mailto:laundry@cleanmaxlaundry.com"
+            <EmailUsButton
               className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
             >
               {t("commercial_overview_email_cta")}
-            </a>
+            </EmailUsButton>
             <a
               href="tel:909-248-7305"
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
