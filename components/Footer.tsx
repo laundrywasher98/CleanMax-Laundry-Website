@@ -86,6 +86,20 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+
+            {/* Map */}
+            <div className="mt-8 rounded-lg overflow-hidden border border-white/10 aspect-square max-w-[260px]">
+              <iframe
+                src="https://www.google.com/maps?q=CleanMax+Laundry,+1009+E+Holt+Ave,+Pomona,+CA+91767&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="CleanMax Laundry location map"
+                aria-label="Map showing CleanMax Laundry at 1009 E Holt Ave, Pomona, CA 91767"
+              />
+            </div>
           </div>
 
           {/* Visit Us */}
