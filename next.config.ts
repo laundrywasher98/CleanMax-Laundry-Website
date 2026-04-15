@@ -5,12 +5,47 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
   },
   async redirects() {
+    const toHome = [
+      "/contact-us",
+      "/contact",
+      "/contact-1",
+      "/home",
+      "/home-1",
+      "/hours",
+      "/shop",
+      "/gallery",
+      "/faq",
+      "/account",
+      "/config",
+    ];
+    const toPricing = [
+      "/services",
+      "/pricing",
+      "/wash-and-fold",
+      "/wash-fold",
+      "/wash-dry-fold",
+    ];
+    const toLocations = [
+      "/laundromat",
+      "/location",
+    ];
+    const toPickup = [
+      "/pickup",
+      "/delivery",
+      "/book",
+      "/booking",
+      "/appointments",
+    ];
+    const map = (sources: string[], destination: string) =>
+      sources.map((source) => ({ source, destination, permanent: true }));
+
     return [
-      {
-        source: "/contact-us",
-        destination: "/",
-        permanent: true,
-      },
+      ...map(toHome, "/"),
+      ...map(toPricing, "/wash-and-fold/pricing"),
+      ...map(toLocations, "/locations"),
+      ...map(toPickup, "/pickup-delivery"),
+      { source: "/about-1", destination: "/about", permanent: true },
+      { source: "/blog-1", destination: "/blog", permanent: true },
     ];
   },
 };
