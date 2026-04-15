@@ -1,11 +1,5 @@
 "use client";
 
-// FUTURE REFACTOR NOTE:
-// All content components currently use 'use client' because of this context.
-// If SSR/SSG performance becomes a concern, consider moving language detection
-// to middleware (reading Accept-Language or a cookie) and passing language as
-// a prop or via a server-compatible context so leaf components can be RSCs.
-
 import {
   createContext,
   useContext,
@@ -30,23 +24,30 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en");
+interface LanguageProviderProps {
+  children: ReactNode;
+  // Server-set initial language — /es/* routes pass "es", English routes pass "en".
+  // This enables SSR in the correct language: React initializes useState with
+  // this value, so the server renders Spanish HTML on /es/* URLs and hydration
+  // matches without a flash.
+  initialLanguage: Language;
+}
 
-  useEffect(() => {
-    const saved = localStorage.getItem("cleanmax-lang") as Language | null;
-    if (saved === "en" || saved === "es") {
-      setLanguageState(saved);
-    }
-  }, []);
+export function LanguageProvider({
+  children,
+  initialLanguage,
+}: LanguageProviderProps) {
+  const [language, setLanguageState] = useState<Language>(initialLanguage);
 
   useEffect(() => {
     document.documentElement.lang = language;
   }, [language]);
 
+  // The URL is now the source of truth for language — /es/* means Spanish,
+  // everything else means English. Client-side setLanguage navigates to the
+  // counterpart URL (handled by LanguageToggle), so this just updates state.
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem("cleanmax-lang", lang);
   };
 
   const t = (key: TranslationKey): string => {

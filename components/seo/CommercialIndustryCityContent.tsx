@@ -5,6 +5,8 @@ import { interpolate } from "@/lib/interpolate";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
 import SeoFaq from "@/components/seo/SeoFaq";
 import SeoCta from "@/components/seo/SeoCta";
+import CityLocalContext from "@/components/seo/CityLocalContext";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { City } from "@/data/cities";
 import type { Industry } from "@/data/industries";
 
@@ -42,6 +44,13 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
       {/* Hero */}
       <section className="pt-32 pb-16 bg-white">
         <div className="max-w-3xl mx-auto px-6">
+          <Breadcrumbs
+            items={[
+              { label: "Commercial Laundry", href: "/commercial-laundry" },
+              { label: industryName, href: `/commercial-laundry/${industry.slug}/${city.slug}` },
+              { label: city.name },
+            ]}
+          />
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
             {industryName} · {city.name}, CA
           </p>
@@ -105,6 +114,8 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
           <ServiceAreaMap theme="dark" />
         </div>
       </section>
+
+      <CityLocalContext citySlug={city.slug} cityName={city.name} variant="service" />
 
       <SeoFaq
         items={faqItems}

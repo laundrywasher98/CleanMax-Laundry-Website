@@ -2,11 +2,25 @@
 
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
+import JsonLd from "@/components/JsonLd";
+import { buildPersonSchema } from "@/lib/schema";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
+const OWNER_NAME = "The CleanMax Team";
+const OWNER_TITLE_EN = "Locally Owned & Operated";
+const OWNER_TITLE_ES = "Negocio Local e Independiente";
+const OWNER_BIO_EN =
+  "CleanMax Laundry is locally owned and operated by people who grew up right here in the San Gabriel Valley and the Inland Empire. Our owner was raised in this community — played youth soccer on local fields, went through the local school system, and has spent years volunteering with the local school districts and helping where needed. CleanMax was built to give the Pomona Valley the cleanest, most reliable laundromat the community deserves: modern Wascomat machines, free parking, fair flat-rate wash-and-fold pricing, and commercial pickup and delivery for the businesses that make this area run. We live where we work, and we take that seriously.";
+const OWNER_BIO_ES =
+  "CleanMax Laundry es un negocio local e independiente, operado por personas que crecieron aquí mismo en el Valle de San Gabriel y el Inland Empire. Nuestro dueño se crió en esta comunidad — jugó fútbol juvenil en canchas locales, pasó por las escuelas de la zona y ha dedicado años como voluntario apoyando a los distritos escolares locales y ayudando donde se necesita. Construimos CleanMax para darle al Valle de Pomona la lavandería más limpia y confiable que la comunidad se merece: máquinas Wascomat modernas, estacionamiento gratis, precios justos a tarifa fija para lavado y doblado, y recolección y entrega comercial para los negocios que hacen funcionar esta zona. Vivimos donde trabajamos, y eso lo tomamos en serio.";
+
 export default function AboutContent() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+
+  const ownerBio = language === "es" ? OWNER_BIO_ES : OWNER_BIO_EN;
+  const ownerTitle = language === "es" ? OWNER_TITLE_ES : OWNER_TITLE_EN;
+  const meetHeading = language === "es" ? "Conoce al equipo" : "Meet the team";
 
   const differentiators = [
     t("about_diff_1"),
@@ -17,6 +31,13 @@ export default function AboutContent() {
 
   return (
     <>
+      <JsonLd
+        data={buildPersonSchema({
+          name: OWNER_NAME,
+          jobTitle: ownerTitle,
+          description: ownerBio,
+        })}
+      />
       {/* Hero */}
       <section className="pt-32 pb-16 bg-white">
         <div className="max-w-3xl mx-auto px-6">
@@ -73,8 +94,28 @@ export default function AboutContent() {
         </div>
       </section>
 
-      {/* Serve area */}
+      {/* Owner / Team bio — E-E-A-T signal */}
       <section className="py-16 bg-brand-surface border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-display font-black text-3xl md:text-4xl uppercase text-brand-dark leading-none mb-6">
+            {meetHeading}
+          </h2>
+          <div className="border-l-2 border-brand-blue pl-6 max-w-2xl">
+            <p className="font-display font-bold text-xl text-brand-dark mb-1">
+              {OWNER_NAME}
+            </p>
+            <p className="font-sans text-xs uppercase tracking-widest text-brand-blue mb-4">
+              {ownerTitle}
+            </p>
+            <p className="font-sans text-brand-dark/70 text-base leading-relaxed">
+              {ownerBio}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Serve area */}
+      <section className="py-16 bg-white border-t border-brand-dark/10">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-display font-black text-3xl md:text-4xl uppercase text-brand-dark leading-none mb-6">
             {t("about_serve_heading")}

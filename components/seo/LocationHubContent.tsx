@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { interpolate } from "@/lib/interpolate";
 import SeoCta from "@/components/seo/SeoCta";
+import CityLocalContext from "@/components/seo/CityLocalContext";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { cities, type City } from "@/data/cities";
 import { industries } from "@/data/industries";
 
@@ -44,6 +46,12 @@ export default function LocationHubContent({ city, nearbyCities }: Props) {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-white">
         <div className="max-w-4xl mx-auto px-6">
+          <Breadcrumbs
+            items={[
+              { label: language === "es" ? "Ubicaciones" : "Locations", href: "/locations" },
+              { label: city.name },
+            ]}
+          />
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
             {city.county} County
           </p>
@@ -57,6 +65,9 @@ export default function LocationHubContent({ city, nearbyCities }: Props) {
           </p>
         </div>
       </section>
+
+      {/* Unique local context per city — differentiates vs. doorway-page filter */}
+      <CityLocalContext citySlug={city.slug} cityName={city.name} variant="hub" />
 
       {/* Services grid */}
       <section className="py-16 bg-brand-surface border-t border-brand-dark/10">

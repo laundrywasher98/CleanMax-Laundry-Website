@@ -37,8 +37,8 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'p',
-        en: 'If you\'ve been searching for wash and fold cost in Pomona CA, the answer depends on a few simple factors: how much laundry you have and when you need it back. At CleanMax Laundry on East Holt Avenue, pricing is straightforward and competitive — no hidden fees, no surprise charges at pickup.',
-        es: 'Si estás buscando el costo del servicio de lavado y doblado en Pomona, CA, la respuesta depende de algunos factores simples: cuánta ropa tienes y cuándo la necesitas. En CleanMax Laundry en East Holt Avenue, los precios son claros y competitivos, sin cargos ocultos ni sorpresas al recoger tu ropa.',
+        en: 'If you\'ve been searching for [wash and fold cost in Pomona CA](/wash-and-fold/pomona), the answer depends on a few simple factors: how much laundry you have and when you need it back. At [CleanMax Laundry on East Holt Avenue](/locations/pomona), pricing is straightforward and competitive — no hidden fees, no surprise charges at pickup. You can see our full [wash and fold pricing](/wash-and-fold/pricing) breakdown online before you drop off.',
+        es: 'Si estás buscando el [costo del servicio de lavado y doblado en Pomona, CA](/wash-and-fold/pomona), la respuesta depende de algunos factores simples: cuánta ropa tienes y cuándo la necesitas. En [CleanMax Laundry en East Holt Avenue](/locations/pomona), los precios son claros y competitivos, sin cargos ocultos ni sorpresas al recoger tu ropa. Puedes ver nuestro desglose completo de [precios de lavado y doblado](/wash-and-fold/pricing) en línea antes de dejar tu ropa.',
       },
       {
         type: 'h2',

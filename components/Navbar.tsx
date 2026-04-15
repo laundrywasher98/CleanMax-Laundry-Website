@@ -16,7 +16,7 @@ export default function Navbar() {
   const [locationsOpen, setLocationsOpen] = useState(false);
   const { language, setLanguage, t } = useTranslation();
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
+  const isHomePage = pathname === "/" || pathname === "/es";
   const servicesRef = useRef<HTMLDivElement>(null);
   const locationsRef = useRef<HTMLDivElement>(null);
 
@@ -207,7 +207,7 @@ export default function Navbar() {
 
         {/* Desktop right */}
         <div className="hidden md:flex items-center gap-5">
-          <LanguageToggle language={language} setLanguage={setLanguage} scrolled={!isTransparent} />
+          <LanguageToggle language={language} setLanguage={setLanguage} scrolled={!isTransparent} pathname={pathname} />
           <a
             href="tel:9092487305"
             className={`flex items-center gap-2 font-sans font-semibold text-sm tracking-wide transition-opacity hover:opacity-70 ${textColor}`}
@@ -346,6 +346,7 @@ export default function Navbar() {
                 language={language}
                 setLanguage={setLanguage}
                 scrolled={true}
+                pathname={pathname}
               />
             </div>
           </div>
@@ -357,43 +358,56 @@ export default function Navbar() {
 
 function LanguageToggle({
   language,
-  setLanguage,
   scrolled,
+  pathname,
 }: {
   language: Language;
   setLanguage: (l: Language) => void;
   scrolled: boolean;
+  pathname: string;
 }) {
   const inactiveColor = scrolled
     ? "text-brand-dark/35 hover:text-brand-dark/60"
     : "text-white/40 hover:text-white/70";
   const dividerColor = scrolled ? "text-brand-dark/20" : "text-white/20";
 
+  // Compute counterpart URL: strip/add the /es prefix while preserving the rest of the path.
+  // /foo/bar  ↔ /es/foo/bar
+  // /         ↔ /es
+  const isEs = pathname === "/es" || pathname.startsWith("/es/");
+  const pathWithoutLang = isEs
+    ? pathname === "/es"
+      ? "/"
+      : pathname.slice(3)
+    : pathname;
+  const enHref = pathWithoutLang || "/";
+  const esHref = pathWithoutLang === "/" ? "/es" : `/es${pathWithoutLang}`;
+
   return (
     <div className="flex items-center gap-1.5 font-sans font-semibold text-sm uppercase tracking-widest">
-      <button
-        onClick={() => setLanguage("en")}
+      <Link
+        href={enHref}
         className={`transition-colors ${
           language === "en" ? "text-brand-blue font-bold" : inactiveColor
         }`}
         aria-label="Switch to English"
-        aria-pressed={language === "en"}
+        aria-current={language === "en" ? "true" : undefined}
       >
         EN
-      </button>
+      </Link>
       <span className={dividerColor} aria-hidden="true">
         |
       </span>
-      <button
-        onClick={() => setLanguage("es")}
+      <Link
+        href={esHref}
         className={`transition-colors ${
           language === "es" ? "text-brand-blue font-bold" : inactiveColor
         }`}
         aria-label="Cambiar a Español"
-        aria-pressed={language === "es"}
+        aria-current={language === "es" ? "true" : undefined}
       >
         ES
-      </button>
+      </Link>
     </div>
   );
 }

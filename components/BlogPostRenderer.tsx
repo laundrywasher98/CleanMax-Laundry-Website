@@ -2,10 +2,40 @@
 
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
-import type { BlogPost } from "@/data/blogPosts";
+import { blogPosts, type BlogPost } from "@/data/blogPosts";
 
 interface Props {
   post: BlogPost;
+}
+
+// Parses markdown-style [text](/url) into React nodes.
+// Plain text without the syntax passes through unchanged.
+function renderWithLinks(text: string): React.ReactNode[] {
+  const parts: React.ReactNode[] = [];
+  const regex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+    const [, label, href] = match;
+    parts.push(
+      <Link
+        key={key++}
+        href={href}
+        className="text-brand-blue hover:underline"
+      >
+        {label}
+      </Link>,
+    );
+    lastIndex = regex.lastIndex;
+  }
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+  return parts;
 }
 
 export default function BlogPostRenderer({ post }: Props) {
@@ -58,7 +88,7 @@ export default function BlogPostRenderer({ post }: Props) {
             case "p":
               return (
                 <p key={i} className="text-base leading-relaxed">
-                  {lang(section)}
+                  {renderWithLinks(lang(section))}
                 </p>
               );
             case "ul":
@@ -97,6 +127,33 @@ export default function BlogPostRenderer({ post }: Props) {
           ))}
         </div>
       </div>
+
+      {/* Related posts */}
+      {(() => {
+        const related = blogPosts
+          .filter((p) => p.slug !== post.slug && !p.spanishOnly)
+          .slice(0, 3);
+        if (related.length === 0) return null;
+        return (
+          <div className="border-t border-brand-dark/10 pt-8 mb-8">
+            <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-dark/40 mb-4">
+              {isEs ? "Lee también" : "Read next"}
+            </p>
+            <ul className="space-y-3">
+              {related.map((p) => (
+                <li key={p.slug}>
+                  <Link
+                    href={`/blog/${p.slug}`}
+                    className="font-sans text-sm text-brand-blue hover:underline"
+                  >
+                    {isEs ? p.titleEs : p.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })()}
 
       {/* Related services */}
       <div className="border-t border-brand-dark/10 pt-8 pb-12">

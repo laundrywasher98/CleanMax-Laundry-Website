@@ -5,6 +5,8 @@ import { useTranslation } from "@/contexts/LanguageContext";
 import { interpolate } from "@/lib/interpolate";
 import SeoFaq from "@/components/seo/SeoFaq";
 import SeoCta from "@/components/seo/SeoCta";
+import CityLocalContext from "@/components/seo/CityLocalContext";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import type { City } from "@/data/cities";
 
 interface Props {
@@ -35,6 +37,12 @@ export default function WashFoldCityContent({ city }: Props) {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-white">
         <div className="max-w-3xl mx-auto px-6">
+          <Breadcrumbs
+            items={[
+              { label: "Wash & Fold", href: "/wash-and-fold/pricing" },
+              { label: city.name },
+            ]}
+          />
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
             {city.name}, CA
           </p>
@@ -133,6 +141,8 @@ export default function WashFoldCityContent({ city }: Props) {
           </p>
         </div>
       </section>
+
+      <CityLocalContext citySlug={city.slug} cityName={city.name} variant="service" />
 
       <SeoFaq
         items={faqItems}

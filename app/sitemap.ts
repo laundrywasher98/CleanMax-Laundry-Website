@@ -5,117 +5,85 @@ import { blogPosts } from "@/data/blogPosts";
 
 const BASE_URL = "https://cleanmaxlaundry.com";
 
+// Every EN path gets a mirrored /es path. hreflang alternates are emitted
+// per entry so Google knows the two URLs are language-equivalent.
+type Entry = {
+  path: string;
+  changeFrequency: "weekly" | "monthly" | "daily";
+  priority: number;
+  lastModified?: Date;
+};
+
+function toBilingualSitemap(entries: Entry[]): MetadataRoute.Sitemap {
+  const out: MetadataRoute.Sitemap = [];
+  for (const entry of entries) {
+    const enUrl = `${BASE_URL}${entry.path}`;
+    const esUrl = `${BASE_URL}/es${entry.path}`;
+    const alternates = {
+      languages: {
+        "en-US": enUrl,
+        es: esUrl,
+        "x-default": enUrl,
+      },
+    };
+    out.push({
+      url: enUrl,
+      lastModified: entry.lastModified ?? new Date(),
+      changeFrequency: entry.changeFrequency,
+      priority: entry.priority,
+      alternates,
+    });
+    out.push({
+      url: esUrl,
+      lastModified: entry.lastModified ?? new Date(),
+      changeFrequency: entry.changeFrequency,
+      priority: entry.priority,
+      alternates,
+    });
+  }
+  return out;
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-
-  const staticPages: MetadataRoute.Sitemap = [
-    {
-      url: BASE_URL,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/locations`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/commercial-laundry`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/commercial-quote`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/wash-and-fold/pricing`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/testimonials`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
-    {
-      url: `${BASE_URL}/blog`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/about`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
+  const entries: Entry[] = [
+    { path: "", changeFrequency: "weekly", priority: 1.0 },
+    { path: "/locations", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/commercial-laundry", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/commercial-quote", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/wash-and-fold/pricing", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/testimonials", changeFrequency: "weekly", priority: 0.7 },
+    { path: "/blog", changeFrequency: "weekly", priority: 0.6 },
+    { path: "/about", changeFrequency: "monthly", priority: 0.5 },
   ];
 
-  // /locations/[city] — all cities
-  const locationCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${BASE_URL}/locations/${city.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
+  // Generate city-level entries for each service pattern
+  for (const city of cities) {
+    entries.push({ path: `/locations/${city.slug}`, changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ path: `/laundromat/${city.slug}`, changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ path: `/wash-and-fold/${city.slug}`, changeFrequency: "monthly", priority: 0.8 });
+    entries.push({ path: `/commercial-laundry/${city.slug}`, changeFrequency: "monthly", priority: 0.7 });
+  }
 
-  // /laundromat/[city] — all cities
-  const laundromatPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${BASE_URL}/laundromat/${city.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
+  // Industry × city commercial pages
+  for (const industry of industries) {
+    for (const city of cities) {
+      entries.push({
+        path: `/commercial-laundry/${industry.slug}/${city.slug}`,
+        changeFrequency: "monthly",
+        priority: 0.6,
+      });
+    }
+  }
 
-  // /wash-and-fold/[city] — all cities
-  const washFoldPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${BASE_URL}/wash-and-fold/${city.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
-
-  // /commercial-laundry/[city] — all cities
-  const commercialCityPages: MetadataRoute.Sitemap = cities.map((city) => ({
-    url: `${BASE_URL}/commercial-laundry/${city.slug}`,
-    lastModified: now,
-    changeFrequency: "monthly" as const,
-    priority: 0.7,
-  }));
-
-  // /commercial-laundry/[industry]/[city] — all industries × all cities
-  const industryPages: MetadataRoute.Sitemap = industries.flatMap((industry) =>
-    cities.map((city) => ({
-      url: `${BASE_URL}/commercial-laundry/${industry.slug}/${city.slug}`,
-      lastModified: now,
-      changeFrequency: "monthly" as const,
+  // Blog posts
+  for (const post of blogPosts) {
+    entries.push({
+      path: `/blog/${post.slug}`,
+      changeFrequency: "monthly",
       priority: 0.6,
-    }))
-  );
+      lastModified: new Date(post.publishDate),
+    });
+  }
 
-  // /blog/[slug] — all posts
-  const blogPostPages: MetadataRoute.Sitemap = blogPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug}`,
-    lastModified: new Date(post.publishDate),
-    changeFrequency: "monthly" as const,
-    priority: 0.6,
-  }));
-
-  return [
-    ...staticPages,
-    ...locationCityPages,
-    ...laundromatPages,
-    ...washFoldPages,
-    ...commercialCityPages,
-    ...industryPages,
-    ...blogPostPages,
-  ];
+  return toBilingualSitemap(entries);
 }

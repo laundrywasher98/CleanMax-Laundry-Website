@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import type { Language } from "@/contexts/LanguageContext";
 
 export const DEFAULT_OG_IMAGE = "/images/IMG_8888.jpg";
 export const BASE_URL = "https://cleanmaxlaundry.com";
@@ -9,14 +10,21 @@ export function buildMetadata({
   path,
   keywords,
   ogImage,
+  lang = "en",
 }: {
   title: string;
   description: string;
+  // Path WITHOUT the /es prefix. E.g. "/about" for both EN and ES variants.
   path: string;
   keywords?: string;
   ogImage?: string;
+  lang?: Language;
 }): Metadata {
   const imageUrl = `${BASE_URL}${ogImage ?? DEFAULT_OG_IMAGE}`;
+  const enUrl = `${BASE_URL}${path}`;
+  const esUrl = `${BASE_URL}/es${path}`;
+  const selfUrl = lang === "es" ? esUrl : enUrl;
+
   return {
     title,
     description,
@@ -24,17 +32,20 @@ export function buildMetadata({
     openGraph: {
       title,
       description,
-      url: `${BASE_URL}${path}`,
+      url: selfUrl,
       siteName: "CleanMax Laundry",
       images: [
         {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: "CleanMax Laundry — Pomona, CA",
+          alt:
+            lang === "es"
+              ? "CleanMax Laundry — Pomona, CA"
+              : "CleanMax Laundry — Pomona, CA",
         },
       ],
-      locale: "en_US",
+      locale: lang === "es" ? "es_US" : "en_US",
       type: "website",
     },
     twitter: {
@@ -44,7 +55,12 @@ export function buildMetadata({
       images: [imageUrl],
     },
     alternates: {
-      canonical: `${BASE_URL}${path}`,
+      canonical: selfUrl,
+      languages: {
+        "en-US": enUrl,
+        es: esUrl,
+        "x-default": enUrl,
+      },
     },
   };
 }

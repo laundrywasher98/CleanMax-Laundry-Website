@@ -7,10 +7,13 @@ import AppDownload from "@/components/AppDownload";
 import ReviewsPreview from "@/components/ReviewsPreview";
 import FAQ from "@/components/FAQ";
 import NearbyLocations from "@/components/NearbyLocations";
+import JsonLd from "@/components/JsonLd";
+import { buildFaqSchema } from "@/lib/schema";
 
-export default function Home() {
+export default function HomeEs() {
   return (
     <main>
+      <JsonLd data={buildFaqSchema("es")} />
       <Hero />
       <Services />
       <WhyCleanMax />
