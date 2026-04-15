@@ -60,10 +60,10 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
               {t("commercial_cta")}
             </a>
             <a
-              href="tel:6263403098"
+              href="tel:909-248-7305"
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
             >
-              (626) 340-3098
+              (909) 248-7305
             </a>
           </div>
         </div>

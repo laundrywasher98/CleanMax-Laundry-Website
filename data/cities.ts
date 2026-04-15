@@ -41,4 +41,6 @@ export const cities: City[] = [
     description: "a major Inland Empire city in Riverside County" },
   { slug: "jurupa-valley", name: "Jurupa Valley", zip: "91752", county: "Riverside",
     description: "a growing community in Riverside County" },
+  { slug: "montclair", name: "Montclair", zip: "91763", county: "San Bernardino",
+    description: "Located just minutes from Montclair — CleanMax is right off the 10 freeway on Holt Ave in Pomona, an easy drive from anywhere in Montclair" },
 ];

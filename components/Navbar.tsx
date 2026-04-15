@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslation, type Language } from "@/contexts/LanguageContext";
 import { cities } from "@/data/cities";
 
@@ -14,6 +15,8 @@ export default function Navbar() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [locationsOpen, setLocationsOpen] = useState(false);
   const { language, setLanguage, t } = useTranslation();
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   const servicesRef = useRef<HTMLDivElement>(null);
   const locationsRef = useRef<HTMLDivElement>(null);
 
@@ -37,9 +40,11 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  const textColor = scrolled ? "text-brand-dark" : "text-white";
-  const borderColor = scrolled ? "border-brand-dark/10" : "border-white/10";
-  const bgBase = scrolled ? "bg-white shadow-sm" : "bg-transparent";
+  // Transparent only on homepage before scrolling; solid on all other pages
+  const isTransparent = isHomePage && !scrolled;
+  const textColor = isTransparent ? "text-white" : "text-brand-dark";
+  const borderColor = isTransparent ? "border-white/10" : "border-brand-dark/10";
+  const bgBase = isTransparent ? "bg-transparent" : "bg-white shadow-sm";
 
   const serviceLinks = [
     { label: t("nav_self_service_laundry"), href: "/laundromat/pomona" },
@@ -200,7 +205,7 @@ export default function Navbar() {
 
         {/* Desktop right */}
         <div className="hidden md:flex items-center gap-5">
-          <LanguageToggle language={language} setLanguage={setLanguage} scrolled={scrolled} />
+          <LanguageToggle language={language} setLanguage={setLanguage} scrolled={!isTransparent} />
           <a
             href="tel:9092487305"
             className={`flex items-center gap-2 font-sans font-semibold text-sm tracking-wide transition-opacity hover:opacity-70 ${textColor}`}

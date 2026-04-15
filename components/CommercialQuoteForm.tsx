@@ -218,8 +218,8 @@ export default function CommercialQuoteForm() {
         </p>
         <p className="font-sans text-white/70 text-base mb-6">
           {language === "es"
-            ? "¿Preguntas? Llámenos al (626) 340-3098."
-            : "Questions? Call us at (626) 340-3098."}
+            ? "¿Preguntas? Llámenos al (909) 248-7305."
+            : "Questions? Call us at (909) 248-7305."}
         </p>
         <p className="font-sans text-white/40 text-sm">
           {language === "es"

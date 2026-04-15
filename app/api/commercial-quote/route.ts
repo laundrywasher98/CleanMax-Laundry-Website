@@ -178,7 +178,7 @@ export async function POST(request: NextRequest) {
     <a href="mailto:${email}" class="reply-cta">Reply to ${contactName} →</a>
   </div>
   <div class="footer">
-    CleanMax Laundry · 1009 E Holt Ave, Pomona CA 91767 · (626) 340-3098 · laundry@cleanmaxlaundry.com
+    CleanMax Laundry · 1009 E Holt Ave, Pomona CA 91767 · (909) 248-7305 · laundry@cleanmaxlaundry.com
   </div>
 </body>
 </html>`;
@@ -210,7 +210,7 @@ export async function POST(request: NextRequest) {
     </p>
     <div class="cta-box">
       <p>Need to talk sooner? Call us directly:</p>
-      <strong>(626) 340-3098</strong>
+      <strong>(909) 248-7305</strong>
       <p style="margin-top:8px; font-size:12px;">Or email: laundry@cleanmaxlaundry.com</p>
     </div>
     <p class="message" style="font-size:14px; color:#666;">
@@ -218,14 +218,14 @@ export async function POST(request: NextRequest) {
       — The CleanMax Laundry Team
     </p>
   </div>
-  <div class="footer">1009 E Holt Ave, Pomona, CA 91767 · (626) 340-3098</div>
+  <div class="footer">1009 E Holt Ave, Pomona, CA 91767 · (909) 248-7305</div>
 </body>
 </html>`;
 
   try {
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "maxwellgclark@gmail.com",
+      to: "laundry@cleanmaxlaundry.com",
       replyTo: email,
       subject: `New Commercial Quote Request — ${businessName}`,
       html: notificationHtml,
