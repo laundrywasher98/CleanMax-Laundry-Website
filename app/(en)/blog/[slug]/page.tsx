@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blogPosts";
 import { buildMetadata } from "@/lib/seo";
+import { buildArticleSchema } from "@/lib/schema";
 import BlogPostRenderer from "@/components/BlogPostRenderer";
 
 export function generateStaticParams() {
@@ -38,26 +39,13 @@ export default async function BlogPostPage({
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
-  const articleSchema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    datePublished: post.publishDate,
-    author: {
-      "@type": "Organization",
-      name: "CleanMax Laundry",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "CleanMax Laundry",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://cleanmaxlaundry.com/images/logo.png",
-      },
-    },
-    url: `https://cleanmaxlaundry.com/blog/${post.slug}`,
-    image: "https://cleanmaxlaundry.com/images/IMG_8888.jpg",
-  };
+  const articleSchema = buildArticleSchema({
+    title: post.title,
+    description: post.excerpt.slice(0, 155),
+    slug: post.slug,
+    publishDate: post.publishDate,
+    lang: "en",
+  });
 
   return (
     <main className="pt-24 pb-4 bg-white">

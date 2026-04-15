@@ -72,7 +72,7 @@ export default function ReviewsPreview() {
     <section className="py-20 bg-white border-t border-brand-dark/10">
       <div className="max-w-6xl mx-auto px-6">
         <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-3">
-          Google Reviews
+          {t("eyebrow_google_reviews")}
         </p>
         <h2 className="font-display font-black text-4xl md:text-5xl uppercase text-brand-dark leading-none mb-10">
           {t("reviews_preview_heading")}

@@ -6,6 +6,7 @@ import { interpolate } from "@/lib/interpolate";
 import SeoFaq from "@/components/seo/SeoFaq";
 import SeoCta from "@/components/seo/SeoCta";
 import CityLocalContext from "@/components/seo/CityLocalContext";
+import CitySiblingServices from "@/components/seo/CitySiblingServices";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { City } from "@/data/cities";
 
@@ -39,7 +40,7 @@ export default function WashFoldCityContent({ city }: Props) {
         <div className="max-w-3xl mx-auto px-6">
           <Breadcrumbs
             items={[
-              { label: "Wash & Fold", href: "/wash-and-fold/pricing" },
+              { label: t("breadcrumb_wash_and_fold"), href: "/wash-and-fold/pricing" },
               { label: city.name },
             ]}
           />
@@ -47,7 +48,7 @@ export default function WashFoldCityContent({ city }: Props) {
             {city.name}, CA
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
-            Wash &amp; Fold Near {city.name}, CA
+            {ip("seo_wf_h1")}
           </h1>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
             {ip("seo_wf_intro")}
@@ -100,10 +101,10 @@ export default function WashFoldCityContent({ city }: Props) {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
             {[
-              { label: "Next Day (Weekday)", price: "$1.50/lb" },
-              { label: "Next Day (Weekend)", price: "$1.75/lb" },
-              { label: "Same Day (Weekday)", price: "$1.75/lb" },
-              { label: "Same Day (Weekend)", price: "$2.00/lb" },
+              { label: t("seo_wf_price_next_weekday"), price: "$1.50/lb" },
+              { label: t("seo_wf_price_next_weekend"), price: "$1.75/lb" },
+              { label: t("seo_wf_price_same_weekday"), price: "$1.75/lb" },
+              { label: t("seo_wf_price_same_weekend"), price: "$2.00/lb" },
             ].map((item) => (
               <div
                 key={item.label}
@@ -120,7 +121,7 @@ export default function WashFoldCityContent({ city }: Props) {
           </div>
 
           <p className="font-sans text-sm text-brand-dark/50 mb-4">
-            $25 minimum order.
+            {t("seo_wf_minimum_order")}
           </p>
 
           <Link
@@ -143,6 +144,12 @@ export default function WashFoldCityContent({ city }: Props) {
       </section>
 
       <CityLocalContext citySlug={city.slug} cityName={city.name} variant="service" />
+
+      <CitySiblingServices
+        citySlug={city.slug}
+        cityName={city.name}
+        currentService="wash-and-fold"
+      />
 
       <SeoFaq
         items={faqItems}

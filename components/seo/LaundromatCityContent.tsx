@@ -7,6 +7,7 @@ import SeoFaq from "@/components/seo/SeoFaq";
 import SeoCta from "@/components/seo/SeoCta";
 import SeoWhyCleanMax from "@/components/seo/SeoWhyCleanMax";
 import CityLocalContext from "@/components/seo/CityLocalContext";
+import CitySiblingServices from "@/components/seo/CitySiblingServices";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { City } from "@/data/cities";
 
@@ -21,9 +22,9 @@ export default function LaundromatCityContent({ city }: Props) {
   const ip = (key: Parameters<typeof t>[0]) => interpolate(t(key), vars);
 
   const details = [
-    { label: "Hours", value: t("seo_laundromat_hours") },
-    { label: "Equipment", value: t("seo_laundromat_machines") },
-    { label: "Payment", value: t("seo_laundromat_payment") },
+    { label: t("seo_laundromat_detail_hours"), value: t("seo_laundromat_hours") },
+    { label: t("seo_laundromat_detail_equipment"), value: t("seo_laundromat_machines") },
+    { label: t("seo_laundromat_detail_payment"), value: t("seo_laundromat_payment") },
   ];
 
   const faqItems = [
@@ -41,7 +42,7 @@ export default function LaundromatCityContent({ city }: Props) {
         <div className="max-w-3xl mx-auto px-6">
           <Breadcrumbs
             items={[
-              { label: "Laundromat", href: "/locations" },
+              { label: t("breadcrumb_laundromat"), href: "/locations" },
               { label: city.name },
             ]}
           />
@@ -49,9 +50,7 @@ export default function LaundromatCityContent({ city }: Props) {
             {city.name}, CA
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
-            {isPomona
-              ? `Self-Service Laundromat in Pomona, CA`
-              : `Self-Service Laundromat Serving ${city.name}, CA`}
+            {isPomona ? t("seo_laundromat_h1_pomona") : ip("seo_laundromat_h1_other")}
           </h1>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
             {ip("seo_laundromat_intro")}
@@ -127,7 +126,7 @@ export default function LaundromatCityContent({ city }: Props) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="border border-brand-dark/10 p-6">
                   <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-2">
-                    Path A
+                    {t("seo_laundromat_path_a_label")}
                   </p>
                   <h3 className="font-display font-black text-2xl uppercase text-brand-dark leading-tight mb-3">
                     {t("seo_laundromat_path_a_heading")}
@@ -138,7 +137,7 @@ export default function LaundromatCityContent({ city }: Props) {
                 </div>
                 <div className="border border-brand-dark/10 p-6">
                   <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-orange mb-2">
-                    Path B
+                    {t("seo_laundromat_path_b_label")}
                   </p>
                   <h3 className="font-display font-black text-2xl uppercase text-brand-dark leading-tight mb-3">
                     {t("seo_laundromat_path_b_heading")}
@@ -154,6 +153,12 @@ export default function LaundromatCityContent({ city }: Props) {
       )}
 
       <CityLocalContext citySlug={city.slug} cityName={city.name} variant="service" />
+
+      <CitySiblingServices
+        citySlug={city.slug}
+        cityName={city.name}
+        currentService="laundromat"
+      />
 
       <SeoWhyCleanMax />
 

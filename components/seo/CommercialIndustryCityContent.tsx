@@ -46,7 +46,7 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
         <div className="max-w-3xl mx-auto px-6">
           <Breadcrumbs
             items={[
-              { label: "Commercial Laundry", href: "/commercial-laundry" },
+              { label: t("breadcrumb_commercial_laundry"), href: "/commercial-laundry" },
               { label: industryName, href: `/commercial-laundry/${industry.slug}/${city.slug}` },
               { label: city.name },
             ]}
@@ -55,7 +55,7 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
             {industryName} · {city.name}, CA
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
-            Laundry Service for {industryName} in {city.name}, CA
+            {ip("seo_industry_h1")}
           </h1>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
             {ip("seo_industry_intro")}

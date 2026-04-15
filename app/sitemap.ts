@@ -51,6 +51,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/commercial-laundry", changeFrequency: "monthly", priority: 0.8 },
     { path: "/commercial-quote", changeFrequency: "monthly", priority: 0.8 },
     { path: "/wash-and-fold/pricing", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/pickup-delivery", changeFrequency: "monthly", priority: 0.85 },
+    { path: "/comforters-large-loads", changeFrequency: "monthly", priority: 0.75 },
     { path: "/testimonials", changeFrequency: "weekly", priority: 0.7 },
     { path: "/blog", changeFrequency: "weekly", priority: 0.6 },
     { path: "/about", changeFrequency: "monthly", priority: 0.5 },

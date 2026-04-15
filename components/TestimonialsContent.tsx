@@ -130,7 +130,7 @@ export default function TestimonialsContent() {
       <section className="pt-32 pb-16 bg-white">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
-            CleanMax Laundry · Pomona, CA
+            {t("eyebrow_cleanmax_pomona")}
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
             {t("testimonials_heading")}
@@ -192,7 +192,7 @@ export default function TestimonialsContent() {
             href="/"
             className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
           >
-            Visit CleanMax Laundry
+            {t("cta_visit_cleanmax")}
           </Link>
         </div>
       </section>

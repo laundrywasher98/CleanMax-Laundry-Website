@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     siteName: "CleanMax Laundry",
     images: [
       {
-        url: "/images/IMG_8888.jpg",
+        url: "/images/og-card-cleanmax.jpg",
         width: 1200,
         height: 630,
-        alt: "CleanMax Laundry interior in Pomona, CA",
+        alt: "CleanMax Laundry — self-service laundromat, wash & fold, and commercial laundry pickup in Pomona, CA",
       },
     ],
     locale: "en_US",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
     description:
       "Self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern Wascomat machines.",
-    images: ["https://cleanmaxlaundry.com/images/IMG_8888.jpg"],
+    images: ["https://cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
   },
   alternates: {
     canonical: "https://cleanmaxlaundry.com",

@@ -130,7 +130,7 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
     url: BASE_URL,
     telephone: "(909) 248-7305",
     email: "laundry@cleanmaxlaundry.com",
-    image: `${BASE_URL}/images/IMG_8888.jpg`,
+    image: `${BASE_URL}/images/cleanmax-laundry-pomona-interior.webp`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "1009 E Holt Ave",
@@ -180,6 +180,76 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
       "https://www.tiktok.com/@cleanmax.laundry3",
       "https://www.yelp.com/biz/cleanmax-laundry-pomona-2",
     ],
+  };
+}
+
+// Site-wide rating — keep in sync with /testimonials page and Google Business Profile.
+// Update ratingValue / reviewCount as new Google reviews accumulate.
+export const SITE_AGGREGATE_RATING = {
+  ratingValue: 4.9,
+  reviewCount: 9,
+  bestRating: 5,
+  worstRating: 1,
+};
+
+export function buildAggregateRatingSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": `${BASE_URL}/#business`,
+    name: "CleanMax Laundry",
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: SITE_AGGREGATE_RATING.ratingValue.toString(),
+      reviewCount: SITE_AGGREGATE_RATING.reviewCount.toString(),
+      bestRating: SITE_AGGREGATE_RATING.bestRating.toString(),
+      worstRating: SITE_AGGREGATE_RATING.worstRating.toString(),
+    },
+  };
+}
+
+export function buildArticleSchema({
+  title,
+  description,
+  slug,
+  publishDate,
+  lang = "en",
+  image,
+}: {
+  title: string;
+  description: string;
+  slug: string;
+  publishDate: string;
+  lang?: Language;
+  image?: string;
+}) {
+  const urlPath = lang === "es" ? `/es/blog/${slug}` : `/blog/${slug}`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}${urlPath}`,
+    },
+    headline: title,
+    description,
+    datePublished: publishDate,
+    dateModified: publishDate,
+    author: {
+      "@type": "Organization",
+      name: "CleanMax Laundry",
+      url: BASE_URL,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "CleanMax Laundry",
+      logo: {
+        "@type": "ImageObject",
+        url: `${BASE_URL}/images/logo.png`,
+      },
+    },
+    image: `${BASE_URL}${image ?? "/images/og-card-cleanmax.jpg"}`,
+    inLanguage: lang === "es" ? "es-US" : "en-US",
   };
 }
 

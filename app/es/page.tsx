@@ -8,12 +8,13 @@ import ReviewsPreview from "@/components/ReviewsPreview";
 import FAQ from "@/components/FAQ";
 import NearbyLocations from "@/components/NearbyLocations";
 import JsonLd from "@/components/JsonLd";
-import { buildFaqSchema } from "@/lib/schema";
+import { buildFaqSchema, buildAggregateRatingSchema } from "@/lib/schema";
 
 export default function HomeEs() {
   return (
     <main>
       <JsonLd data={buildFaqSchema("es")} />
+      <JsonLd data={buildAggregateRatingSchema()} />
       <Hero />
       <Services />
       <WhyCleanMax />

@@ -7,6 +7,7 @@ import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
 import SeoFaq from "@/components/seo/SeoFaq";
 import SeoCta from "@/components/seo/SeoCta";
 import CityLocalContext from "@/components/seo/CityLocalContext";
+import CitySiblingServices from "@/components/seo/CitySiblingServices";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { industries } from "@/data/industries";
 import type { City } from "@/data/cities";
@@ -41,7 +42,7 @@ export default function CommercialCityContent({ city }: Props) {
         <div className="max-w-3xl mx-auto px-6">
           <Breadcrumbs
             items={[
-              { label: "Commercial Laundry", href: "/commercial-laundry" },
+              { label: t("breadcrumb_commercial_laundry"), href: "/commercial-laundry" },
               { label: city.name },
             ]}
           />
@@ -49,7 +50,7 @@ export default function CommercialCityContent({ city }: Props) {
             {city.name}, CA
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
-            Commercial Laundry in {city.name}, CA
+            {ip("seo_commercial_h1")}
           </h1>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
             {ip("seo_commercial_intro")}
@@ -141,6 +142,12 @@ export default function CommercialCityContent({ city }: Props) {
       </section>
 
       <CityLocalContext citySlug={city.slug} cityName={city.name} variant="service" />
+
+      <CitySiblingServices
+        citySlug={city.slug}
+        cityName={city.name}
+        currentService="commercial-laundry"
+      />
 
       <SeoFaq
         items={faqItems}

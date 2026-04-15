@@ -46,12 +46,15 @@ export default function Navbar() {
   const borderColor = isTransparent ? "border-white/10" : "border-brand-dark/10";
   const bgBase = isTransparent ? "bg-transparent" : "bg-white shadow-sm";
 
+  const linkPrefix = language === "es" ? "/es" : "";
   const serviceLinks = [
-    { label: t("nav_self_service_laundry"), href: "/laundromat/pomona" },
-    { label: t("nav_wash_and_fold"), href: "/wash-and-fold/pomona" },
-    { label: t("nav_wash_fold_pricing"), href: "/wash-and-fold/pricing" },
-    { label: t("nav_commercial_laundry"), href: "/commercial-laundry" },
-    { label: t("nav_get_quote"), href: "/commercial-quote" },
+    { label: t("nav_self_service_laundry"), href: `${linkPrefix}/laundromat/pomona` },
+    { label: t("nav_wash_and_fold"), href: `${linkPrefix}/wash-and-fold/pomona` },
+    { label: t("nav_wash_fold_pricing"), href: `${linkPrefix}/wash-and-fold/pricing` },
+    { label: t("nav_pickup_delivery"), href: `${linkPrefix}/pickup-delivery` },
+    { label: t("nav_comforters"), href: `${linkPrefix}/comforters-large-loads` },
+    { label: t("nav_commercial_laundry"), href: `${linkPrefix}/commercial-laundry` },
+    { label: t("nav_get_quote"), href: `${linkPrefix}/commercial-quote` },
   ];
 
   // All cities sorted alphabetically for the dropdown
@@ -157,7 +160,7 @@ export default function Navbar() {
                   {allCities.map((city) => (
                     <Link
                       key={city.slug}
-                      href={`/locations/${city.slug}`}
+                      href={`${linkPrefix}/locations/${city.slug}`}
                       onClick={() => setLocationsOpen(false)}
                       className="block px-4 py-2.5 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5"
                     >
@@ -166,7 +169,7 @@ export default function Navbar() {
                   ))}
                 </div>
                 <Link
-                  href="/locations"
+                  href={`${linkPrefix}/locations`}
                   onClick={() => setLocationsOpen(false)}
                   className="block px-5 py-3 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:bg-brand-surface transition-colors border-t border-brand-dark/10"
                 >
@@ -177,21 +180,21 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="/testimonials"
+            href={`${linkPrefix}/testimonials`}
             className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
           >
             {t("nav_reviews")}
           </Link>
 
           <Link
-            href="/blog"
+            href={`${linkPrefix}/blog`}
             className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
           >
             {t("nav_blog")}
           </Link>
 
           <Link
-            href="/about"
+            href={`${linkPrefix}/about`}
             className={`font-sans font-semibold text-sm uppercase tracking-widest transition-opacity hover:opacity-60 ${textColor}`}
           >
             {t("nav_about")}
@@ -288,7 +291,7 @@ export default function Navbar() {
             {allCities.map((city) => (
               <Link
                 key={city.slug}
-                href={`/locations/${city.slug}`}
+                href={`${linkPrefix}/locations/${city.slug}`}
                 onClick={() => setMenuOpen(false)}
                 className="font-sans text-sm text-brand-dark hover:text-brand-blue transition-colors py-2 border-b border-brand-dark/5"
               >
@@ -296,7 +299,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="/locations"
+              href={`${linkPrefix}/locations`}
               onClick={() => setMenuOpen(false)}
               className="font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity py-3 border-b border-brand-dark/5"
             >
@@ -304,7 +307,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/testimonials"
+              href={`${linkPrefix}/testimonials`}
               onClick={() => setMenuOpen(false)}
               className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5 mt-2"
             >
@@ -312,7 +315,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/blog"
+              href={`${linkPrefix}/blog`}
               onClick={() => setMenuOpen(false)}
               className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5"
             >
@@ -320,7 +323,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/about"
+              href={`${linkPrefix}/about`}
               onClick={() => setMenuOpen(false)}
               className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors py-3 border-b border-brand-dark/5"
             >
@@ -328,7 +331,7 @@ export default function Navbar() {
             </Link>
 
             <Link
-              href="/commercial-quote"
+              href={`${linkPrefix}/commercial-quote`}
               onClick={() => setMenuOpen(false)}
               className="font-sans font-semibold text-sm text-brand-blue hover:opacity-70 transition-opacity py-3 border-b border-brand-dark/5"
             >

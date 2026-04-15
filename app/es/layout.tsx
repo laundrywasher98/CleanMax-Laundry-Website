@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     siteName: "CleanMax Laundry",
     images: [
       {
-        url: "/images/IMG_8888.jpg",
+        url: "/images/og-card-cleanmax.jpg",
         width: 1200,
         height: 630,
-        alt: "CleanMax Laundry en Pomona, CA",
+        alt: "CleanMax Laundry — lavandería de autoservicio, lavado y doblado, y recolección comercial en Pomona, CA",
       },
     ],
     locale: "es_US",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: "CleanMax Laundry | Lavandería en Pomona, CA",
     description:
       "Lavandería de autoservicio, lavado y doblado, y recolección de lavandería comercial en Pomona, CA.",
-    images: ["https://cleanmaxlaundry.com/images/IMG_8888.jpg"],
+    images: ["https://cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
   },
   alternates: {
     canonical: "https://cleanmaxlaundry.com/es",

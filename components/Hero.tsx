@@ -12,8 +12,8 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background photo */}
       <Image
-        src="/images/IMG_8888.jpg"
-        alt="CleanMax Laundry interior — rows of modern machines"
+        src="/images/cleanmax-laundry-pomona-interior.webp"
+        alt="CleanMax Laundry interior in Pomona, CA — rows of modern Wascomat washers and dryers"
         fill
         priority
         className="object-cover object-center"

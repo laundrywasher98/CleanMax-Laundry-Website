@@ -2,20 +2,20 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "/images/IMG_8788.jpg",
-    alt: "Row of front-load washers at CleanMax Laundry",
+    src: "/images/cleanmax-laundromat-washers.webp",
+    alt: "Row of Wascomat front-load washers at CleanMax Laundry in Pomona, CA",
   },
   {
-    src: "/images/IMG_8791.jpg",
-    alt: "Wascomat Clarus Vibe machine up close",
+    src: "/images/cleanmax-laundromat-dryers.webp",
+    alt: "Large-capacity Wascomat Clarus Vibe washers for comforters and bedding",
   },
   {
-    src: "/images/IMG_8794.jpg",
-    alt: "ClariVibe touchscreen showing CleanMax Laundry logo",
+    src: "/images/cleanmax-laundromat-folding-area.webp",
+    alt: "Clean folding area and ClariVibe touchscreen at CleanMax Laundry Pomona",
   },
   {
-    src: "/images/IMG_8883.jpg",
-    alt: "Two large-capacity Wascomat front-load washers",
+    src: "/images/cleanmax-laundromat-interior.webp",
+    alt: "CleanMax Laundry interior showing large-capacity washers in Pomona",
   },
 ];
 

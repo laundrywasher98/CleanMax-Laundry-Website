@@ -14,7 +14,7 @@ export default function BlogIndexContent() {
       <section className="pt-32 pb-14 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
-            CleanMax Laundry · Pomona, CA
+            {t("eyebrow_cleanmax_pomona")}
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-4">
             {t("blog_heading")}
