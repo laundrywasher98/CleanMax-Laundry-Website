@@ -54,8 +54,8 @@ export default function Navbar() {
     { label: t("nav_get_quote"), href: "/commercial-quote" },
   ];
 
-  // Top 5 cities for the dropdown, rest accessible via footer
-  const topCities = cities.slice(0, 10);
+  // All cities sorted alphabetically for the dropdown
+  const allCities = [...cities].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <header
@@ -152,21 +152,23 @@ export default function Navbar() {
             </button>
 
             {locationsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg border border-brand-dark/10 z-50 max-h-80 overflow-y-auto">
-                {topCities.map((city) => (
-                  <Link
-                    key={city.slug}
-                    href={`/locations/${city.slug}`}
-                    onClick={() => setLocationsOpen(false)}
-                    className="block px-5 py-3 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5 last:border-b-0"
-                  >
-                    {city.name}
-                  </Link>
-                ))}
+              <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg border border-brand-dark/10 z-50">
+                <div className="grid grid-cols-2 max-h-80 overflow-y-auto">
+                  {allCities.map((city) => (
+                    <Link
+                      key={city.slug}
+                      href={`/locations/${city.slug}`}
+                      onClick={() => setLocationsOpen(false)}
+                      className="block px-4 py-2.5 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5"
+                    >
+                      {city.name}
+                    </Link>
+                  ))}
+                </div>
                 <Link
-                  href="/locations/pomona"
+                  href="/locations"
                   onClick={() => setLocationsOpen(false)}
-                  className="block px-5 py-3 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:bg-brand-surface transition-colors"
+                  className="block px-5 py-3 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:bg-brand-surface transition-colors border-t border-brand-dark/10"
                 >
                   {t("nav_view_all_cities")}
                 </Link>
@@ -283,7 +285,7 @@ export default function Navbar() {
             <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-dark/40 mt-6 mb-2">
               {t("nav_locations")}
             </p>
-            {topCities.map((city) => (
+            {allCities.map((city) => (
               <Link
                 key={city.slug}
                 href={`/locations/${city.slug}`}
