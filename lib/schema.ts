@@ -102,11 +102,7 @@ export function buildServiceCatalogSchema(lang: Language = "en") {
         "@type": "Service",
         name: service.name[lang],
         description: service.description[lang],
-        provider: {
-          "@type": "LocalBusiness",
-          name: "CleanMax Laundry",
-          "@id": `${BASE_URL}/#business`,
-        },
+        provider: { "@id": `${BASE_URL}/#business` },
         areaServed: cities.map((c) => ({
           "@type": "City",
           name: c.name,
@@ -241,11 +237,7 @@ export function buildCommercialServiceSchema({
     serviceType: "Commercial Laundry",
     name,
     description,
-    provider: {
-      "@type": "LocalBusiness",
-      "@id": `${BASE_URL}/#business`,
-      name: "CleanMax Laundry",
-    },
+    provider: { "@id": `${BASE_URL}/#business` },
     areaServed: { "@type": "City", name: city.name },
     url: `${BASE_URL}${urlPath}`,
   };
@@ -262,11 +254,7 @@ export function buildPickupServiceSchema(lang: Language = "en") {
       lang === "es"
         ? "Recolección y entrega de lavandería residencial y comercial programada en el Valle de Pomona y el Inland Empire."
         : "Scheduled residential and commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire.",
-    provider: {
-      "@type": "LocalBusiness",
-      "@id": `${BASE_URL}/#business`,
-      name: "CleanMax Laundry",
-    },
+    provider: { "@id": `${BASE_URL}/#business` },
     areaServed: pickupServiceArea.map((name) => ({ "@type": "City", name })),
     offers: {
       "@type": "Offer",
