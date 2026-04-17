@@ -199,6 +199,58 @@ export const SITE_AGGREGATE_RATING = {
   worstRating: 1,
 };
 
+type CommercialServiceArgs = {
+  city: { name: string; slug: string };
+  industry?: { name: string; nameEs: string; items: string; itemsEs: string; slug: string };
+  lang?: Language;
+};
+
+export function buildCommercialServiceSchema({
+  city,
+  industry,
+  lang = "en",
+}: CommercialServiceArgs) {
+  const isEs = lang === "es";
+  const slugPath = industry
+    ? `/commercial-laundry/${industry.slug}/${city.slug}`
+    : `/commercial-laundry/${city.slug}`;
+  const urlPath = isEs ? `/es${slugPath}` : slugPath;
+
+  const industryName = industry ? (isEs ? industry.nameEs : industry.name) : null;
+  const items = industry ? (isEs ? industry.itemsEs : industry.items) : null;
+
+  const name = industry
+    ? isEs
+      ? `Lavandería Comercial para ${industryName} en ${city.name}, CA`
+      : `${industryName} Commercial Laundry in ${city.name}, CA`
+    : isEs
+      ? `Lavandería Comercial en ${city.name}, CA`
+      : `Commercial Laundry in ${city.name}, CA`;
+
+  const description = industry
+    ? isEs
+      ? `Recolección y entrega de lavandería comercial para ${industryName} en ${city.name}, CA. CleanMax lava ${items} con turnaround programado y precios por libra.`
+      : `Scheduled commercial laundry pickup and delivery for ${industryName} in ${city.name}, CA. CleanMax handles ${items} with reliable turnaround and per-pound pricing.`
+    : isEs
+      ? `Recolección y entrega de lavandería comercial en ${city.name}, CA. CleanMax atiende restaurantes, gimnasios, hoteles, Airbnb, salones y oficinas médicas.`
+      : `Commercial laundry pickup and delivery in ${city.name}, CA. CleanMax serves restaurants, gyms, hotels, Airbnb, salons, and medical offices.`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Commercial Laundry",
+    name,
+    description,
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${BASE_URL}/#business`,
+      name: "CleanMax Laundry",
+    },
+    areaServed: { "@type": "City", name: city.name },
+    url: `${BASE_URL}${urlPath}`,
+  };
+}
+
 export function buildPickupServiceSchema(lang: Language = "en") {
   const urlPath = lang === "es" ? "/es/pickup-delivery" : "/pickup-delivery";
   return {

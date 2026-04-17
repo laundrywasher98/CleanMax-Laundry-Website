@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CommercialCityContent from "@/components/seo/CommercialCityContent";
 import CommercialIndustryCityContent from "@/components/seo/CommercialIndustryCityContent";
+import JsonLd from "@/components/JsonLd";
 import { cities } from "@/data/cities";
 import { industries } from "@/data/industries";
 import { buildMetadata } from "@/lib/seo";
+import { buildCommercialServiceSchema } from "@/lib/schema";
 
 const industryShortTitlesEs: Record<string, string> = {
   gyms: "Gimnasio",
@@ -96,6 +98,7 @@ export default async function PageEs({
   if (resolved.kind === "city") {
     return (
       <main>
+        <JsonLd data={buildCommercialServiceSchema({ city: resolved.city, lang: "es" })} />
         <CommercialCityContent city={resolved.city} />
       </main>
     );
@@ -103,6 +106,13 @@ export default async function PageEs({
 
   return (
     <main>
+      <JsonLd
+        data={buildCommercialServiceSchema({
+          city: resolved.city,
+          industry: resolved.industry,
+          lang: "es",
+        })}
+      />
       <CommercialIndustryCityContent city={resolved.city} industry={resolved.industry} />
     </main>
   );
