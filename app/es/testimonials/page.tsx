@@ -2,12 +2,12 @@ import TestimonialsContent from "@/components/TestimonialsContent";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
-  title: "Reseñas de Clientes | CleanMax Laundry Pomona, CA",
+  title: "Reseñas — La Lavandería Mejor Calificada de Pomona | CleanMax Laundry",
   description:
-    "Mira lo que dicen los clientes de Pomona sobre CleanMax Laundry. Calificación de 4.8 estrellas en Google. Autoservicio, lavado y doblado, y recolección comercial en 1009 E Holt Ave.",
+    "Lee lo que dicen los clientes de Pomona sobre nuestra lavandería. Calificación de 4.8 estrellas en Google. Lavandería de autoservicio, lavado y doblado, y lavandería comercial en 1009 E Holt Ave.",
   path: "/testimonials",
   keywords:
-    "reseñas CleanMax Laundry, reseñas lavandería Pomona, reseñas clientes lavandería Pomona CA",
+    "reseñas CleanMax Laundry, reseñas lavandería Pomona, mejor lavandería Pomona CA, lavandería mejor calificada Pomona",
   lang: "es",
 });
 

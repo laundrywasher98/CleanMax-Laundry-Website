@@ -25,7 +25,7 @@ export default function LocationsIndexContent() {
           </h1>
           <p className="font-sans text-white/70 text-lg leading-relaxed max-w-2xl mx-auto">
             {isEs
-              ? "CleanMax Laundry está ubicada en Pomona, CA, y ofrece lavandería de autoservicio, lavado y doblado, y servicio comercial para toda la comunidad del Valle de San Gabriel y el Inland Empire."
+              ? "CleanMax Laundry es la lavandería de Pomona, CA — ofrecemos lavandería de autoservicio, lavado y doblado, y lavandería comercial con recogida y entrega para toda la comunidad del Valle de San Gabriel y el Inland Empire. Encuentra tu lavandería más cercana abajo."
               : "CleanMax Laundry is located in Pomona, CA, offering self-service laundry, wash & fold, and commercial pickup & delivery to communities across the San Gabriel Valley and Inland Empire. Find your nearest service area below."}
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function LocationsIndexContent() {
       <section className="py-16 bg-brand-surface">
         <div className="max-w-5xl mx-auto px-6">
           <h2 className="font-display font-black text-2xl md:text-3xl uppercase text-brand-dark leading-none mb-10 text-center">
-            {isEs ? "Todas las Ciudades que Servimos" : "All Cities We Serve"}
+            {isEs ? "Lavandería en Todas las Ciudades que Servimos" : "All Cities We Serve"}
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

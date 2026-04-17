@@ -6,7 +6,7 @@ import { interpolate } from "@/lib/interpolate";
 import SeoCta from "@/components/seo/SeoCta";
 import CityLocalContext from "@/components/seo/CityLocalContext";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { cities, type City } from "@/data/cities";
+import type { City } from "@/data/cities";
 import { industries } from "@/data/industries";
 import { localizeHref } from "@/lib/href";
 
@@ -49,16 +49,18 @@ export default function LocationHubContent({ city, nearbyCities }: Props) {
         <div className="max-w-4xl mx-auto px-6">
           <Breadcrumbs
             items={[
-              { label: language === "es" ? "Ubicaciones" : "Locations", href: "/locations" },
+              { label: language === "es" ? "Áreas de Servicio" : "Locations", href: "/locations" },
               { label: city.name },
             ]}
           />
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
-            {city.county} County
+            {city.county} {language === "es" ? "Condado" : "County"}
           </p>
           <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
             {isPomona
-              ? `Laundry Services in Pomona, CA`
+              ? language === "es"
+                ? "Servicios de Lavandería en Pomona, CA"
+                : "Laundry Services in Pomona, CA"
               : ip("seo_hub_serving_h1")}
           </h1>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">

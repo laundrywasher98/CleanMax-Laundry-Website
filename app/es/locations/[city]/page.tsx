@@ -19,11 +19,11 @@ export async function generateMetadata({
 
   const isPomona = slug === "pomona";
   const title = isPomona
-    ? `CleanMax Laundry — Pomona, CA | Servicios de Lavandería`
-    : `CleanMax Laundry — Atendiendo ${city.name}, CA`;
+    ? `Servicios de Lavandería en Pomona, CA | CleanMax Laundry`
+    : `Lavandería Cerca de ${city.name}, CA | CleanMax Laundry`;
   const description = isPomona
-    ? `CleanMax Laundry en Pomona, CA — lavandería de autoservicio, lavado y doblado, y recolección comercial. Abierto todos los días 6AM–10PM.`
-    : `CleanMax Laundry atiende ${city.name}, CA — lavandería de autoservicio, lavado y doblado, y recolección comercial. Ubicado en Pomona, CA.`;
+    ? `CleanMax Laundry en Pomona, CA — lavandería de autoservicio, lavado y doblado, y lavandería comercial. Abierto todos los días 6AM–10PM.`
+    : `Lavandería confiable cerca de ${city.name}, CA. CleanMax Laundry ofrece autoservicio, lavado y doblado, y lavandería comercial con recogida y entrega. Ubicada en Pomona, CA.`;
 
   return buildMetadata({
     title,
