@@ -6,6 +6,7 @@ import { useTranslation } from "@/contexts/LanguageContext";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema, type BreadcrumbItem } from "@/lib/schema";
 import { BASE_URL } from "@/lib/seo";
+import { localizeHref } from "@/lib/href";
 
 interface Props {
   items: Array<{ label: string; href?: string }>;
@@ -16,13 +17,11 @@ export default function Breadcrumbs({ items }: Props) {
   const pathname = usePathname() || "/";
   const homeLabel = language === "es" ? "Inicio" : "Home";
   const homeHref = language === "es" ? "/es" : "/";
-  const localizeHref = (href: string) =>
-    language === "es" && !href.startsWith("/es") ? `/es${href}` : href;
   const allItems = [
     { label: homeLabel, href: homeHref },
     ...items.map((item) => ({
       label: item.label,
-      href: item.href ? localizeHref(item.href) : undefined,
+      href: item.href ? localizeHref(item.href, language) : undefined,
     })),
   ];
 

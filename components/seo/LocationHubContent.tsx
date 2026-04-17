@@ -8,6 +8,7 @@ import CityLocalContext from "@/components/seo/CityLocalContext";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { cities, type City } from "@/data/cities";
 import { industries } from "@/data/industries";
+import { localizeHref } from "@/lib/href";
 
 interface Props {
   city: City;
@@ -112,7 +113,7 @@ export default function LocationHubContent({ city, nearbyCities }: Props) {
             {industries.map((ind) => (
               <Link
                 key={ind.slug}
-                href={`/commercial-laundry/${ind.slug}/${city.slug}`}
+                href={localizeHref(`/commercial-laundry/${ind.slug}/${city.slug}`, language)}
                 className="border border-brand-dark/10 p-3 text-center hover:border-brand-blue hover:text-brand-blue transition-colors"
               >
                 <span className="font-sans font-semibold text-sm text-brand-dark hover:text-brand-blue transition-colors">
@@ -135,7 +136,7 @@ export default function LocationHubContent({ city, nearbyCities }: Props) {
               {nearbyCities.map((nearby) => (
                 <Link
                   key={nearby.slug}
-                  href={`/locations/${nearby.slug}`}
+                  href={localizeHref(`/locations/${nearby.slug}`, language)}
                   className="font-sans text-sm text-brand-blue hover:opacity-70 transition-opacity underline underline-offset-2"
                 >
                   {nearby.name}

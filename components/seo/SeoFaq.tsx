@@ -72,11 +72,13 @@ export default function SeoFaq({ items, eyebrow = "FAQ", heading }: SeoFaqProps)
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              {open === i && (
-                <p className="font-sans text-sm text-brand-dark/70 leading-relaxed pb-5">
-                  {item.a}
-                </p>
-              )}
+              <p
+                className={`font-sans text-sm text-brand-dark/70 leading-relaxed pb-5 ${
+                  open === i ? "" : "hidden"
+                }`}
+              >
+                {item.a}
+              </p>
             </div>
           ))}
         </div>

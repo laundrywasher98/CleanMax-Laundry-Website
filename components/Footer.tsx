@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { cities } from "@/data/cities";
+import { localizeHref } from "@/lib/href";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
@@ -47,7 +48,8 @@ const socialLinks = [
 ];
 
 export default function Footer() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const lh = (path: string) => localizeHref(path, language);
 
   return (
     <footer id="contact" className="bg-brand-dark text-white">
@@ -139,7 +141,7 @@ export default function Footer() {
               </li>
               <li className="pt-1">
                 <Link
-                  href="/testimonials"
+                  href={lh("/testimonials")}
                   className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
                 >
                   {t("footer_reviews")}
@@ -147,7 +149,7 @@ export default function Footer() {
               </li>
               <li className="pt-1">
                 <Link
-                  href="/blog"
+                  href={lh("/blog")}
                   className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
                 >
                   {t("footer_blog")}
@@ -155,7 +157,7 @@ export default function Footer() {
               </li>
               <li className="pt-1">
                 <Link
-                  href="/about"
+                  href={lh("/about")}
                   className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
                 >
                   {t("footer_about")}
@@ -163,7 +165,7 @@ export default function Footer() {
               </li>
               <li className="pt-1">
                 <Link
-                  href="/commercial-quote"
+                  href={lh("/commercial-quote")}
                   className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
                 >
                   {t("footer_get_quote")}
@@ -203,7 +205,7 @@ export default function Footer() {
               {cities.map((city) => (
                 <li key={city.slug}>
                   <Link
-                    href={`/locations/${city.slug}`}
+                    href={lh(`/locations/${city.slug}`)}
                     className="font-sans text-sm text-white/50 hover:text-brand-blue transition-colors"
                   >
                     {city.name}
@@ -212,7 +214,7 @@ export default function Footer() {
               ))}
             </ul>
             <Link
-              href="/locations"
+              href={lh("/locations")}
               className="inline-block mt-5 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
             >
               {t("nav_view_all_cities")}

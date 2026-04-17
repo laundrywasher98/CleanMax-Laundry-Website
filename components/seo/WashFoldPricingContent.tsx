@@ -2,11 +2,20 @@
 
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
+import SeoFaq from "@/components/seo/SeoFaq";
+import { localizeHref } from "@/lib/href";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
 export default function WashFoldPricingContent() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const comfortersHref = localizeHref("/comforters-large-loads", language);
+  const faqItems = [
+    { q: t("pricing_faq_q1"), a: t("pricing_faq_a1") },
+    { q: t("pricing_faq_q2"), a: t("pricing_faq_a2") },
+    { q: t("pricing_faq_q3"), a: t("pricing_faq_a3") },
+    { q: t("pricing_faq_q4"), a: t("pricing_faq_a4") },
+  ];
 
   const pricing = [
     {
@@ -154,6 +163,21 @@ export default function WashFoldPricingContent() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <SeoFaq items={faqItems} heading={t("pricing_faq_heading")} />
+
+      {/* Related pages */}
+      <section className="py-8 bg-white border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <Link
+            href={comfortersHref}
+            className="font-sans text-sm text-brand-blue hover:underline"
+          >
+            {t("pricing_faq_q4_link_label")} →
+          </Link>
         </div>
       </section>
 

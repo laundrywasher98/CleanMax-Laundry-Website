@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
+import { localizeHref } from "@/lib/href";
 
 const previewReviews = [
   {
@@ -66,7 +67,7 @@ function GoogleIcon() {
 }
 
 export default function ReviewsPreview() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section className="py-20 bg-white border-t border-brand-dark/10">
@@ -109,7 +110,7 @@ export default function ReviewsPreview() {
 
         <div className="text-center">
           <Link
-            href="/testimonials"
+            href={localizeHref("/testimonials", language)}
             className="inline-flex items-center gap-2 font-sans font-semibold text-sm uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"
           >
             {t("reviews_preview_link")}

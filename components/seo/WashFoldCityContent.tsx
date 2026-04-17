@@ -9,13 +9,15 @@ import CityLocalContext from "@/components/seo/CityLocalContext";
 import CitySiblingServices from "@/components/seo/CitySiblingServices";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import type { City } from "@/data/cities";
+import { localizeHref } from "@/lib/href";
 
 interface Props {
   city: City;
 }
 
 export default function WashFoldCityContent({ city }: Props) {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const lh = (path: string) => localizeHref(path, language);
   const vars = { city: city.name, county: city.county, desc: city.description };
   const ip = (key: Parameters<typeof t>[0]) => interpolate(t(key), vars);
 
@@ -56,7 +58,7 @@ export default function WashFoldCityContent({ city }: Props) {
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
-              href="/wash-and-fold/pricing"
+              href={lh("/wash-and-fold/pricing")}
               className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
             >
               {t("seo_view_pricing")}

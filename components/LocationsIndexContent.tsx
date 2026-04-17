@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { cities } from "@/data/cities";
+import { localizeHref } from "@/lib/href";
 
 const sortedCities = [...cities].sort((a, b) => a.name.localeCompare(b.name));
 
 export default function LocationsIndexContent() {
   const { language } = useTranslation();
   const isEs = language === "es";
+  const lh = (path: string) => localizeHref(path, language);
 
   return (
     <main className="pt-24 pb-20 bg-white">
@@ -43,7 +45,7 @@ export default function LocationsIndexContent() {
                 className="bg-white border border-brand-dark/10 p-6 hover:border-brand-blue/40 hover:shadow-sm transition-all"
               >
                 <Link
-                  href={`/locations/${city.slug}`}
+                  href={lh(`/locations/${city.slug}`)}
                   className="block font-display font-black text-xl uppercase text-brand-dark hover:text-brand-blue transition-colors mb-1"
                 >
                   {city.name}
@@ -55,19 +57,19 @@ export default function LocationsIndexContent() {
                 {/* Sub-service links */}
                 <div className="flex flex-wrap gap-2">
                   <Link
-                    href={`/laundromat/${city.slug}`}
+                    href={lh(`/laundromat/${city.slug}`)}
                     className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
                   >
                     {isEs ? "Lavandería" : "Laundromat"}
                   </Link>
                   <Link
-                    href={`/wash-and-fold/${city.slug}`}
+                    href={lh(`/wash-and-fold/${city.slug}`)}
                     className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
                   >
                     {isEs ? "Lavado y Doblado" : "Wash & Fold"}
                   </Link>
                   <Link
-                    href={`/commercial-laundry/${city.slug}`}
+                    href={lh(`/commercial-laundry/${city.slug}`)}
                     className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
                   >
                     {isEs ? "Comercial" : "Commercial"}

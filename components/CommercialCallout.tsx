@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTranslation, type TranslationKey } from "@/contexts/LanguageContext";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
+import { localizeHref } from "@/lib/href";
 
 const industryKeys: TranslationKey[] = [
   "commercial_industry_0",
@@ -14,7 +15,7 @@ const industryKeys: TranslationKey[] = [
 ];
 
 export default function CommercialCallout() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section id="commercial" className="relative bg-brand-dark py-24 overflow-hidden">
@@ -62,7 +63,7 @@ export default function CommercialCallout() {
 
             <div className="mt-8">
               <Link
-                href="/commercial-laundry"
+                href={localizeHref("/commercial-laundry", language)}
                 className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue/70 hover:text-brand-blue transition-colors"
               >
                 {t("nav_commercial_laundry")} →

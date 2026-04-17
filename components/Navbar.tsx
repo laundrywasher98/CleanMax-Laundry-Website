@@ -69,7 +69,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link
-          href="/"
+          href={linkPrefix || "/"}
           className="flex items-center gap-2 shrink-0"
           aria-label="CleanMax Laundry home"
         >

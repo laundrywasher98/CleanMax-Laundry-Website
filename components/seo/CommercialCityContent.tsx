@@ -11,6 +11,7 @@ import CitySiblingServices from "@/components/seo/CitySiblingServices";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { industries } from "@/data/industries";
 import type { City } from "@/data/cities";
+import { localizeHref } from "@/lib/href";
 
 interface Props {
   city: City;
@@ -104,7 +105,7 @@ export default function CommercialCityContent({ city }: Props) {
             {industries.map((industry) => (
               <Link
                 key={industry.slug}
-                href={`/commercial-laundry/${industry.slug}/${city.slug}`}
+                href={localizeHref(`/commercial-laundry/${industry.slug}/${city.slug}`, language)}
                 className="group border border-brand-dark/10 p-5 hover:border-brand-blue transition-colors"
               >
                 <p className="font-sans font-semibold text-base text-brand-dark group-hover:text-brand-blue transition-colors">

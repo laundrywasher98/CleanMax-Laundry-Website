@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { blogPosts, type BlogPost } from "@/data/blogPosts";
+import { localizeHref } from "@/lib/href";
 
 interface Props {
   post: BlogPost;
@@ -47,7 +48,7 @@ export default function BlogPostRenderer({ post }: Props) {
   return (
     <article className="max-w-2xl mx-auto px-6">
       <Link
-        href="/blog"
+        href={localizeHref("/blog", language)}
         className="inline-flex items-center font-sans text-sm text-brand-blue hover:opacity-70 transition-opacity mb-8 mt-2 block"
       >
         {t("blog_back")}
@@ -162,28 +163,28 @@ export default function BlogPostRenderer({ post }: Props) {
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/wash-and-fold/pomona"
+            href={localizeHref("/wash-and-fold/pomona", language)}
             className="font-sans text-sm text-brand-blue hover:underline"
           >
             {isEs ? "Lavado y Doblado" : "Wash & Fold"}
           </Link>
           <span className="text-brand-dark/20">·</span>
           <Link
-            href="/laundromat/pomona"
+            href={localizeHref("/laundromat/pomona", language)}
             className="font-sans text-sm text-brand-blue hover:underline"
           >
             {isEs ? "Autoservicio" : "Self-Service Laundry"}
           </Link>
           <span className="text-brand-dark/20">·</span>
           <Link
-            href="/commercial-laundry"
+            href={localizeHref("/commercial-laundry", language)}
             className="font-sans text-sm text-brand-blue hover:underline"
           >
             {isEs ? "Lavandería Comercial" : "Commercial Laundry"}
           </Link>
           <span className="text-brand-dark/20">·</span>
           <Link
-            href="/wash-and-fold/pricing"
+            href={localizeHref("/wash-and-fold/pricing", language)}
             className="font-sans text-sm text-brand-blue hover:underline"
           >
             {isEs ? "Precios" : "Pricing"}

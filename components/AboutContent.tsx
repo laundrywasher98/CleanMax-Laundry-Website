@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import JsonLd from "@/components/JsonLd";
 import { buildPersonSchema } from "@/lib/schema";
+import { localizeHref } from "@/lib/href";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
@@ -125,19 +126,19 @@ export default function AboutContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <Link
-              href="/laundromat/pomona"
+              href={localizeHref("/laundromat/pomona", language)}
               className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
             >
               {t("nav_self_service_laundry")}
             </Link>
             <Link
-              href="/wash-and-fold/pomona"
+              href={localizeHref("/wash-and-fold/pomona", language)}
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
             >
               {t("nav_wash_and_fold")}
             </Link>
             <Link
-              href="/commercial-laundry"
+              href={localizeHref("/commercial-laundry", language)}
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
             >
               {t("nav_commercial_laundry")}

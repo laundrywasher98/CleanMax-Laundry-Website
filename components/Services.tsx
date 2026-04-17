@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslation, type TranslationKey } from "@/contexts/LanguageContext";
+import { localizeHref } from "@/lib/href";
 
 const serviceData: Array<{
   titleKey: TranslationKey;
@@ -41,7 +42,7 @@ const serviceData: Array<{
 ];
 
 export default function Services() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
 
   return (
     <section id="services" className="py-24 bg-white">
@@ -88,7 +89,7 @@ export default function Services() {
                   </span>
                   {service.pricingLinkKey && (
                     <Link
-                      href="/wash-and-fold/pricing"
+                      href={localizeHref("/wash-and-fold/pricing", language)}
                       className="font-sans font-semibold text-xs text-brand-dark/40 hover:text-brand-blue transition-colors whitespace-nowrap"
                     >
                       {t(service.pricingLinkKey)}

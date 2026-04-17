@@ -3,12 +3,14 @@
 import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { cities } from "@/data/cities";
+import { localizeHref } from "@/lib/href";
 
 // Top 5 cities shown on homepage
 const featuredCities = cities.slice(0, 5);
 
 export default function NearbyLocations() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+  const lh = (path: string) => localizeHref(path, language);
 
   return (
     <section className="py-16 bg-brand-surface border-t border-brand-dark/10">
@@ -23,7 +25,7 @@ export default function NearbyLocations() {
             </h2>
           </div>
           <Link
-            href="/locations/pomona"
+            href={lh("/locations/pomona")}
             className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity whitespace-nowrap"
           >
             {t("nav_view_all_cities")}
@@ -34,7 +36,7 @@ export default function NearbyLocations() {
           {featuredCities.map((city) => (
             <Link
               key={city.slug}
-              href={`/locations/${city.slug}`}
+              href={lh(`/locations/${city.slug}`)}
               className="group border border-brand-dark/10 bg-white p-5 hover:border-brand-blue transition-colors"
             >
               <p className="font-display font-black text-xl uppercase text-brand-dark group-hover:text-brand-blue transition-colors leading-tight">

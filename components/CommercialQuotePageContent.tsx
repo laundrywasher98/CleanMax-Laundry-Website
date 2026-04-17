@@ -2,9 +2,15 @@
 
 import { useTranslation } from "@/contexts/LanguageContext";
 import CommercialQuoteForm from "@/components/CommercialQuoteForm";
+import SeoFaq from "@/components/seo/SeoFaq";
 
 export default function CommercialQuotePageContent() {
   const { t } = useTranslation();
+  const faqItems = [
+    { q: t("quote_faq_q1"), a: t("quote_faq_a1") },
+    { q: t("quote_faq_q2"), a: t("quote_faq_a2") },
+    { q: t("quote_faq_q3"), a: t("quote_faq_a3") },
+  ];
 
   return (
     <>
@@ -27,6 +33,8 @@ export default function CommercialQuotePageContent() {
           <CommercialQuoteForm />
         </div>
       </section>
+
+      <SeoFaq items={faqItems} heading={t("quote_faq_heading")} />
     </>
   );
 }

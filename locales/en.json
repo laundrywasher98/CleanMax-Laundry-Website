@@ -391,5 +391,24 @@
   "comforters_faq_q4": "How long does it take if I drop it off?",
   "comforters_faq_a4": "Next business day on weekday drop-offs before 10 AM. Same-day available for a surcharge. Weekend drop-offs come back Monday or Tuesday. Bulky items with slow drying (down, thick quilts) may take an extra cycle.",
   "comforters_faq_q5": "Do you wash area rugs?",
-  "comforters_faq_a5": "We wash machine-washable rugs and bath mats that fit in our largest Wascomat. We do not wash hand-knotted, wool, or jute rugs — those need a rug cleaning specialist. If you are unsure, bring it in and we will check the label together."
+  "comforters_faq_a5": "We wash machine-washable rugs and bath mats that fit in our largest Wascomat. We do not wash hand-knotted, wool, or jute rugs — those need a rug cleaning specialist. If you are unsure, bring it in and we will check the label together.",
+
+  "pricing_faq_heading": "Wash & Fold Pricing FAQ",
+  "pricing_faq_q1": "What is included in the per-pound wash and fold price?",
+  "pricing_faq_a1": "Detergent, fabric softener, dryer sheets, washing, drying, folding, and packaging in a clean breathable bag are all included in the per-pound rate. No hidden fees. Specific detergent requests (fragrance-free, hypoallergenic, dye-free) are available on request at no extra charge.",
+  "pricing_faq_q2": "Is there a minimum order for wash and fold?",
+  "pricing_faq_a2": "Yes, the minimum wash and fold order is $25 (about 17 pounds at the weekday rate). Below that we still accept your laundry, but you will be charged the $25 minimum. Most Pomona households drop off 20 to 40 pounds per visit.",
+  "pricing_faq_q3": "How fast is same-day wash and fold in Pomona?",
+  "pricing_faq_a3": "Weekday drop-offs before 10 AM come back the same evening. Drop-offs after 10 AM or on weekends are ready the next business day at standard rates. Same-day pricing is a small surcharge over next-day; see the table above for exact rates.",
+  "pricing_faq_q4": "Do you wash comforters, bedding, and oversized loads?",
+  "pricing_faq_q4_link_label": "comforters and large-load page",
+  "pricing_faq_a4": "Yes. Our large Wascomat Clarus Vibe machines handle king comforters, duvets, sleeping bags, and heavy bedding that a home washer cannot. Large items are weighed at the same $1.50/lb rate.",
+
+  "quote_faq_heading": "Commercial Laundry Quote FAQ",
+  "quote_faq_q1": "How soon will I hear back after requesting a quote?",
+  "quote_faq_a1": "We respond to commercial quote requests within one business day, usually within a few hours. If you have a tight deadline or need same-day pricing, call (909) 248-7305 directly and we will build your quote on the phone.",
+  "quote_faq_q2": "What information do you need for an accurate commercial laundry quote?",
+  "quote_faq_a2": "Business type (restaurant, gym, Airbnb, hotel, salon, medical office, etc.), approximate weekly laundry volume in pounds, pickup address, and any special handling needs (allergen-free, uniform sorting, linen vs terry). The quote form asks for all of this.",
+  "quote_faq_q3": "Which cities do you service for commercial pickup and delivery?",
+  "quote_faq_a3": "CleanMax picks up across the Pomona Valley and the Inland Empire: Pomona, Claremont, La Verne, San Dimas, Diamond Bar, Walnut, Chino, Chino Hills, Ontario, Upland, Rancho Cucamonga, Montclair, Fontana, Rialto, Colton, Riverside, and surrounding cities. If your business is nearby but not listed, call us — we likely cover it."
 }
