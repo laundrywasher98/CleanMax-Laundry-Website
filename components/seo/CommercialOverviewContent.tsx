@@ -7,6 +7,7 @@ import CommercialQuoteForm from "@/components/CommercialQuoteForm";
 import EmailUsButton from "@/components/EmailUsButton";
 import SeoFaq from "@/components/seo/SeoFaq";
 import { industries } from "@/data/industries";
+import { localizeHref } from "@/lib/href";
 
 export default function CommercialOverviewContent() {
   const { t, language } = useTranslation();
@@ -128,17 +129,18 @@ export default function CommercialOverviewContent() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {industries.map((industry) => (
-              <div
+              <Link
                 key={industry.slug}
-                className="border border-brand-dark/10 p-5"
+                href={localizeHref(`/commercial-laundry/${industry.slug}/pomona`, language)}
+                className="group border border-brand-dark/10 p-5 hover:border-brand-blue transition-colors"
               >
-                <p className="font-sans font-semibold text-base text-brand-dark">
+                <p className="font-sans font-semibold text-base text-brand-dark group-hover:text-brand-blue transition-colors">
                   {language === "es" ? industry.nameEs : industry.name}
                 </p>
                 <p className="font-sans text-sm text-brand-dark/55 mt-1">
                   {language === "es" ? industry.itemsEs : industry.items}
                 </p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -77,10 +77,10 @@ export async function generateMetadata({
   const { industry, city } = resolved;
   const shortName = industryShortTitles[industry.slug] ?? industry.name;
   return buildMetadata({
-    title: `${shortName} Laundry ${city.name}, CA | CleanMax`,
-    description: `Commercial laundry for ${industry.name} in ${city.name}, CA. CleanMax offers scheduled pickup & delivery. Call (909) 248-7305.`,
+    title: `${shortName} Laundry Service in ${city.name}, CA | CleanMax`,
+    description: `${industry.name} commercial laundry in ${city.name}, CA — ${industry.items}. $65 flat pickup, next-day turnaround, bilingual team. (909) 248-7305.`,
     path: `/commercial-laundry/${industry.slug}/${city.slug}`,
-    keywords: `laundry for ${industry.name.toLowerCase()} ${city.name}, commercial laundry ${city.name} CA, ${industry.name.toLowerCase()} linen service ${city.name}`,
+    keywords: `${industry.name.toLowerCase()} laundry service ${city.name}, commercial laundry ${city.name} CA, ${industry.name.toLowerCase()} linen service ${city.name}, ${industry.name.toLowerCase()} pickup delivery ${city.name}`,
   });
 }
 

@@ -70,7 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({
         path: `/commercial-laundry/${industry.slug}/${city.slug}`,
         changeFrequency: "monthly",
-        priority: 0.6,
+        priority: 0.7,
       });
     }
   }

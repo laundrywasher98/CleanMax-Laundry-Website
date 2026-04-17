@@ -95,8 +95,20 @@ export default function CommercialCityContent({ city }: Props) {
         </div>
       </section>
 
+      {/* Industry mix intro */}
+      <section className="py-12 bg-white border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-display font-black text-3xl uppercase text-brand-dark leading-none mb-6">
+            {ip("seo_commercial_industry_mix_heading")}
+          </h2>
+          <p className="font-sans text-brand-dark/75 text-base leading-relaxed">
+            {ip("seo_commercial_industry_mix_para")}
+          </p>
+        </div>
+      </section>
+
       {/* Industries */}
-      <section className="py-16 bg-white border-t border-brand-dark/10">
+      <section className="py-16 bg-brand-surface border-t border-brand-dark/10">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-display font-black text-3xl uppercase text-brand-dark leading-none mb-8">
             {t("seo_commercial_industries_heading")}

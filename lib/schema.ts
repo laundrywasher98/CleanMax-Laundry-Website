@@ -214,7 +214,7 @@ export function buildCommercialServiceSchema({
     const urlPath = isEs ? "/es/commercial-laundry" : "/commercial-laundry";
     return {
       "@context": "https://schema.org",
-      "@type": "Service",
+      "@type": "ProfessionalService",
       serviceType: "Commercial Laundry Pickup and Delivery",
       name: isEs
         ? "Recolección y Entrega de Lavandería Comercial de CleanMax"
@@ -224,6 +224,7 @@ export function buildCommercialServiceSchema({
         : "Scheduled commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire. $65 flat pickup fee; next-day delivery on orders under 750 lbs.",
       provider: { "@id": `${BASE_URL}/#business` },
       areaServed: pickupServiceArea.map((name) => ({ "@type": "City", name })),
+      priceRange: "$$",
       offers: {
         "@type": "Offer",
         priceCurrency: "USD",
@@ -267,12 +268,14 @@ export function buildCommercialServiceSchema({
 
   return {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "ProfessionalService",
     serviceType: "Commercial Laundry",
+    ...(industry && { serviceCategory: industryName }),
     name,
     description,
     provider: { "@id": `${BASE_URL}/#business` },
     areaServed: { "@type": "City", name: city.name },
+    priceRange: "$$",
     url: `${BASE_URL}${urlPath}`,
   };
 }

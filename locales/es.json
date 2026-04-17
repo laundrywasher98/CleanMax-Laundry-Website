@@ -202,6 +202,16 @@
   "seo_industry_faq_q5": "¿Es CleanMax Laundry confiable para un {industry} ocupado en {city}?",
   "seo_industry_faq_a5": "Absolutamente. CleanMax Laundry utiliza máquinas Wascomat de grado comercial y mantiene horarios consistentes de recogida y entrega para que su negocio nunca se quede sin ropa limpia.",
 
+  "seo_industry_home_city_preface": "Como la lavandería comercial familiar de Pomona, hemos manejado cargas de {industry_lower} para nuestros vecinos en E Holt Ave desde el primer día.",
+  "seo_industry_process_callout_heading": "Cómo Se Limpia Tu Ropa Realmente",
+  "seo_industry_process_callout_body": "Cada recogida empieza con una inspección previa al lavado antes de que cualquier cosa entre a una máquina — así es como se tratan las manchas frescas y se marcan honestamente las ya fijadas. Lavamos con detergente premium Sudsy en máquinas Wascomat comerciales hasta 80 libras de capacidad. Nuestro encargado en sitio es bilingüe español/inglés y cubre cada hora de apertura. La persona que contesta tu llamada es la misma familia que maneja la operación — sin capa de vendedores, sin intermediarios.",
+  "seo_industry_cta_heading": "Obtén una Cotización Comercial para {city}",
+  "seo_industry_cta_body": "Dinos tu cadencia y volumen y te enviaremos una cotización por libra en el mismo día hábil. La recogida y entrega siempre es $65 fijos por viaje — la tarifa por libra es lo que ajustamos a tu operación.",
+  "seo_industry_cta_button": "Solicita una Cotización para {industry}",
+
+  "seo_commercial_industry_mix_heading": "Las Industrias que Mueven la Economía de {city}",
+  "seo_commercial_industry_mix_para": "{city} es {desc} en el Condado de {county} — una mezcla de restaurantes, hoteles, estudios de fitness, salones, clínicas médicas y talleres automotrices que comparten el mismo problema: ropa acumulándose más rápido de lo que una lavandería regular puede despejarla. CleanMax recoge y devuelve los textiles lavados en un horario que se acomoda a tu operación, y luego cotiza el precio por libra una vez que vemos tu cadencia. Elige la industria abajo que coincida con la tuya para ver exactamente cómo la manejamos.",
+
   "seo_hub_heading": "Servicios de Lavandería en {city}, CA",
   "seo_hub_intro": "CleanMax Laundry atiende a {city} con tres servicios convenientes: autoservicio de lavandería, lavado y doblado, y lavandería comercial con recogida y entrega. Ubicados en 1009 E Holt Ave en Pomona, somos su lavandería local para todo el condado de {county}.",
   "seo_hub_services_heading": "Servicios Disponibles en {city}",

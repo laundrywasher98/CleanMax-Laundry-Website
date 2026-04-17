@@ -202,6 +202,16 @@
   "seo_industry_faq_q5": "Is CleanMax Laundry reliable enough for a busy {industry} in {city}?",
   "seo_industry_faq_a5": "Absolutely. CleanMax Laundry uses commercial-grade Wascomat machines and maintains consistent pickup/delivery schedules so your business never runs short of clean linens or uniforms.",
 
+  "seo_industry_home_city_preface": "As Pomona's family-run commercial laundry, we've been handling {industry_lower} loads for our neighbors on E Holt Ave since day one.",
+  "seo_industry_process_callout_heading": "How Your Laundry Actually Gets Clean",
+  "seo_industry_process_callout_body": "Every pickup starts with a pre-wash inspection before anything hits a machine — that's how fresh stains get treated and set-in ones get flagged honestly. We wash on premium Sudsy detergent through commercial-grade Wascomat machines up to 80 lb capacity. Our on-site attendant is bilingual Spanish/English and covers every open hour. The person answering your call is the same family running the operation — no salesperson layer, no handoffs.",
+  "seo_industry_cta_heading": "Get a Commercial Quote for {city}",
+  "seo_industry_cta_body": "Tell us your cadence and volume and we'll send a per-pound quote within the same business day. Pickup and delivery is always $65 flat per run — the per-pound rate is what we tailor to your operation.",
+  "seo_industry_cta_button": "Request a {industry} Quote",
+
+  "seo_commercial_industry_mix_heading": "The Industries Driving {city}'s Economy",
+  "seo_commercial_industry_mix_para": "{city} is {desc} in {county} County — a mix of restaurants, hotels, fitness studios, salons, medical clinics, and auto shops that all run through the same problem: laundry piling up faster than a regular laundromat can clear it. CleanMax picks up and returns washed textiles on a schedule that fits your operation, then quotes the per-pound rate once we see your cadence. Pick the industry below that matches yours to see exactly how we handle it.",
+
   "seo_hub_heading": "Laundry Services in {city}, CA",
   "seo_hub_intro": "CleanMax Laundry serves {city} with three convenient services: self-service laundry, wash & fold drop-off, and commercial laundry pickup and delivery. Located at 1009 E Holt Ave in Pomona, we're your local laundromat for all of {county} County.",
   "seo_hub_services_heading": "Services Available in {city}",
