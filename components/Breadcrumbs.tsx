@@ -16,7 +16,15 @@ export default function Breadcrumbs({ items }: Props) {
   const pathname = usePathname() || "/";
   const homeLabel = language === "es" ? "Inicio" : "Home";
   const homeHref = language === "es" ? "/es" : "/";
-  const allItems = [{ label: homeLabel, href: homeHref }, ...items];
+  const localizeHref = (href: string) =>
+    language === "es" && !href.startsWith("/es") ? `/es${href}` : href;
+  const allItems = [
+    { label: homeLabel, href: homeHref },
+    ...items.map((item) => ({
+      label: item.label,
+      href: item.href ? localizeHref(item.href) : undefined,
+    })),
+  ];
 
   const schemaItems: BreadcrumbItem[] = allItems.map((item) => ({
     name: item.label,

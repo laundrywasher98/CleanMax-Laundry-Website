@@ -47,8 +47,7 @@ export default function CommercialIndustryCityContent({ city, industry }: Props)
           <Breadcrumbs
             items={[
               { label: t("breadcrumb_commercial_laundry"), href: "/commercial-laundry" },
-              { label: industryName, href: `/commercial-laundry/${industry.slug}/${city.slug}` },
-              { label: city.name },
+              { label: `${industryName} · ${city.name}` },
             ]}
           />
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
