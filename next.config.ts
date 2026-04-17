@@ -43,7 +43,9 @@ const nextConfig: NextConfig = {
       ...map(toHome, "/"),
       ...map(toPricing, "/wash-and-fold/pricing"),
       ...map(toLocations, "/locations"),
-      ...map(toPickup, "/pickup-delivery"),
+      ...map(toPickup, "/commercial-laundry"),
+      { source: "/pickup-delivery", destination: "/commercial-laundry", permanent: true },
+      { source: "/es/pickup-delivery", destination: "/es/commercial-laundry", permanent: true },
       { source: "/about-1", destination: "/about", permanent: true },
       { source: "/blog-1", destination: "/blog", permanent: true },
     ];

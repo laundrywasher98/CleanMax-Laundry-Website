@@ -1,18 +1,29 @@
 "use client";
 
+import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import ServiceAreaMap from "@/components/seo/ServiceAreaMap";
 import CommercialQuoteForm from "@/components/CommercialQuoteForm";
 import EmailUsButton from "@/components/EmailUsButton";
+import SeoFaq from "@/components/seo/SeoFaq";
 import { industries } from "@/data/industries";
 
 export default function CommercialOverviewContent() {
   const { t, language } = useTranslation();
+  const prefix = language === "es" ? "/es" : "";
 
   const steps = [
     t("commercial_overview_step1"),
     t("commercial_overview_step2"),
     t("commercial_overview_step3"),
+  ];
+
+  const faqItems = [
+    { q: t("pickup_faq_q1"), a: t("pickup_faq_a1") },
+    { q: t("pickup_faq_q2"), a: t("pickup_faq_a2") },
+    { q: t("pickup_faq_q3"), a: t("pickup_faq_a3") },
+    { q: t("pickup_faq_q4"), a: t("pickup_faq_a4") },
+    { q: t("pickup_faq_q5"), a: t("pickup_faq_a5") },
   ];
 
   return (
@@ -46,8 +57,38 @@ export default function CommercialOverviewContent() {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Value props */}
       <section className="py-16 bg-brand-surface border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-display font-black text-3xl md:text-4xl uppercase text-brand-dark leading-none mb-4">
+            {t("pickup_who_heading")}
+          </h2>
+          <p className="font-sans text-brand-dark/70 text-base leading-relaxed mb-8 max-w-2xl">
+            {t("pickup_who_intro")}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="bg-white border border-brand-dark/10 p-6">
+              <h3 className="font-display font-black text-xl uppercase text-brand-dark leading-tight mb-3">
+                {t("pickup_value_1_title")}
+              </h3>
+              <p className="font-sans text-sm text-brand-dark/70 leading-relaxed">
+                {t("pickup_value_1_desc")}
+              </p>
+            </div>
+            <div className="bg-white border border-brand-dark/10 p-6">
+              <h3 className="font-display font-black text-xl uppercase text-brand-dark leading-tight mb-3">
+                {t("pickup_value_2_title")}
+              </h3>
+              <p className="font-sans text-sm text-brand-dark/70 leading-relaxed">
+                {t("pickup_value_2_desc")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How it works */}
+      <section className="py-16 bg-white border-t border-brand-dark/10">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-display font-black text-3xl md:text-4xl uppercase text-brand-dark leading-none mb-10">
             {t("commercial_overview_how_heading")}
@@ -64,6 +105,18 @@ export default function CommercialOverviewContent() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className="py-12 bg-brand-surface border-t border-brand-dark/10">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-display font-black text-3xl uppercase text-brand-dark leading-none mb-6">
+            {t("pickup_pricing_heading")}
+          </h2>
+          <p className="font-sans text-brand-dark/70 text-base leading-relaxed">
+            {t("pickup_pricing_commercial")}
+          </p>
         </div>
       </section>
 
@@ -101,6 +154,13 @@ export default function CommercialOverviewContent() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <SeoFaq
+        items={faqItems}
+        eyebrow={t("faq_eyebrow")}
+        heading={t("faq_heading")}
+      />
+
       {/* Quote Form */}
       <section className="py-16 bg-white border-t border-brand-dark/10">
         <div className="max-w-3xl mx-auto px-6">
@@ -108,6 +168,32 @@ export default function CommercialOverviewContent() {
             {t("commercial_quote_form_heading")}
           </h2>
           <CommercialQuoteForm />
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 bg-brand-dark text-white">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-display font-black text-4xl md:text-5xl uppercase leading-none mb-6">
+            {t("pickup_cta_heading")}
+          </h2>
+          <p className="font-sans text-white/70 text-lg leading-relaxed max-w-xl mx-auto mb-10">
+            {t("pickup_cta_body")}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href={`${prefix}/commercial-quote`}
+              className="inline-flex items-center justify-center gap-2 bg-brand-orange text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
+            >
+              {t("pickup_cta_button")}
+            </Link>
+            <a
+              href="tel:9092487305"
+              className="inline-flex items-center justify-center gap-2 border border-white/30 text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-white hover:text-brand-dark transition-colors"
+            >
+              {t("pickup_cta_phone")}
+            </a>
+          </div>
         </div>
       </section>
     </>

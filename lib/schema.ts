@@ -196,7 +196,7 @@ export const SITE_AGGREGATE_RATING = {
 };
 
 type CommercialServiceArgs = {
-  city: { name: string; slug: string };
+  city?: { name: string; slug: string };
   industry?: { name: string; nameEs: string; items: string; itemsEs: string; slug: string };
   lang?: Language;
 };
@@ -205,8 +205,42 @@ export function buildCommercialServiceSchema({
   city,
   industry,
   lang = "en",
-}: CommercialServiceArgs) {
+}: CommercialServiceArgs = {}) {
   const isEs = lang === "es";
+
+  // Overview mode: /commercial-laundry hub page. Includes the $65 flat pickup
+  // offer + full pickupServiceArea. City and industry-city schemas stay narrower.
+  if (!city) {
+    const urlPath = isEs ? "/es/commercial-laundry" : "/commercial-laundry";
+    return {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      serviceType: "Commercial Laundry Pickup and Delivery",
+      name: isEs
+        ? "Recolección y Entrega de Lavandería Comercial de CleanMax"
+        : "CleanMax Commercial Laundry Pickup & Delivery",
+      description: isEs
+        ? "Recolección y entrega de lavandería comercial programada en el Valle de Pomona y el Inland Empire. Tarifa fija de $65 por visita; entrega al siguiente día en pedidos de menos de 750 libras."
+        : "Scheduled commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire. $65 flat pickup fee; next-day delivery on orders under 750 lbs.",
+      provider: { "@id": `${BASE_URL}/#business` },
+      areaServed: pickupServiceArea.map((name) => ({ "@type": "City", name })),
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "USD",
+        price: "65.00",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          price: "65.00",
+          priceCurrency: "USD",
+          description: isEs
+            ? "Tarifa fija de recolección y entrega por visita. Tarifa por libra cotizada por separado según volumen y tipo."
+            : "Flat pickup-and-delivery fee per run. Per-pound laundry rate quoted separately by volume and type.",
+        },
+      },
+      url: `${BASE_URL}${urlPath}`,
+    };
+  }
+
   const slugPath = industry
     ? `/commercial-laundry/${industry.slug}/${city.slug}`
     : `/commercial-laundry/${city.slug}`;
@@ -239,37 +273,6 @@ export function buildCommercialServiceSchema({
     description,
     provider: { "@id": `${BASE_URL}/#business` },
     areaServed: { "@type": "City", name: city.name },
-    url: `${BASE_URL}${urlPath}`,
-  };
-}
-
-export function buildPickupServiceSchema(lang: Language = "en") {
-  const urlPath = lang === "es" ? "/es/pickup-delivery" : "/pickup-delivery";
-  return {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Commercial Laundry Pickup and Delivery",
-    name: "CleanMax Commercial Laundry Pickup & Delivery",
-    description:
-      lang === "es"
-        ? "Recolección y entrega de lavandería comercial programada en el Valle de Pomona y el Inland Empire. Tarifa fija de $65 por visita; entrega al siguiente día en pedidos de menos de 750 libras."
-        : "Scheduled commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire. $65 flat pickup fee; next-day delivery on orders under 750 lbs.",
-    provider: { "@id": `${BASE_URL}/#business` },
-    areaServed: pickupServiceArea.map((name) => ({ "@type": "City", name })),
-    offers: {
-      "@type": "Offer",
-      priceCurrency: "USD",
-      price: "65.00",
-      priceSpecification: {
-        "@type": "PriceSpecification",
-        price: "65.00",
-        priceCurrency: "USD",
-        description:
-          lang === "es"
-            ? "Tarifa fija de recolección y entrega por visita. Tarifa por libra cotizada por separado según volumen y tipo."
-            : "Flat pickup-and-delivery fee per run. Per-pound laundry rate quoted separately by volume and type.",
-      },
-    },
     url: `${BASE_URL}${urlPath}`,
   };
 }

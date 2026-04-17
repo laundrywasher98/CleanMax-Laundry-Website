@@ -47,10 +47,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const entries: Entry[] = [
     { path: "", changeFrequency: "weekly", priority: 1.0 },
     { path: "/locations", changeFrequency: "weekly", priority: 0.9 },
-    { path: "/commercial-laundry", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/commercial-laundry", changeFrequency: "monthly", priority: 0.85 },
     { path: "/commercial-quote", changeFrequency: "monthly", priority: 0.8 },
     { path: "/wash-and-fold/pricing", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/pickup-delivery", changeFrequency: "monthly", priority: 0.85 },
     { path: "/comforters-large-loads", changeFrequency: "monthly", priority: 0.75 },
     { path: "/testimonials", changeFrequency: "weekly", priority: 0.7 },
     { path: "/blog", changeFrequency: "weekly", priority: 0.6 },

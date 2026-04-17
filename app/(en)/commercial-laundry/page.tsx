@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import CommercialOverviewContent from "@/components/seo/CommercialOverviewContent";
 import { buildMetadata } from "@/lib/seo";
+import { buildCommercialServiceSchema } from "@/lib/schema";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
   title: "Commercial Laundry Pomona | CleanMax",
@@ -14,6 +16,7 @@ export const metadata: Metadata = buildMetadata({
 export default function CommercialLaundryPage() {
   return (
     <main>
+      <JsonLd data={buildCommercialServiceSchema({ lang: "en" })} />
       <CommercialOverviewContent />
     </main>
   );

@@ -51,7 +51,6 @@ export default function Navbar() {
     { label: t("nav_self_service_laundry"), href: `${linkPrefix}/laundromat/pomona` },
     { label: t("nav_wash_and_fold"), href: `${linkPrefix}/wash-and-fold/pomona` },
     { label: t("nav_wash_fold_pricing"), href: `${linkPrefix}/wash-and-fold/pricing` },
-    { label: t("nav_pickup_delivery"), href: `${linkPrefix}/pickup-delivery` },
     { label: t("nav_comforters"), href: `${linkPrefix}/comforters-large-loads` },
     { label: t("nav_commercial_laundry"), href: `${linkPrefix}/commercial-laundry` },
     { label: t("nav_get_quote"), href: `${linkPrefix}/commercial-quote` },
