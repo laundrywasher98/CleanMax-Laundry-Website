@@ -12,8 +12,10 @@
   "nav_view_all_cities": "View all locations →",
 
   "hero_location": "1009 E Holt Ave, Pomona, CA",
-  "hero_headline_line1": "Pomona's",
-  "hero_headline_line2": "Coin Laundry & Wash-Fold",
+  "hero_headline": "Pomona's Laundromat",
+  "hero_link_self_serve": "Self-Serve",
+  "hero_link_dropoff": "Drop-off",
+  "hero_link_commercial": "Commercial",
   "hero_subheadline": "Self-service coin and AirWallet cashless pay, drop-off wash and fold, and commercial pickup — a bilingual, family-run laundromat on E Holt Ave.",
   "hero_cta_directions": "Get Directions",
   "hero_cta_app": "Download the App",

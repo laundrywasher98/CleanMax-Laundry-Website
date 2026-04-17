@@ -1,12 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
+import { localizeHref } from "@/lib/href";
 
 const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
 
 export default function Hero() {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
+
+  const serviceLinks = [
+    { label: t("hero_link_self_serve"), href: localizeHref("/laundromat/pomona", language) },
+    { label: t("hero_link_dropoff"), href: localizeHref("/wash-and-fold/pomona", language) },
+    { label: t("hero_link_commercial"), href: localizeHref("/commercial-laundry", language) },
+  ];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -29,8 +37,26 @@ export default function Hero() {
           {t("hero_location")}
         </p>
         <h1 className="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl uppercase leading-none tracking-tight mb-6">
-          {t("hero_headline_line1")}<br />{t("hero_headline_line2")}
+          {t("hero_headline")}
         </h1>
+        <nav
+          aria-label="Primary services"
+          className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mb-8 font-display font-bold uppercase tracking-tight text-2xl sm:text-3xl md:text-4xl"
+        >
+          {serviceLinks.map((link, idx) => (
+            <span key={link.href} className="flex items-center gap-x-4">
+              {idx > 0 && (
+                <span aria-hidden="true" className="text-brand-blue">·</span>
+              )}
+              <Link
+                href={link.href}
+                className="hover:underline underline-offset-8 decoration-2 transition-colors hover:text-brand-blue"
+              >
+                {link.label}
+              </Link>
+            </span>
+          ))}
+        </nav>
         <p className="font-sans font-medium text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-10">
           {t("hero_subheadline")}
         </p>

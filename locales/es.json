@@ -12,8 +12,10 @@
   "nav_view_all_cities": "Ver todas las ciudades →",
 
   "hero_location": "1009 E Holt Ave, Pomona, CA",
-  "hero_headline_line1": "La Lavandería",
-  "hero_headline_line2": "de Pomona, CA",
+  "hero_headline": "La Lavandería de Pomona",
+  "hero_link_self_serve": "Autoservicio",
+  "hero_link_dropoff": "Entrega",
+  "hero_link_commercial": "Comercial",
   "hero_subheadline": "Autoservicio con monedas y pago con AirWallet, lavado y doblado de entrega, y recolección comercial — una lavandería bilingüe y familiar en E Holt Ave.",
   "hero_cta_directions": "Cómo Llegar",
   "hero_cta_app": "Descargar la App",
