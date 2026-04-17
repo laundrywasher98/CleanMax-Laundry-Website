@@ -21,11 +21,7 @@ function buildComfortersServiceSchema() {
     name: "CleanMax Comforter & Large-Load Laundry",
     description:
       "Lavadoras de gran capacidad de autoservicio y lavado y doblado de entrega para edredones, duvets, ropa de cama, bolsas de dormir y otros artículos de gran tamaño en CleanMax Laundry en Pomona, CA.",
-    provider: {
-      "@type": "LocalBusiness",
-      "@id": `${BASE_URL}/#business`,
-      name: "CleanMax Laundry",
-    },
+    provider: { "@id": `${BASE_URL}/#business` },
     areaServed: {
       "@type": "City",
       name: "Pomona",

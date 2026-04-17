@@ -20,11 +20,7 @@ function buildComfortersServiceSchema() {
     name: "CleanMax Comforter & Large-Load Laundry",
     description:
       "Self-service large-capacity washers and drop-off wash & fold for comforters, duvets, bedding, sleeping bags, and other oversized items at CleanMax Laundry in Pomona, CA.",
-    provider: {
-      "@type": "LocalBusiness",
-      "@id": `${BASE_URL}/#business`,
-      name: "CleanMax Laundry",
-    },
+    provider: { "@id": `${BASE_URL}/#business` },
     areaServed: {
       "@type": "City",
       name: "Pomona",
