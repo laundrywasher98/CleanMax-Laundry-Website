@@ -1,9 +1,29 @@
 import type { Metadata } from "next";
+import { Barlow_Condensed, Barlow } from "next/font/google";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import Analytics from "@/components/Analytics";
+import { buildLocalBusinessSchema } from "@/lib/schema";
+import "../globals.css";
+
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["700", "800", "900"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
+});
+
+const barlow = Barlow({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-barlow",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://cleanmaxlaundry.com"),
   title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
   description:
     "CleanMax Laundry offers self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern machines. $1.50/lb.",
@@ -36,23 +56,39 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://cleanmaxlaundry.com",
     languages: {
-      "en-US": "https://cleanmaxlaundry.com",
+      en: "https://cleanmaxlaundry.com",
       es: "https://cleanmaxlaundry.com/es",
       "x-default": "https://cleanmaxlaundry.com",
     },
   },
+  ...(process.env.GOOGLE_SITE_VERIFICATION && {
+    verification: {
+      google: process.env.GOOGLE_SITE_VERIFICATION,
+    },
+  }),
 };
 
-export default function EnLayout({
+export default function EnRootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <LanguageProvider initialLanguage="en">
-      <Navbar />
-      {children}
-      <Footer />
-    </LanguageProvider>
+    <html
+      lang="en"
+      className={`${barlowCondensed.variable} ${barlow.variable}`}
+    >
+      <head>
+        <JsonLd data={buildLocalBusinessSchema("en")} />
+        <Analytics />
+      </head>
+      <body className="antialiased">
+        <LanguageProvider initialLanguage="en">
+          <Navbar />
+          {children}
+          <Footer />
+        </LanguageProvider>
+      </body>
+    </html>
   );
 }

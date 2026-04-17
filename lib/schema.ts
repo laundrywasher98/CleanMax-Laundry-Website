@@ -1,6 +1,7 @@
 import en from "@/locales/en.json";
 import es from "@/locales/es.json";
 import { cities } from "@/data/cities";
+import { pickupServiceArea } from "@/data/pickupServiceArea";
 import { BASE_URL } from "@/lib/seo";
 import type { Language } from "@/contexts/LanguageContext";
 
@@ -171,9 +172,15 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
     areaServed: cities.map((c) => ({
       "@type": "City",
       name: c.name,
-      "@id": `${BASE_URL}/locations/${c.slug}`,
     })),
     hasOfferCatalog: buildServiceCatalogSchema(lang),
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: SITE_AGGREGATE_RATING.ratingValue,
+      reviewCount: SITE_AGGREGATE_RATING.reviewCount,
+      bestRating: SITE_AGGREGATE_RATING.bestRating,
+      worstRating: SITE_AGGREGATE_RATING.worstRating,
+    },
     sameAs: [
       "https://www.instagram.com/cleanmaxlaundry_pomona",
       "https://www.facebook.com/profile.php?id=61588438208705",
@@ -183,28 +190,44 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
   };
 }
 
-// Site-wide rating — keep in sync with /testimonials page and Google Business Profile.
-// Update ratingValue / reviewCount as new Google reviews accumulate.
+// Site-wide rating — keep in sync with Google Business Profile.
+// Last synced: 2026-04-16 (4.8★ / 99 reviews). Update as new reviews accumulate.
 export const SITE_AGGREGATE_RATING = {
-  ratingValue: 4.9,
-  reviewCount: 9,
+  ratingValue: 4.8,
+  reviewCount: 99,
   bestRating: 5,
   worstRating: 1,
 };
 
-export function buildAggregateRatingSchema() {
+export function buildPickupServiceSchema(lang: Language = "en") {
+  const urlPath = lang === "es" ? "/es/pickup-delivery" : "/pickup-delivery";
   return {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${BASE_URL}/#business`,
-    name: "CleanMax Laundry",
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_AGGREGATE_RATING.ratingValue.toString(),
-      reviewCount: SITE_AGGREGATE_RATING.reviewCount.toString(),
-      bestRating: SITE_AGGREGATE_RATING.bestRating.toString(),
-      worstRating: SITE_AGGREGATE_RATING.worstRating.toString(),
+    "@type": "Service",
+    serviceType: "Laundry Pickup and Delivery",
+    name: "CleanMax Laundry Pickup & Delivery",
+    description:
+      lang === "es"
+        ? "Recolección y entrega de lavandería residencial y comercial programada en el Valle de Pomona y el Inland Empire."
+        : "Scheduled residential and commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire.",
+    provider: {
+      "@type": "LocalBusiness",
+      "@id": `${BASE_URL}/#business`,
+      name: "CleanMax Laundry",
     },
+    areaServed: pickupServiceArea.map((name) => ({ "@type": "City", name })),
+    offers: {
+      "@type": "Offer",
+      priceCurrency: "USD",
+      price: "1.50",
+      priceSpecification: {
+        "@type": "UnitPriceSpecification",
+        price: "1.50",
+        priceCurrency: "USD",
+        unitText: "LB",
+      },
+    },
+    url: `${BASE_URL}${urlPath}`,
   };
 }
 

@@ -21,7 +21,7 @@ function toBilingualSitemap(entries: Entry[]): MetadataRoute.Sitemap {
     const esUrl = `${BASE_URL}/es${entry.path}`;
     const alternates = {
       languages: {
-        "en-US": enUrl,
+        en: enUrl,
         es: esUrl,
         "x-default": enUrl,
       },

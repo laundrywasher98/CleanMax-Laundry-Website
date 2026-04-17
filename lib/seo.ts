@@ -57,7 +57,7 @@ export function buildMetadata({
     alternates: {
       canonical: selfUrl,
       languages: {
-        "en-US": enUrl,
+        en: enUrl,
         es: esUrl,
         "x-default": enUrl,
       },

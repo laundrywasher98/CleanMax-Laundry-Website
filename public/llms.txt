@@ -1,0 +1,37 @@
+# CleanMax Laundry
+
+CleanMax Laundry is a full-service laundromat in Pomona, California, serving the Pomona Valley and Inland Empire. We offer self-service laundry, wash & fold drop-off, commercial laundry pickup and delivery, and specialty services for comforters and large loads.
+
+- Address: 1009 E Holt Ave, Pomona, CA 91767
+- Phone: (909) 248-7305
+- Email: laundry@cleanmaxlaundry.com
+- Hours: 6 AM – 10 PM, seven days a week
+- Payment: Cash, credit card, and in-app payment via the CleanMax app
+
+## Services
+
+- **Self-service laundry**: Modern Wascomat washers and dryers, open daily 6 AM to 10 PM.
+- **Wash & fold**: $1.50/lb with a $25 order minimum. Same-day and next-day turnaround available.
+- **Pickup & delivery**: Scheduled residential and commercial pickup throughout the Pomona Valley and Inland Empire. 24–48 hour turnaround.
+- **Commercial laundry**: Weekly, biweekly, and on-call service for restaurants, gyms, Airbnbs, hotels, salons, medical offices, and more.
+- **Comforters & large loads**: Large-capacity machines for bedding, duvets, and oversized items.
+
+## Primary URLs
+
+- Home: https://cleanmaxlaundry.com
+- Locations served: https://cleanmaxlaundry.com/locations
+- Wash & fold pricing: https://cleanmaxlaundry.com/wash-and-fold/pricing
+- Pickup & delivery: https://cleanmaxlaundry.com/pickup-delivery
+- Commercial laundry: https://cleanmaxlaundry.com/commercial-laundry
+- Commercial quote request: https://cleanmaxlaundry.com/commercial-quote
+- Comforters & large loads: https://cleanmaxlaundry.com/comforters-large-loads
+- Blog: https://cleanmaxlaundry.com/blog
+- Spanish site: https://cleanmaxlaundry.com/es
+
+## Service area
+
+Pomona, Ontario, Rancho Cucamonga, Chino, Chino Hills, Upland, Claremont, Diamond Bar, West Covina, Covina, Glendora, La Verne, San Dimas, Azusa, Walnut, Corona, Jurupa Valley, Montclair. Pickup & delivery additionally serves Fontana, Rialto, Colton, and Riverside.
+
+## Languages
+
+Content is available in English and Spanish. Spanish pages are mirrored under the /es/ path prefix.

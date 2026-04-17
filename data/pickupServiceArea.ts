@@ -1,0 +1,18 @@
+export const pickupServiceArea: string[] = [
+  "Pomona",
+  "Claremont",
+  "La Verne",
+  "San Dimas",
+  "Diamond Bar",
+  "Walnut",
+  "Chino",
+  "Chino Hills",
+  "Ontario",
+  "Upland",
+  "Rancho Cucamonga",
+  "Montclair",
+  "Fontana",
+  "Rialto",
+  "Colton",
+  "Riverside",
+];

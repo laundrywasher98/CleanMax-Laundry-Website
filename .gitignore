@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# seo research cache (raw semrush exports)
+/.semrush-research/
+/.lighthouse-reports/
