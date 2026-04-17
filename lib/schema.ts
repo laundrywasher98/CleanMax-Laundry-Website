@@ -334,11 +334,7 @@ export function buildPersonSchema({
     name,
     jobTitle,
     description,
-    worksFor: {
-      "@type": "LocalBusiness",
-      "@id": `${BASE_URL}/#business`,
-      name: "CleanMax Laundry",
-    },
+    worksFor: { "@id": `${BASE_URL}/#business` },
     ...(image && { image: `${BASE_URL}${image}` }),
   };
 }

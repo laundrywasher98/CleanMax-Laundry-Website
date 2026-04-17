@@ -3,7 +3,7 @@ import LocationsIndexContent from "@/components/LocationsIndexContent";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Laundromat Near Me | CleanMax Laundry Service Areas in Pomona & Surrounding Cities",
+  title: "Laundromat Near Me in Pomona & Inland Empire | CleanMax",
   description:
     "CleanMax Laundry serves Pomona, CA and surrounding communities. Find your nearest laundromat location for self-service laundry, wash & fold, and commercial laundry services.",
   path: "/locations",
