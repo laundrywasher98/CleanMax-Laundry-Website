@@ -64,18 +64,18 @@ export default function PickupDeliveryContent() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="bg-white border border-brand-dark/10 p-6">
               <h3 className="font-display font-black text-xl uppercase text-brand-dark leading-tight mb-3">
-                {t("pickup_residential_title")}
+                {t("pickup_value_1_title")}
               </h3>
               <p className="font-sans text-sm text-brand-dark/70 leading-relaxed">
-                {t("pickup_residential_desc")}
+                {t("pickup_value_1_desc")}
               </p>
             </div>
             <div className="bg-white border border-brand-dark/10 p-6">
               <h3 className="font-display font-black text-xl uppercase text-brand-dark leading-tight mb-3">
-                {t("pickup_commercial_title")}
+                {t("pickup_value_2_title")}
               </h3>
               <p className="font-sans text-sm text-brand-dark/70 leading-relaxed">
-                {t("pickup_commercial_desc")}
+                {t("pickup_value_2_desc")}
               </p>
             </div>
           </div>
@@ -123,9 +123,6 @@ export default function PickupDeliveryContent() {
           <h2 className="font-display font-black text-3xl uppercase text-brand-dark leading-none mb-6">
             {t("pickup_pricing_heading")}
           </h2>
-          <p className="font-sans text-brand-dark/70 text-base leading-relaxed mb-4">
-            {t("pickup_pricing_residential")}
-          </p>
           <p className="font-sans text-brand-dark/70 text-base leading-relaxed">
             {t("pickup_pricing_commercial")}
           </p>

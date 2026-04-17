@@ -19,13 +19,13 @@ export async function generateMetadata({
 
   const isPomona = slug === "pomona";
   const title = isPomona
-    ? `Lavandería de Autoservicio en Pomona, CA | CleanMax Laundry`
+    ? `Lavandería de Monedas y Autoservicio en Pomona, CA | CleanMax Laundry`
     : `Lavandería Cerca de ${city.name}, CA | CleanMax Laundry`;
   const description = isPomona
-    ? `Lavandería moderna de autoservicio en Pomona, CA. Abierto todos los días de 6 AM a 10 PM. Máquinas Wascomat, estacionamiento gratis, pago con app. CleanMax Laundry.`
-    : `Lavandería moderna de autoservicio atendiendo ${city.name}, CA. Abierto todos los días de 6 AM a 10 PM. Máquinas Wascomat, estacionamiento. CleanMax Laundry en Pomona.`;
+    ? `Lavandería de monedas y autoservicio en Pomona, CA — 1009 E Holt Ave. Abierto todos los días de 6 AM a 10 PM. 25 lavadoras (hasta 80 lb), pago con monedas o AirWallet, encargado bilingüe. CleanMax Laundry.`
+    : `Lavandería moderna de autoservicio atendiendo ${city.name}, CA. Abierto todos los días de 6 AM a 10 PM. 25 lavadoras (25–80 lb) y 34 secadoras, pago con monedas o AirWallet, encargado bilingüe. CleanMax Laundry en Pomona.`;
   const keywords = isPomona
-    ? `lavandería Pomona CA, lavandería de monedas Pomona, lavandería autoservicio Pomona, lavandería cerca de mí Pomona`
+    ? `lavandería Pomona CA, lavandería de monedas Pomona, lavandería autoservicio Pomona, lavandería cerca de mí Pomona, laundromat Pomona`
     : `lavandería cerca de ${city.name}, lavandería de monedas ${city.name} CA, lavandería autoservicio ${city.name}, lavandería cerca de mí ${city.name}`;
 
   return buildMetadata({

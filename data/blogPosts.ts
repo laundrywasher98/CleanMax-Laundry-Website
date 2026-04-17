@@ -1320,4 +1320,265 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  // ─── POST: WASH & FOLD VS DRY CLEANING ────────────────────────────────────
+  {
+    slug: 'wash-fold-vs-dry-cleaning-pomona',
+    title: 'Wash & Fold vs Dry Cleaning in Pomona, CA: What CleanMax Handles',
+    titleEs: 'Lavado y Doblado vs Lavado en Seco en Pomona, CA: Lo que CleanMax Maneja',
+    publishDate: '2026-04-17',
+    excerpt:
+      'Not everything needs a dry cleaner. Here is exactly what wash & fold (a.k.a. fluff and fold) at CleanMax handles, what needs a dry cleaner instead, and how we decide at drop-off.',
+    excerptEs:
+      'No todo necesita lavado en seco. Esto es exactamente lo que el servicio de lavado y doblado (también conocido como fluff and fold) maneja en CleanMax, qué necesita una tintorería, y cómo lo decidimos al recibir su ropa.',
+    sections: [
+      {
+        type: 'h2',
+        en: "What's the difference between wash & fold and dry cleaning?",
+        es: '¿Cuál es la diferencia entre lavado y doblado y lavado en seco?',
+      },
+      {
+        type: 'p',
+        en: "Dry cleaning uses chemical solvents (usually perc or hydrocarbon) to clean fabrics that water would damage — silk, wool suits, structured jackets, leather, certain delicate dresses. Wash and fold — also called fluff and fold — is a water-and-detergent service for the 90% of laundry that doesn't need a solvent: everyday clothes, towels, bedding, uniforms, kids' clothes. Most households generate one dry-cleaning item every few months and fifteen pounds of wash-and-fold every week. Knowing which bin an item belongs in saves money and keeps the item in good shape longer.",
+        es: "El lavado en seco usa solventes químicos (usualmente perc o hidrocarburo) para limpiar telas que el agua dañaría — seda, trajes de lana, sacos estructurados, cuero, ciertos vestidos delicados. El lavado y doblado — también llamado fluff and fold — es un servicio con agua y detergente para el 90% de la ropa que no necesita solvente: ropa cotidiana, toallas, ropa de cama, uniformes, ropa de niños. La mayoría de los hogares generan una prenda para lavar en seco cada pocos meses y quince libras de lavado y doblado cada semana. Saber a qué categoría pertenece cada prenda ahorra dinero y prolonga la vida útil de la prenda.",
+      },
+      {
+        type: 'h2',
+        en: 'What CleanMax wash & fold handles',
+        es: 'Lo que el lavado y doblado de CleanMax maneja',
+      },
+      {
+        type: 'p',
+        en: "If it's washable in water, we probably handle it. Our 80-pound Wascomat Clarus Vibe machines are big enough for king comforters and oversized bedding, which is where many home washers fail. The full list of items we accept:",
+        es: "Si se puede lavar con agua, lo más probable es que lo manejemos. Nuestras lavadoras Wascomat Clarus Vibe de 80 libras son suficientes para edredones king y ropa de cama grande, que es donde muchas lavadoras de casa fallan. La lista completa de artículos que aceptamos:",
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: 'Regular clothes — shirts, pants, jeans, shorts, dresses (non-silk), underwear, socks', es: 'Ropa regular — camisas, pantalones, jeans, shorts, vestidos (no de seda), ropa interior, calcetines' },
+          { en: 'Bedding and linens — sheets, pillowcases, duvet covers, quilts, blankets', es: 'Ropa de cama y lencería — sábanas, fundas de almohada, fundas de duvet, colchas, cobijas' },
+          { en: 'Comforters — including king, our 80-lb machines fit them comfortably', es: 'Edredones — incluyendo king, nuestras máquinas de 80 lb los aceptan cómodamente' },
+          { en: 'Towels — bath, hand, kitchen, beach, pool', es: 'Toallas — de baño, de mano, de cocina, de playa, de piscina' },
+          { en: "Kids' and baby clothes", es: "Ropa de niños y de bebé" },
+          { en: 'Activewear and athleisure — yoga pants, workout tops, leggings', es: 'Ropa deportiva y athleisure — pantalones de yoga, tops de entrenamiento, leggings' },
+          { en: 'Uniforms — restaurant, medical scrubs, work and trade uniforms', es: 'Uniformes — de restaurante, scrubs médicos, uniformes de trabajo y oficio' },
+          { en: 'Tablecloths and napkins', es: 'Manteles y servilletas' },
+          { en: 'Pet beds and pet-safe blankets', es: 'Camas de mascota y cobijas lavables para mascotas' },
+        ],
+      },
+      {
+        type: 'h2',
+        en: 'When you actually need a dry cleaner',
+        es: 'Cuándo realmente necesita una tintorería',
+      },
+      {
+        type: 'p',
+        en: "Some items genuinely need a solvent-based cleaner, and putting them through a water wash can ruin them. We do not accept these at wash & fold — and if you bring one in, we'll say so honestly at drop-off and recommend a local Pomona dry cleaner.",
+        es: "Algunas prendas realmente necesitan una tintorería con solventes, y pasarlas por un lavado con agua puede arruinarlas. No las aceptamos en el lavado y doblado — y si trae alguna, se lo diremos con honestidad al recibir su ropa y le recomendaremos una tintorería local de Pomona.",
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: 'Suits and structured blazers', es: 'Trajes y sacos estructurados' },
+          { en: 'Silk dresses and silk blouses', es: 'Vestidos y blusas de seda' },
+          { en: 'Wedding gowns', es: 'Vestidos de novia' },
+          { en: 'Leather, suede, and fur', es: 'Cuero, gamuza y piel' },
+          { en: 'Down comforters (feathers clump and take days to dry properly in a residential dryer)', es: 'Edredones de pluma (las plumas se apelotonan y tardan días en secarse correctamente en una secadora doméstica)' },
+          { en: 'Any garment tagged "dry-clean only"', es: 'Cualquier prenda con etiqueta "solo lavado en seco"' },
+          { en: 'Heavily soiled items with paint, oil, grease, or chemical residue', es: 'Artículos muy sucios con pintura, aceite, grasa o residuos químicos' },
+          { en: 'Anything with biohazard exposure — blood, sewage, mold', es: 'Cualquier prenda con exposición a biopeligros — sangre, aguas negras, moho' },
+        ],
+      },
+      {
+        type: 'h2',
+        en: 'Our wash & fold process (what happens to your bag)',
+        es: 'Nuestro proceso de lavado y doblado (qué pasa con su bolsa)',
+      },
+      {
+        type: 'p',
+        en: "Every bag that comes through our Pomona location gets the same care. Our bilingual attendant weighs and logs it. Then a pre-wash stain inspection — we flag anything needing extra attention and pre-treat fresh stains. We wash with premium Sudsy detergent and fabric softener by default (custom on request: fragrance-free, hypoallergenic, dye-free, or bring your own). Colors and whites are separated. Dryers are set to the right temperature for the fabric type — lower heat for activewear and synthetics, standard for cottons. Everything is folded by hand into a breathable bag, and we text you when it's ready.",
+        es: "Cada bolsa que llega a nuestra ubicación de Pomona recibe el mismo cuidado. Nuestro encargado bilingüe la pesa y la registra. Luego una inspección de manchas antes del lavado — marcamos cualquier prenda que necesite atención extra y pre-tratamos las manchas frescas. Lavamos con detergente premium Sudsy y suavizante por defecto (personalizado bajo pedido: sin fragancia, hipoalergénico, sin tinte, o traiga el suyo). Los colores y los blancos se separan. Las secadoras se ajustan a la temperatura correcta para el tipo de tela — calor más bajo para ropa deportiva y sintéticos, estándar para algodones. Todo se dobla a mano en una bolsa transpirable, y le enviamos un mensaje cuando esté listo.",
+      },
+      {
+        type: 'p',
+        en: "One honest note on stains: we do our best on fresh stains, but anything that's been through a prior wash cycle or has been set by heat is much harder to remove. We won't promise a result we can't deliver — we'll tell you at drop-off if we think a stain is unlikely to come out.",
+        es: "Una nota honesta sobre las manchas: hacemos nuestro mejor esfuerzo en manchas frescas, pero cualquier mancha que haya pasado por un ciclo de lavado anterior o haya sido fijada por calor es mucho más difícil de eliminar. No prometemos un resultado que no podamos cumplir — le diremos al recibir su ropa si creemos que una mancha probablemente no salga.",
+      },
+      {
+        type: 'h2',
+        en: 'Pricing',
+        es: 'Precios',
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: 'Next-day weekday: $1.50/lb', es: 'Al día siguiente entre semana: $1.50/lb' },
+          { en: 'Next-day weekend: $1.75/lb', es: 'Al día siguiente fin de semana: $1.75/lb' },
+          { en: 'Same-day weekday (drop by 3 PM): $1.75/lb', es: 'Mismo día entre semana (antes de las 3 PM): $1.75/lb' },
+          { en: 'Same-day weekend (drop by 3 PM): $2.00/lb', es: 'Mismo día fin de semana (antes de las 3 PM): $2.00/lb' },
+          { en: '$25 minimum order', es: 'Pedido mínimo de $25' },
+        ],
+      },
+      {
+        type: 'p',
+        en: 'Full details are on our [wash and fold pricing page](/wash-and-fold/pricing) — the per-pound rate is all in (detergent, dryer sheets, fold, breathable bag) with no hidden fees.',
+        es: 'Todos los detalles están en nuestra [página de precios de lavado y doblado](/wash-and-fold/pricing) — la tarifa por libra incluye todo (detergente, hojas de secadora, doblado, bolsa transpirable) sin cargos ocultos.',
+      },
+      {
+        type: 'h2',
+        en: 'Serving Pomona, Rancho Cucamonga, Upland, Claremont, La Verne, and the Inland Empire',
+        es: 'Atendiendo a Pomona, Rancho Cucamonga, Upland, Claremont, La Verne y el Inland Empire',
+      },
+      {
+        type: 'p',
+        en: "Our Pomona location at 1009 E Holt Ave is within a short drive of most of the Pomona Valley. See service details for your city:",
+        es: "Nuestra ubicación de Pomona en 1009 E Holt Ave queda a corta distancia de la mayor parte del Valle de Pomona. Vea los detalles del servicio para su ciudad:",
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: '[Wash & Fold in Pomona](/wash-and-fold/pomona)', es: '[Lavado y Doblado en Pomona](/es/wash-and-fold/pomona)' },
+          { en: '[Wash & Fold in Rancho Cucamonga](/wash-and-fold/rancho-cucamonga)', es: '[Lavado y Doblado en Rancho Cucamonga](/es/wash-and-fold/rancho-cucamonga)' },
+          { en: '[Wash & Fold in Upland](/wash-and-fold/upland)', es: '[Lavado y Doblado en Upland](/es/wash-and-fold/upland)' },
+          { en: '[Wash & Fold in Claremont](/wash-and-fold/claremont)', es: '[Lavado y Doblado en Claremont](/es/wash-and-fold/claremont)' },
+          { en: '[Wash & Fold in La Verne](/wash-and-fold/la-verne)', es: '[Lavado y Doblado en La Verne](/es/wash-and-fold/la-verne)' },
+        ],
+      },
+      {
+        type: 'p',
+        en: "Not sure whether your item is wash-and-fold or dry-clean? Bring it in. Our attendant will check the tag and tell you honestly whether we should wash it or whether it belongs at a dry cleaner.",
+        es: "¿No está seguro si su prenda es de lavado y doblado o de lavado en seco? Tráigala. Nuestro encargado revisará la etiqueta y le dirá honestamente si deberíamos lavarla o si pertenece a una tintorería.",
+      },
+    ],
+    ctaHeadingEn: 'Drop off wash & fold in Pomona',
+    ctaHeadingEs: 'Deje su lavado y doblado en Pomona',
+    ctaLinks: [
+      {
+        href: '/wash-and-fold/pricing',
+        labelEn: 'See wash & fold pricing',
+        labelEs: 'Ver precios de lavado y doblado',
+      },
+      {
+        href: 'tel:9092487305',
+        labelEn: 'Call (909) 248-7305',
+        labelEs: 'Llame al (909) 248-7305',
+      },
+    ],
+  },
+  // ─── POST: LAUNDROMAT VS COIN LAUNDRY ─────────────────────────────────────
+  {
+    slug: 'laundromat-vs-coin-laundry-difference',
+    title: "Laundromat vs Coin Laundry: What's the Difference?",
+    titleEs: "Lavandería vs Coin Laundry: ¿Cuál es la Diferencia?",
+    publishDate: '2026-04-17',
+    excerpt:
+      "Short answer: they're the same thing. Here's where the term \"coin laundry\" comes from, what a modern laundromat actually looks like, and how CleanMax pairs coin payment with AirWallet cashless pay.",
+    excerptEs:
+      "Respuesta corta: son lo mismo. Aquí le explicamos de dónde viene el término \"coin laundry\", cómo es una lavandería moderna, y cómo CleanMax combina el pago con monedas con el pago sin efectivo de AirWallet.",
+    sections: [
+      {
+        type: 'h2',
+        en: 'The short answer',
+        es: 'La respuesta corta',
+      },
+      {
+        type: 'p',
+        en: '"Laundromat" and "coin laundry" refer to the same kind of business — a self-service laundry where you bring your clothes, use the machines, and leave with clean laundry. "Coin laundry" is the older term, from when every machine ran on quarters. "Laundromat" came later and stuck as a more general name. Today, most places you search for as a "coin laundry near me" accept both coins and some form of cashless payment (card reader, app, or tap-to-pay). The two terms are interchangeable, but old habits die hard — which is why Google still shows thousands of monthly searches for both phrasings side by side.',
+        es: '"Lavandería" y "coin laundry" se refieren al mismo tipo de negocio — una lavandería de autoservicio donde usted trae su ropa, usa las máquinas y se va con ropa limpia. "Coin laundry" es el término más antiguo, de cuando cada máquina funcionaba con monedas de 25 centavos. "Lavandería" o "laundromat" vino después y se quedó como el nombre más general. Hoy, la mayoría de los lugares que se buscan como "coin laundry cerca de mí" aceptan tanto monedas como alguna forma de pago sin efectivo (lector de tarjeta, app, o tap-to-pay). Los dos términos son intercambiables, pero los hábitos viejos son difíciles de cambiar — por eso Google todavía muestra miles de búsquedas mensuales de ambas frases en paralelo.',
+      },
+      {
+        type: 'h2',
+        en: 'The modern laundromat',
+        es: 'La lavandería moderna',
+      },
+      {
+        type: 'p',
+        en: "Modern coin laundries run on commercial equipment that's faster, quieter, and gentler on fabric than what was on the floor twenty years ago. The biggest change is payment. Most laundromats today pair traditional coin slots with a cashless option so you don't have to hoard quarters or feed a bill-changer that may or may not be working.",
+        es: "Las lavanderías modernas funcionan con equipo comercial que es más rápido, silencioso y suave con la tela que lo que había hace veinte años. El cambio más grande es el pago. La mayoría de las lavanderías hoy combinan las ranuras tradicionales de monedas con una opción sin efectivo para que usted no tenga que acumular monedas ni depender de una máquina cambiadora que puede o no estar funcionando.",
+      },
+      {
+        type: 'p',
+        en: "At [CleanMax Laundry](/) we do both. Every washer and dryer accepts coins, and we also accept AirWallet cashless payment — you load your AirWallet balance with a credit card, debit card, Apple Pay, Google Pay, or PayPal, then tap to start a machine. Your first wash is free when you sign up.",
+        es: "En [CleanMax Laundry](/) hacemos ambos. Cada lavadora y secadora acepta monedas, y también aceptamos pago sin efectivo con AirWallet — usted carga su saldo de AirWallet con una tarjeta de crédito, tarjeta de débito, Apple Pay, Google Pay o PayPal, y luego toca para iniciar una máquina. Su primer lavado es gratis al registrarse.",
+      },
+      {
+        type: 'h2',
+        en: 'What to look for in any laundromat',
+        es: 'Qué buscar en cualquier lavandería',
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: "Cleanliness — machines should look clean inside and out. At CleanMax, an on-site attendant deep-cleans every washer and dryer between uses.", es: "Limpieza — las máquinas deben verse limpias por dentro y por fuera. En CleanMax, un encargado en el local limpia a fondo cada lavadora y secadora entre usos." },
+          { en: "Range of machine sizes — you want options from small loads to oversized. Look for at least one 80-lb-capacity machine if you wash comforters or bedding.", es: "Variedad de tamaños de máquina — busque opciones desde cargas pequeñas hasta extragrandes. Busque al menos una máquina de capacidad de 80 lb si lava edredones o ropa de cama." },
+          { en: "Hours that match your schedule — late hours matter if you work a full day. CleanMax is open daily 6 AM to 10 PM, last wash 9 PM.", es: "Horarios que se adapten a su agenda — las horas tardías importan si trabaja todo el día. CleanMax abre todos los días de 6 AM a 10 PM, última lavada 9 PM." },
+          { en: "Staff on site — not every laundromat has attendants. One who can help with a stuck machine, a payment question, or a stain saves you a trip home.", es: "Personal en el local — no todas las lavanderías tienen encargados. Uno que pueda ayudar con una máquina atorada, una pregunta de pago o una mancha le evita regresar a casa." },
+          { en: "Bilingual service — in much of the Pomona Valley this matters. Our attendant speaks Spanish and English, every open hour.", es: "Servicio bilingüe — en gran parte del Valle de Pomona esto importa. Nuestro encargado habla español e inglés, cada hora que abrimos." },
+          { en: "Parking and lighting — free on-site parking and bright interiors make late-evening trips feel safe.", es: "Estacionamiento e iluminación — el estacionamiento gratuito y los interiores bien iluminados hacen que las visitas nocturnas se sientan seguras." },
+        ],
+      },
+      {
+        type: 'h2',
+        en: 'CleanMax machines at a glance',
+        es: 'Las máquinas de CleanMax de un vistazo',
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: '25 Wascomat Clarus Vibe washers: 2× 80-lb, 6× 65-lb, 11× 40-lb, 6× 25-lb', es: '25 lavadoras Wascomat Clarus Vibe: 2× 80 lb, 6× 65 lb, 11× 40 lb, 6× 25 lb' },
+          { en: '34 dryers: 2× 75-lb, 32× 30-lb stacked units', es: '34 secadoras: 2× 75 lb, 32× 30 lb en torre' },
+          { en: '80-lb washers fit king comforters, duvets, and large Airbnb bedding sets', es: 'Las lavadoras de 80 lb aceptan edredones king, duvets y juegos grandes de ropa de cama de Airbnb' },
+          { en: 'Every machine accepts coins and AirWallet cashless pay', es: 'Cada máquina acepta monedas y pago sin efectivo con AirWallet' },
+        ],
+      },
+      {
+        type: 'h2',
+        en: 'Same self-service, modern payment',
+        es: 'Mismo autoservicio, pago moderno',
+      },
+      {
+        type: 'p',
+        en: "If the word \"coin laundry\" makes you picture digging around for quarters, skip that part. Download the [AirWallet app](https://airwallet.net/user-home), load your balance with a card or mobile wallet, and tap the NFC sensor on the washer or dryer to start it. You can still feed coins into any machine if that's your preference — both options work on the same equipment.",
+        es: "Si la palabra \"coin laundry\" le hace imaginar buscar monedas de 25 centavos, sáltese esa parte. Descargue la [app AirWallet](https://airwallet.net/user-home), cargue su saldo con una tarjeta o billetera móvil, y toque el sensor NFC en la lavadora o secadora para iniciarla. Aún puede usar monedas en cualquier máquina si esa es su preferencia — ambas opciones funcionan en el mismo equipo.",
+      },
+      {
+        type: 'h2',
+        en: 'Find a coin laundry near you in the Pomona Valley',
+        es: 'Encuentre una lavandería de monedas cerca de usted en el Valle de Pomona',
+      },
+      {
+        type: 'p',
+        en: "CleanMax is at 1009 E Holt Ave in Pomona and serves the surrounding Pomona Valley and Inland Empire. Our location pages go deeper on what to expect when you visit from each city:",
+        es: "CleanMax está en 1009 E Holt Ave en Pomona y atiende al Valle de Pomona y al Inland Empire. Nuestras páginas de ubicación entran en más detalle sobre qué esperar al visitar desde cada ciudad:",
+      },
+      {
+        type: 'ul',
+        items: [
+          { en: '[Laundromat in Pomona](/laundromat/pomona) — our home location', es: '[Lavandería en Pomona](/es/laundromat/pomona) — nuestra ubicación principal' },
+          { en: '[Laundromat near Rancho Cucamonga](/laundromat/rancho-cucamonga)', es: '[Lavandería cerca de Rancho Cucamonga](/es/laundromat/rancho-cucamonga)' },
+          { en: '[Laundromat near Ontario](/laundromat/ontario)', es: '[Lavandería cerca de Ontario](/es/laundromat/ontario)' },
+          { en: '[Laundromat near Upland](/laundromat/upland)', es: '[Lavandería cerca de Upland](/es/laundromat/upland)' },
+          { en: '[Laundromat near Claremont](/laundromat/claremont)', es: '[Lavandería cerca de Claremont](/es/laundromat/claremont)' },
+        ],
+      },
+      {
+        type: 'p',
+        en: "So — laundromat or coin laundry? Both. Come in whenever we're open, pay whichever way is easiest, and talk to a real person if you need help. That's the whole difference.",
+        es: "Entonces — ¿lavandería o coin laundry? Ambas. Venga cuando estemos abiertos, pague como le sea más fácil, y hable con una persona real si necesita ayuda. Esa es toda la diferencia.",
+      },
+    ],
+    ctaHeadingEn: 'Visit CleanMax in Pomona',
+    ctaHeadingEs: 'Visite CleanMax en Pomona',
+    ctaLinks: [
+      {
+        href: '/laundromat/pomona',
+        labelEn: 'See the Pomona coin laundry',
+        labelEs: 'Ver la lavandería de Pomona',
+      },
+      {
+        href: 'https://airwallet.net/user-home',
+        labelEn: 'Download the AirWallet app',
+        labelEs: 'Descargar la app AirWallet',
+      },
+    ],
+  },
 ];

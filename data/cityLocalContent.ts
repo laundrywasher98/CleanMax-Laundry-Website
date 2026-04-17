@@ -103,8 +103,8 @@ export const cityLocalContent: CityLocalContent[] = [
       es: "La mezcla de raíces agrícolas, parques industriales y vecindarios familiares en crecimiento de Chino significa que nuestros clientes van desde talleres mecánicos que necesitan uniformes con grasa lavados hasta familias en The Preserve que dejan cargas semanales. También servimos a ranchos equinos y negocios ecuestres cerca de Prado Park.",
     },
     intro: {
-      en: "Chino is a unique market for us — half industrial, half residential, with a strong Spanish-speaking community. CleanMax handles commercial uniform laundry for local shops and machine businesses along Central Ave, plus wash-and-fold pickup for families throughout Chino's residential core.",
-      es: "Chino es un mercado único para nosotros — mitad industrial, mitad residencial, con una fuerte comunidad hispanohablante. CleanMax maneja lavado comercial de uniformes para talleres locales y negocios mecánicos a lo largo de Central Ave, además de servicio de lavado y doblado con recolección para familias en todo el núcleo residencial de Chino.",
+      en: "Chino is a unique market for us — half industrial, half residential, with a strong Spanish-speaking community. CleanMax handles commercial uniform laundry for local shops and machine businesses along Central Ave, and our bilingual Pomona location is a short drive for Chino families who drop off walk-in wash-and-fold.",
+      es: "Chino es un mercado único para nosotros — mitad industrial, mitad residencial, con una fuerte comunidad hispanohablante. CleanMax maneja lavado comercial de uniformes para talleres locales y negocios mecánicos a lo largo de Central Ave, y nuestro local bilingüe en Pomona queda a corta distancia para las familias de Chino que dejan su lavado y doblado en persona.",
     },
   },
   {
@@ -271,8 +271,8 @@ export const cityLocalContent: CityLocalContent[] = [
       es: "Glendora Village es uno de los centros peatonales más encantadores del Valle de San Gabriel. Los cafés y restaurantes independientes allí confían en CleanMax para servicio de uniformes y lencería, y las familias en los vecindarios del pie de la montaña de Glendora usan nuestro servicio de lavado y doblado por conveniencia.",
     },
     intro: {
-      en: "Glendora — the 'Pride of the Foothills' — is a market where quality matters more than the cheapest option. That fits CleanMax perfectly: modern Wascomat machines, careful handling, and consistent turnaround for both residential and commercial customers.",
-      es: "Glendora — el 'Orgullo de las Estribaciones' — es un mercado donde la calidad importa más que la opción más barata. Eso encaja perfectamente con CleanMax: máquinas Wascomat modernas, manejo cuidadoso y plazos consistentes para clientes residenciales y comerciales.",
+      en: "Glendora — the 'Pride of the Foothills' — is a market where quality matters more than the cheapest option. That fits CleanMax perfectly: modern Wascomat machines, careful handling, and consistent turnaround for both walk-in drop-off customers and commercial accounts.",
+      es: "Glendora — el 'Orgullo de las Estribaciones' — es un mercado donde la calidad importa más que la opción más barata. Eso encaja perfectamente con CleanMax: máquinas Wascomat modernas, manejo cuidadoso y plazos consistentes tanto para clientes que dejan su ropa en el local como para cuentas comerciales.",
     },
   },
   {
@@ -319,8 +319,8 @@ export const cityLocalContent: CityLocalContent[] = [
       es: "Las familias de San Dimas cerca del Parque Frank G. Bonelli y Via Verde son grandes usuarios de nuestro servicio de lavado y doblado con recolección y entrega. Los restaurantes del Old Town de San Dimas — la escena de steakhouse y saloon — son clientes habituales de nuestro servicio de uniformes y manteles comerciales.",
     },
     intro: {
-      en: "San Dimas's Old Town western-themed restaurants and the recreation hub at Bonelli Park drive two different streams of CleanMax business. Old Town pulls commercial linen service; Bonelli-area families pull residential pickup and delivery.",
-      es: "Los restaurantes temáticos del oeste del Old Town de San Dimas y el centro recreativo en Bonelli Park generan dos corrientes diferentes de negocio para CleanMax. Old Town trae servicio de lencería comercial; las familias del área de Bonelli traen recolección y entrega residencial.",
+      en: "San Dimas's Old Town western-themed restaurants and the recreation hub at Bonelli Park drive two different streams of CleanMax business. Old Town pulls commercial linen service; Bonelli-area families drop off walk-in wash-and-fold at our Pomona location on the way home.",
+      es: "Los restaurantes temáticos del oeste del Old Town de San Dimas y el centro recreativo en Bonelli Park generan dos corrientes diferentes de negocio para CleanMax. Old Town trae servicio de lencería comercial; las familias del área de Bonelli dejan su lavado y doblado en nuestro local de Pomona al pasar de regreso a casa.",
     },
   },
   {
@@ -367,8 +367,8 @@ export const cityLocalContent: CityLocalContent[] = [
       es: "Walnut está justo al lado de Pomona — los estudiantes de Mt. SAC a menudo dejan su ropa en CleanMax camino a casa, y las familias de Walnut Creek Estates usan nuestro servicio de recolección. Es una de las ciudades más fáciles de atender porque está muy cerca.",
     },
     intro: {
-      en: "Walnut is practically in our backyard. Mt. San Antonio College (Mt. SAC) is the biggest single source of student laundry across any of our markets, and Walnut's quiet residential neighborhoods make up a large share of our wash-and-fold pickup customers.",
-      es: "Walnut está prácticamente en nuestro patio trasero. Mt. San Antonio College (Mt. SAC) es la mayor fuente única de lavandería estudiantil en todos nuestros mercados, y los vecindarios residenciales tranquilos de Walnut conforman una gran parte de nuestros clientes de lavado y doblado con recolección.",
+      en: "Walnut is practically in our backyard. Mt. San Antonio College (Mt. SAC) is the biggest single source of student laundry across any of our markets, and families from Walnut's quiet neighborhoods are a large share of the wash-and-fold drop-offs at our nearby Pomona location.",
+      es: "Walnut está prácticamente en nuestro patio trasero. Mt. San Antonio College (Mt. SAC) es la mayor fuente única de lavandería estudiantil en todos nuestros mercados, y las familias de los tranquilos vecindarios de Walnut son una gran parte de los clientes de lavado y doblado que dejan su ropa en nuestro local cercano de Pomona.",
     },
   },
   {

@@ -5,12 +5,12 @@ import { buildPickupServiceSchema } from "@/lib/schema";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Recolección y Entrega de Lavandería en Pomona, CA | CleanMax Laundry",
+  title: "Recolección y Entrega de Lavandería Comercial en Pomona, CA | CleanMax Laundry",
   description:
-    "Recolección y entrega de lavandería programada en el Valle de Pomona y el Inland Empire. Cuentas residenciales y comerciales. Entrega en 24 a 48 horas.",
+    "Recolección y entrega de lavandería comercial programada en el Valle de Pomona y el Inland Empire. Tarifa fija de $65, entrega al siguiente día en pedidos de menos de 750 lbs, equipo familiar.",
   path: "/pickup-delivery",
   keywords:
-    "recolección y entrega lavandería Pomona, lavado y doblado recolección, lavandería comercial entrega Inland Empire, CleanMax Laundry recolección",
+    "recolección lavandería comercial Pomona, lavado y doblado comercial, lavandería comercial entrega Inland Empire, servicio lencería restaurante Pomona, CleanMax Laundry recolección comercial",
   lang: "es",
 });
 

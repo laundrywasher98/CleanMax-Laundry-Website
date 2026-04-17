@@ -19,14 +19,14 @@ export async function generateMetadata({
 
   const isPomona = slug === "pomona";
   const title = isPomona
-    ? `Self-Service Laundromat in Pomona, CA | CleanMax Laundry`
-    : `Laundromat Near ${city.name}, CA | CleanMax Laundry`;
+    ? `Pomona Coin Laundry & Self-Service Laundromat | CleanMax Laundry`
+    : `Laundromat & Coin Laundry Near ${city.name}, CA | CleanMax Laundry`;
   const description = isPomona
-    ? `Modern self-service laundromat in Pomona, CA. Open daily 6AM–10PM. Wascomat machines, free parking, app payment. CleanMax Laundry.`
-    : `Modern self-service laundromat serving ${city.name}, CA. Open daily 6AM–10PM. Wascomat machines, on-site parking. CleanMax Laundry in Pomona.`;
+    ? `Pomona coin laundry and self-service laundromat at 1009 E Holt Ave. Open daily 6 AM–10 PM, 25 washers up to 80 lb, coin or AirWallet cashless pay, bilingual attendant. CleanMax Laundry.`
+    : `Modern laundromat and coin laundry serving ${city.name}, CA. Open daily 6 AM–10 PM. 25 washers (25–80 lb) plus 34 dryers, coin or AirWallet cashless pay, bilingual attendant. CleanMax Laundry in Pomona.`;
   const keywords = isPomona
-    ? `laundromat Pomona CA, coin laundry Pomona, self service laundry Pomona, lavanderia Pomona`
-    : `laundromat near ${city.name}, coin laundry ${city.name} CA, self service laundry ${city.name}, lavanderia ${city.name}`;
+    ? `laundromat Pomona CA, coin laundry Pomona, pomona coin laundry, self service laundry Pomona, laundry Pomona, lavanderia Pomona`
+    : `laundromat ${city.name}, coin laundry ${city.name} CA, laundromat near ${city.name}, self service laundry ${city.name}, lavanderia ${city.name}`;
 
   return buildMetadata({
     title,

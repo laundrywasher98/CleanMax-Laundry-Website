@@ -248,23 +248,26 @@ export function buildPickupServiceSchema(lang: Language = "en") {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    serviceType: "Laundry Pickup and Delivery",
-    name: "CleanMax Laundry Pickup & Delivery",
+    serviceType: "Commercial Laundry Pickup and Delivery",
+    name: "CleanMax Commercial Laundry Pickup & Delivery",
     description:
       lang === "es"
-        ? "Recolección y entrega de lavandería residencial y comercial programada en el Valle de Pomona y el Inland Empire."
-        : "Scheduled residential and commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire.",
+        ? "Recolección y entrega de lavandería comercial programada en el Valle de Pomona y el Inland Empire. Tarifa fija de $65 por visita; entrega al siguiente día en pedidos de menos de 750 libras."
+        : "Scheduled commercial laundry pickup and delivery throughout the Pomona Valley and Inland Empire. $65 flat pickup fee; next-day delivery on orders under 750 lbs.",
     provider: { "@id": `${BASE_URL}/#business` },
     areaServed: pickupServiceArea.map((name) => ({ "@type": "City", name })),
     offers: {
       "@type": "Offer",
       priceCurrency: "USD",
-      price: "1.50",
+      price: "65.00",
       priceSpecification: {
-        "@type": "UnitPriceSpecification",
-        price: "1.50",
+        "@type": "PriceSpecification",
+        price: "65.00",
         priceCurrency: "USD",
-        unitText: "LB",
+        description:
+          lang === "es"
+            ? "Tarifa fija de recolección y entrega por visita. Tarifa por libra cotizada por separado según volumen y tipo."
+            : "Flat pickup-and-delivery fee per run. Per-pound laundry rate quoted separately by volume and type.",
       },
     },
     url: `${BASE_URL}${urlPath}`,
