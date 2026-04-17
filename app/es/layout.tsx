@@ -23,7 +23,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cleanmaxlaundry.com"),
+  metadataBase: new URL("https://www.cleanmaxlaundry.com"),
   title: "CleanMax Laundry | Lavandería y Lavado y Doblado en Pomona, CA",
   description:
     "CleanMax Laundry ofrece lavandería de autoservicio, lavado y doblado, y recolección de lavandería comercial en Pomona, CA. Abierto todos los días. Máquinas modernas. $1.50/lb.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "CleanMax Laundry | Lavandería en Pomona, CA",
     description:
       "Lavandería de autoservicio, lavado y doblado, y recolección de lavandería comercial en Pomona, CA. Abierto todos los días.",
-    url: "https://cleanmaxlaundry.com/es",
+    url: "https://www.cleanmaxlaundry.com/es",
     siteName: "CleanMax Laundry",
     images: [
       {
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     title: "CleanMax Laundry | Lavandería en Pomona, CA",
     description:
       "Lavandería de autoservicio, lavado y doblado, y recolección de lavandería comercial en Pomona, CA.",
-    images: ["https://cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
+    images: ["https://www.cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
   },
   alternates: {
-    canonical: "https://cleanmaxlaundry.com/es",
+    canonical: "https://www.cleanmaxlaundry.com/es",
     languages: {
-      en: "https://cleanmaxlaundry.com",
-      es: "https://cleanmaxlaundry.com/es",
+      en: "https://www.cleanmaxlaundry.com",
+      es: "https://www.cleanmaxlaundry.com/es",
     },
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION && {

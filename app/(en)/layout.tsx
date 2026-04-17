@@ -23,7 +23,7 @@ const barlow = Barlow({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cleanmaxlaundry.com"),
+  metadataBase: new URL("https://www.cleanmaxlaundry.com"),
   title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
   description:
     "CleanMax Laundry offers self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern machines. $1.50/lb.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
     description:
       "Self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern Wascomat machines.",
-    url: "https://cleanmaxlaundry.com",
+    url: "https://www.cleanmaxlaundry.com",
     siteName: "CleanMax Laundry",
     images: [
       {
@@ -51,13 +51,13 @@ export const metadata: Metadata = {
     title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
     description:
       "Self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern Wascomat machines.",
-    images: ["https://cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
+    images: ["https://www.cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
   },
   alternates: {
-    canonical: "https://cleanmaxlaundry.com",
+    canonical: "https://www.cleanmaxlaundry.com",
     languages: {
-      en: "https://cleanmaxlaundry.com",
-      es: "https://cleanmaxlaundry.com/es",
+      en: "https://www.cleanmaxlaundry.com",
+      es: "https://www.cleanmaxlaundry.com/es",
     },
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION && {

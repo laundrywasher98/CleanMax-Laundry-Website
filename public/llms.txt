@@ -18,15 +18,15 @@ CleanMax Laundry is a full-service laundromat in Pomona, California, serving the
 
 ## Primary URLs
 
-- Home: https://cleanmaxlaundry.com
-- Locations served: https://cleanmaxlaundry.com/locations
-- Wash & fold pricing: https://cleanmaxlaundry.com/wash-and-fold/pricing
-- Pickup & delivery: https://cleanmaxlaundry.com/pickup-delivery
-- Commercial laundry: https://cleanmaxlaundry.com/commercial-laundry
-- Commercial quote request: https://cleanmaxlaundry.com/commercial-quote
-- Comforters & large loads: https://cleanmaxlaundry.com/comforters-large-loads
-- Blog: https://cleanmaxlaundry.com/blog
-- Spanish site: https://cleanmaxlaundry.com/es
+- Home: https://www.cleanmaxlaundry.com
+- Locations served: https://www.cleanmaxlaundry.com/locations
+- Wash & fold pricing: https://www.cleanmaxlaundry.com/wash-and-fold/pricing
+- Pickup & delivery: https://www.cleanmaxlaundry.com/pickup-delivery
+- Commercial laundry: https://www.cleanmaxlaundry.com/commercial-laundry
+- Commercial quote request: https://www.cleanmaxlaundry.com/commercial-quote
+- Comforters & large loads: https://www.cleanmaxlaundry.com/comforters-large-loads
+- Blog: https://www.cleanmaxlaundry.com/blog
+- Spanish site: https://www.cleanmaxlaundry.com/es
 
 ## Service area
 

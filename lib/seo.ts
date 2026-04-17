@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import type { Language } from "@/contexts/LanguageContext";
 
 export const DEFAULT_OG_IMAGE = "/images/og-card-cleanmax.jpg";
-export const BASE_URL = "https://cleanmaxlaundry.com";
+export const BASE_URL = "https://www.cleanmaxlaundry.com";
 
 export function buildMetadata({
   title,

@@ -3,7 +3,7 @@ import { cities } from "@/data/cities";
 import { industries } from "@/data/industries";
 import { blogPosts } from "@/data/blogPosts";
 
-const BASE_URL = "https://cleanmaxlaundry.com";
+const BASE_URL = "https://www.cleanmaxlaundry.com";
 
 // Every EN path gets a mirrored /es path. hreflang alternates are emitted
 // per entry so Google knows the two URLs are language-equivalent.

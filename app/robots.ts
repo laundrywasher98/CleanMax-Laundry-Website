@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/api/",
     },
-    sitemap: "https://cleanmaxlaundry.com/sitemap.xml",
+    sitemap: "https://www.cleanmaxlaundry.com/sitemap.xml",
   };
 }
