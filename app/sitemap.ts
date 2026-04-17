@@ -23,7 +23,6 @@ function toBilingualSitemap(entries: Entry[]): MetadataRoute.Sitemap {
       languages: {
         en: enUrl,
         es: esUrl,
-        "x-default": enUrl,
       },
     };
     out.push({

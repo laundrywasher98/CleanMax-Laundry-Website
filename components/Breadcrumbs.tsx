@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "@/contexts/LanguageContext";
 import JsonLd from "@/components/JsonLd";
 import { buildBreadcrumbSchema, type BreadcrumbItem } from "@/lib/schema";
@@ -12,12 +13,14 @@ interface Props {
 
 export default function Breadcrumbs({ items }: Props) {
   const { language } = useTranslation();
+  const pathname = usePathname() || "/";
   const homeLabel = language === "es" ? "Inicio" : "Home";
-  const allItems = [{ label: homeLabel, href: "/" }, ...items];
+  const homeHref = language === "es" ? "/es" : "/";
+  const allItems = [{ label: homeLabel, href: homeHref }, ...items];
 
   const schemaItems: BreadcrumbItem[] = allItems.map((item) => ({
     name: item.label,
-    url: item.href ? `${BASE_URL}${item.href}` : `${BASE_URL}`,
+    url: `${BASE_URL}${item.href ?? pathname}`,
   }));
 
   return (

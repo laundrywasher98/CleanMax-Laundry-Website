@@ -59,7 +59,6 @@ export function buildMetadata({
       languages: {
         en: enUrl,
         es: esUrl,
-        "x-default": enUrl,
       },
     },
   };

@@ -57,7 +57,7 @@ type ServiceDefinition = {
 
 const coreServices: ServiceDefinition[] = [
   {
-    slug: "laundromat",
+    slug: "locations",
     name: {
       en: "Self-Service Laundromat",
       es: "Lavandería de Autoservicio",
@@ -68,7 +68,7 @@ const coreServices: ServiceDefinition[] = [
     },
   },
   {
-    slug: "wash-and-fold",
+    slug: "wash-and-fold/pricing",
     name: {
       en: "Wash and Fold Service",
       es: "Servicio de Lavado y Doblado",

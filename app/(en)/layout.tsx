@@ -58,7 +58,6 @@ export const metadata: Metadata = {
     languages: {
       en: "https://cleanmaxlaundry.com",
       es: "https://cleanmaxlaundry.com/es",
-      "x-default": "https://cleanmaxlaundry.com",
     },
   },
   ...(process.env.GOOGLE_SITE_VERIFICATION && {
