@@ -2,20 +2,20 @@ import Image from "next/image";
 
 const photos = [
   {
-    src: "/images/cleanmax-laundromat-washers.webp",
-    alt: "Row of Wascomat front-load washers at CleanMax Laundry in Pomona, CA",
+    src: "/images/cleanmax-laundromat-pomona-exterior-storefront.webp",
+    alt: "CleanMax Laundromat storefront at 1009 E Holt Ave, Pomona, CA — bilingual parking signage",
   },
   {
-    src: "/images/cleanmax-laundromat-dryers.webp",
-    alt: "Large-capacity Wascomat Clarus Vibe washers for comforters and bedding",
+    src: "/images/cleanmax-laundromat-pomona-wascomat-washers-row-01.webp",
+    alt: "Row of modern Wascomat front-load washers at CleanMax Laundromat in Pomona, CA",
   },
   {
-    src: "/images/cleanmax-laundromat-folding-area.webp",
-    alt: "Clean folding area and ClariVibe touchscreen at CleanMax Laundry Pomona",
+    src: "/images/cleanmax-laundromat-pomona-ipso-stack-dryers-02.webp",
+    alt: "IPSO stack dryers with bilingual Spanish and English signage at CleanMax Laundromat Pomona",
   },
   {
-    src: "/images/cleanmax-laundromat-interior.webp",
-    alt: "CleanMax Laundry interior showing large-capacity washers in Pomona",
+    src: "/images/cleanmax-laundromat-pomona-bilingual-wash-fold-pricing.webp",
+    alt: "Bilingual wash-dry-fold pricing display at CleanMax Laundromat in Pomona, CA",
   },
 ];
 

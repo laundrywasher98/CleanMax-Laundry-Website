@@ -127,7 +127,7 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
     url: BASE_URL,
     telephone: "(909) 248-7305",
     email: "laundry@cleanmaxlaundry.com",
-    image: `${BASE_URL}/images/cleanmax-laundry-pomona-interior.webp`,
+    image: `${BASE_URL}/images/cleanmax-laundromat-pomona-interior-wide-02.webp`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "1009 E Holt Ave",
