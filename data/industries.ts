@@ -42,7 +42,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What does pickup cost for a {city} gym?",
-        a: "Pickup and delivery is a flat $65 per run. The laundry itself is quoted per pound based on volume, frequency, and fabric type — we'll send a custom quote once we know your cadence.",
+        a: "Pickup and delivery is a flat $35 per run. The laundry itself is quoted per pound based on volume, frequency, and fabric type — we'll send a custom quote once we know your cadence.",
       },
       {
         q: "Can you scale with us as membership grows?",
@@ -64,7 +64,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuánto cuesta la recogida para un gimnasio en {city}?",
-        a: "La recogida y entrega es una tarifa fija de $65 por viaje. El lavado se cotiza por libra según volumen, frecuencia y tipo de tela — enviamos una cotización personalizada una vez que conozcamos tu cadencia.",
+        a: "La recogida y entrega es una tarifa fija de $35 por viaje. El lavado se cotiza por libra según volumen, frecuencia y tipo de tela — enviamos una cotización personalizada una vez que conozcamos tu cadencia.",
       },
       {
         q: "¿Pueden crecer con nosotros a medida que aumentan los miembros?",
@@ -101,7 +101,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What does it cost for a {city} restaurant?",
-        a: "Pickup and delivery is a $65 flat fee per run. Laundry is quoted per pound — volume, fabric mix, and frequency set the per-pound rate. We send the quote after a short intake call.",
+        a: "Pickup and delivery is a $35 flat fee per run. Laundry is quoted per pound — volume, fabric mix, and frequency set the per-pound rate. We send the quote after a short intake call.",
       },
       {
         q: "Do you offer volume contracts?",
@@ -123,7 +123,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuánto cuesta para un restaurante en {city}?",
-        a: "La recogida y entrega es una tarifa fija de $65 por viaje. El lavado se cotiza por libra — volumen, mezcla de telas y frecuencia fijan el precio por libra. Enviamos la cotización después de una breve llamada.",
+        a: "La recogida y entrega es una tarifa fija de $35 por viaje. El lavado se cotiza por libra — volumen, mezcla de telas y frecuencia fijan el precio por libra. Enviamos la cotización después de una breve llamada.",
       },
       {
         q: "¿Ofrecen contratos por volumen?",
@@ -160,7 +160,7 @@ export const industries: Industry[] = [
       },
       {
         q: "How is pricing structured for {city} hosts?",
-        a: "Pickup and delivery is $65 flat per run. Linen washing is quoted per pound — you pay the same rate whether it's one bed or ten. Most hosts settle into a weekly pickup.",
+        a: "Pickup and delivery is $35 flat per run. Linen washing is quoted per pound — you pay the same rate whether it's one bed or ten. Most hosts settle into a weekly pickup.",
       },
       {
         q: "Can you handle multiple properties on one contract?",
@@ -182,7 +182,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cómo está estructurado el precio para anfitriones de {city}?",
-        a: "La recogida y entrega es $65 fijos por viaje. El lavado de ropa de cama se cotiza por libra — pagas la misma tarifa ya sea una cama o diez. La mayoría de anfitriones se acomodan a una recogida semanal.",
+        a: "La recogida y entrega es $35 fijos por viaje. El lavado de ropa de cama se cotiza por libra — pagas la misma tarifa ya sea una cama o diez. La mayoría de anfitriones se acomodan a una recogida semanal.",
       },
       {
         q: "¿Pueden manejar múltiples propiedades en un contrato?",
@@ -219,7 +219,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What does commercial pickup cost for a hotel?",
-        a: "Pickup and delivery is a flat $65 per run. Laundry itself is quoted per pound after we see a week's rotation volume — the per-pound rate scales with frequency and mix.",
+        a: "Pickup and delivery is a flat $35 per run. Laundry itself is quoted per pound after we see a week's rotation volume — the per-pound rate scales with frequency and mix.",
       },
       {
         q: "Do you do volume contracts for {county} County hotels?",
@@ -241,7 +241,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuánto cuesta la recogida comercial para un hotel?",
-        a: "La recogida y entrega es una tarifa fija de $65 por viaje. El lavado se cotiza por libra después de que vemos el volumen de una semana — el precio por libra escala con frecuencia y mezcla.",
+        a: "La recogida y entrega es una tarifa fija de $35 por viaje. El lavado se cotiza por libra después de que vemos el volumen de una semana — el precio por libra escala con frecuencia y mezcla.",
       },
       {
         q: "¿Hacen contratos por volumen para hoteles del Condado de {county}?",
@@ -278,7 +278,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What's the cost for a 2-to-10-chair salon in {city}?",
-        a: "Pickup is $65 flat per run. Laundry is quoted per pound — smaller salons usually land on a two or three times a week pickup with a predictable weekly invoice.",
+        a: "Pickup is $35 flat per run. Laundry is quoted per pound — smaller salons usually land on a two or three times a week pickup with a predictable weekly invoice.",
       },
       {
         q: "Do you speak Spanish? My team does.",
@@ -300,7 +300,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuánto cuesta para un salón de 2 a 10 sillas en {city}?",
-        a: "La recogida es $65 fijos por viaje. El lavado se cotiza por libra — los salones más pequeños normalmente se acomodan a una recogida dos o tres veces por semana con una factura semanal predecible.",
+        a: "La recogida es $35 fijos por viaje. El lavado se cotiza por libra — los salones más pequeños normalmente se acomodan a una recogida dos o tres veces por semana con una factura semanal predecible.",
       },
       {
         q: "¿Hablan español? Mi equipo sí.",
@@ -337,7 +337,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What does pickup cost for a {city} clinic?",
-        a: "A flat $65 per pickup and delivery run. Laundry is quoted per pound based on your weekly scrubs and linen volume — the per-pound rate holds steady as long as the cadence is predictable.",
+        a: "A flat $35 per pickup and delivery run. Laundry is quoted per pound based on your weekly scrubs and linen volume — the per-pound rate holds steady as long as the cadence is predictable.",
       },
       {
         q: "Can you schedule around clinic hours?",
@@ -359,7 +359,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuánto cuesta la recogida para una clínica en {city}?",
-        a: "Una tarifa fija de $65 por viaje de recogida y entrega. El lavado se cotiza por libra basado en tu volumen semanal de uniformes y ropa — el precio por libra se mantiene estable mientras la cadencia sea predecible.",
+        a: "Una tarifa fija de $35 por viaje de recogida y entrega. El lavado se cotiza por libra basado en tu volumen semanal de uniformes y ropa — el precio por libra se mantiene estable mientras la cadencia sea predecible.",
       },
       {
         q: "¿Pueden programar alrededor de las horas de la clínica?",
@@ -396,7 +396,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What's the pricing for a {city} preschool?",
-        a: "Pickup is a flat $65 per run. Laundry is quoted per pound based on enrollment size and how often you need rotation — smaller daycares typically land on a weekly pickup.",
+        a: "Pickup is a flat $35 per run. Laundry is quoted per pound based on enrollment size and how often you need rotation — smaller daycares typically land on a weekly pickup.",
       },
       {
         q: "Is the attendant bilingual?",
@@ -418,7 +418,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuál es el precio para un preescolar en {city}?",
-        a: "La recogida es una tarifa fija de $65 por viaje. El lavado se cotiza por libra basado en el tamaño de la matrícula y qué tan seguido necesitas rotación — las guarderías más pequeñas típicamente se acomodan a una recogida semanal.",
+        a: "La recogida es una tarifa fija de $35 por viaje. El lavado se cotiza por libra basado en el tamaño de la matrícula y qué tan seguido necesitas rotación — las guarderías más pequeñas típicamente se acomodan a una recogida semanal.",
       },
       {
         q: "¿El encargado es bilingüe?",
@@ -455,7 +455,7 @@ export const industries: Industry[] = [
       },
       {
         q: "What does a {city} shop pay for pickup?",
-        a: "Pickup and delivery is a flat $65 per run. Uniform and rag laundry is quoted per pound based on your weekly volume — the per-pound rate stays fixed as long as the cadence holds steady.",
+        a: "Pickup and delivery is a flat $35 per run. Uniform and rag laundry is quoted per pound based on your weekly volume — the per-pound rate stays fixed as long as the cadence holds steady.",
       },
       {
         q: "Can you handle a multi-bay dealership?",
@@ -477,7 +477,7 @@ export const industries: Industry[] = [
       },
       {
         q: "¿Cuánto paga un taller en {city} por recogida?",
-        a: "La recogida y entrega es una tarifa fija de $65 por viaje. El lavado de uniformes y trapos se cotiza por libra basado en tu volumen semanal — el precio por libra se mantiene fijo mientras la cadencia se mantenga estable.",
+        a: "La recogida y entrega es una tarifa fija de $35 por viaje. El lavado de uniformes y trapos se cotiza por libra basado en tu volumen semanal — el precio por libra se mantiene fijo mientras la cadencia se mantenga estable.",
       },
       {
         q: "¿Pueden manejar una agencia con múltiples bahías?",
