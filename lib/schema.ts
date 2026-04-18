@@ -117,7 +117,7 @@ export function buildServiceCatalogSchema(lang: Language = "en") {
 export function buildLocalBusinessSchema(lang: Language = "en") {
   return {
     "@context": "https://schema.org",
-    "@type": "Laundry",
+    "@type": "DryCleaningOrLaundry",
     "@id": `${BASE_URL}/#business`,
     name: "CleanMax Laundry",
     description:
