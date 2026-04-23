@@ -35,9 +35,12 @@ export default function CommercialOverviewContent() {
           <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-4">
             {t("commercial_overview_eyebrow")}
           </p>
-          <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-6">
+          <h1 className="font-display font-black text-5xl md:text-6xl uppercase text-brand-dark leading-none mb-4">
             {t("commercial_overview_heading")}
           </h1>
+          <h2 className="font-display font-bold text-2xl md:text-3xl uppercase text-brand-dark/70 leading-tight mb-6">
+            {t("commercial_overview_subheading")}
+          </h2>
           <p className="font-sans text-brand-dark/70 text-lg leading-relaxed max-w-2xl">
             {t("commercial_overview_intro")}
           </p>

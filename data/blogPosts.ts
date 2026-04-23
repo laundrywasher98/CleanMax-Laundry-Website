@@ -1581,4 +1581,246 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
+  // ─── POST 13 ──────────────────────────────────────────────────────────────
+  {
+    slug: 'commercial-laundry-pickup-pomona-cost',
+    title: 'Commercial Laundry Pickup in Pomona: What It Costs and How It Works',
+    titleEs: 'Recolección de Lavandería Comercial en Pomona: Costo y Cómo Funciona',
+    publishDate: '2026-04-23',
+    excerpt:
+      'Commercial laundry pickup in Pomona starts at a $35 flat fee plus per-pound pricing. Next-day turnaround, no long-term contract — here is the full breakdown.',
+    excerptEs:
+      'La recolección de lavandería comercial en Pomona comienza con una tarifa fija de $35 más precio por libra. Entrega al siguiente día, sin contrato — aquí está el desglose completo.',
+    sections: [
+      {
+        type: 'h2',
+        en: 'What Does Commercial Laundry Pickup Cost in Pomona?',
+        es: '¿Cuánto Cuesta la Recolección de Lavandería Comercial en Pomona?',
+      },
+      {
+        type: 'p',
+        en: 'If you run a restaurant, gym, Airbnb, salon, hotel, or medical office in Pomona, the real question is rarely "do I need commercial laundry service?" — it is "what does it actually cost?" At [CleanMax Laundry](/commercial-laundry), commercial laundry pickup in Pomona is built on two components: a flat $35 pickup-and-delivery fee per visit, and a per-pound rate on the laundry itself. The $35 covers the route, the driver, and the return delivery. The per-pound rate depends on volume, textile type, and whether items need special handling like stain treatment or folding to spec.',
+        es: 'Si usted maneja un restaurante, gimnasio, Airbnb, salón, hotel o consultorio médico en Pomona, la pregunta real rara vez es "¿necesito servicio de lavandería comercial?" — es "¿cuánto cuesta realmente?" En [CleanMax Laundry](/es/commercial-laundry), la recolección de lavandería comercial en Pomona se basa en dos componentes: una tarifa fija de $35 por visita (recogida y entrega), y una tarifa por libra sobre la ropa misma. Los $35 cubren la ruta, el conductor y la entrega de regreso. La tarifa por libra depende del volumen, el tipo de textil, y si los artículos necesitan tratamiento especial como remoción de manchas o doblado específico.',
+      },
+      {
+        type: 'h2',
+        en: 'The $35 Flat Pickup Fee — What It Covers',
+        es: 'La Tarifa Fija de $35 — Qué Cubre',
+      },
+      {
+        type: 'p',
+        en: 'The $35 flat fee is per visit, not per pound. Whether the driver picks up 20 pounds of restaurant aprons or 400 pounds of Airbnb linens, the trip charge is the same. This matters for businesses with predictable weekly volume — the fee amortizes quickly. It also means you are not punished for needing a second mid-week pickup during a busy stretch; the extra visit adds $35, not a percentage of the load.',
+        es: 'La tarifa fija de $35 es por visita, no por libra. Ya sea que el conductor recoja 20 libras de delantales de restaurante o 400 libras de ropa de cama de Airbnb, el cargo del viaje es el mismo. Esto importa para negocios con volumen semanal predecible — la tarifa se amortiza rápidamente. También significa que no se le castiga por necesitar una segunda recolección a mitad de semana durante un período ocupado; la visita adicional suma $35, no un porcentaje de la carga.',
+      },
+      {
+        type: 'p',
+        en: 'The fee includes next-day delivery on orders under 750 pounds. Larger volumes get scheduled separately — a 1,000-pound hotel linen load, for example, is typically returned in 48 hours because it occupies multiple wash cycles on our large-capacity Wascomat machines. Either way, you see the full schedule before the truck leaves.',
+        es: 'La tarifa incluye entrega al siguiente día en pedidos de menos de 750 libras. Los volúmenes mayores se programan por separado — una carga de sábanas de hotel de 1,000 libras, por ejemplo, típicamente regresa en 48 horas porque ocupa múltiples ciclos de lavado en nuestras máquinas Wascomat de gran capacidad. En cualquier caso, usted ve el horario completo antes de que el camión salga.',
+      },
+      {
+        type: 'h2',
+        en: 'Per-Pound Pricing by Industry',
+        es: 'Precio por Libra por Industria',
+      },
+      {
+        type: 'p',
+        en: 'The per-pound rate is quoted after we understand your volume and textile mix. A few rough benchmarks for commercial laundry in Pomona as of 2026:',
+        es: 'La tarifa por libra se cotiza después de que entendemos su volumen y tipo de textiles. Algunos valores de referencia aproximados para lavandería comercial en Pomona a partir de 2026:',
+      },
+      {
+        type: 'ul',
+        items: [
+          {
+            en: 'Restaurant linens (tablecloths, napkins, aprons, bar towels): $1.10–$1.35 per pound. See our [restaurant commercial laundry page](/commercial-laundry/restaurant/pomona).',
+            es: 'Textiles de restaurante (manteles, servilletas, delantales, toallas de bar): $1.10–$1.35 por libra. Vea nuestra [página de lavandería comercial para restaurantes](/es/commercial-laundry/restaurant/pomona).',
+          },
+          {
+            en: 'Gym towels and microfiber: $1.15–$1.40 per pound. See [gym commercial laundry](/commercial-laundry/gym/pomona).',
+            es: 'Toallas de gimnasio y microfibra: $1.15–$1.40 por libra. Vea [lavandería comercial para gimnasios](/es/commercial-laundry/gym/pomona).',
+          },
+          {
+            en: 'Airbnb and short-term rental turns (sheets, towels, duvet covers): $1.20–$1.45 per pound. See [Airbnb commercial laundry](/commercial-laundry/airbnb/pomona).',
+            es: 'Rotaciones de Airbnb y rentas de corto plazo (sábanas, toallas, fundas de edredón): $1.20–$1.45 por libra. Vea [lavandería comercial para Airbnb](/es/commercial-laundry/airbnb/pomona).',
+          },
+          {
+            en: 'Salon and spa towels (bleach-safe cycles): $1.25–$1.50 per pound. See [salon commercial laundry](/commercial-laundry/salon/pomona).',
+            es: 'Toallas de salón y spa (ciclos con cloro): $1.25–$1.50 por libra. Vea [lavandería comercial para salones](/es/commercial-laundry/salon/pomona).',
+          },
+          {
+            en: 'Medical-office textiles (scrubs, exam-room linens, non-biohazard only): $1.35–$1.60 per pound. See [medical commercial laundry](/commercial-laundry/medical-office/pomona).',
+            es: 'Textiles de consultorio médico (scrubs, sábanas de sala de examen, sin riesgo biológico): $1.35–$1.60 por libra. Vea [lavandería comercial médica](/es/commercial-laundry/medical-office/pomona).',
+          },
+          {
+            en: 'Hotel bulk linens (volume-tier pricing): $0.95–$1.25 per pound. See [hotel commercial laundry](/commercial-laundry/hotel/pomona).',
+            es: 'Sábanas de hotel en volumen (precios por tier de volumen): $0.95–$1.25 por libra. Vea [lavandería comercial para hoteles](/es/commercial-laundry/hotel/pomona).',
+          },
+        ],
+      },
+      {
+        type: 'p',
+        en: 'Volume breaks kick in around 300 pounds per week — businesses with consistent high volume get the lower end of each range. One-time or on-call pickups sit at the higher end because they do not amortize the route cost as efficiently.',
+        es: 'Los descuentos por volumen comienzan alrededor de 300 libras por semana — los negocios con volumen alto consistente obtienen el extremo inferior de cada rango. Las recolecciones únicas o por llamada están en el extremo más alto porque no amortizan el costo de la ruta con la misma eficiencia.',
+      },
+      {
+        type: 'h2',
+        en: 'What the Math Looks Like for a Real Pomona Business',
+        es: 'Cómo se Ve el Cálculo para un Negocio Real de Pomona',
+      },
+      {
+        type: 'p',
+        en: 'A typical mid-size Pomona restaurant runs about 120 pounds of linens per week — roughly 40 aprons, 60 bar towels, and a stack of napkins and tablecloths. At $1.20 per pound plus the $35 pickup, one weekly visit comes to $179. Two weekly visits (Monday and Thursday) comes to $214. For most operators, that is less than one shift of a prep cook spent on laundry, plus they get commercial-grade results they cannot reproduce in a back-of-house stack washer.',
+        es: 'Un restaurante mediano típico en Pomona maneja unas 120 libras de textiles por semana — unos 40 delantales, 60 toallas de bar, y una pila de servilletas y manteles. A $1.20 por libra más los $35 de recolección, una visita semanal suma $179. Dos visitas semanales (lunes y jueves) suma $214. Para la mayoría de operadores, eso es menos que un turno de un cocinero de prep gastado en lavandería, y además obtienen resultados de grado comercial que no pueden reproducir en una lavadora apilada de la parte trasera.',
+      },
+      {
+        type: 'p',
+        en: 'A 4-unit Airbnb operator doing 8 turns per week averages 280 pounds of sheets and towels. At $1.30 per pound plus $35, that is $399 per week — versus roughly $600 per week in cleaner time if the laundry is done in-unit between turns. The real savings are not the per-pound rate; they are the hour-per-turn you reclaim for more bookings.',
+        es: 'Un operador de 4 unidades de Airbnb que hace 8 rotaciones por semana promedia 280 libras de sábanas y toallas. A $1.30 por libra más $35, eso son $399 por semana — versus aproximadamente $600 por semana en tiempo de limpiadores si la lavandería se hace en la unidad entre rotaciones. El ahorro real no es la tarifa por libra; es la hora por rotación que usted recupera para más reservaciones.',
+      },
+      {
+        type: 'h2',
+        en: 'Next-Day Turnaround — How We Actually Hit It',
+        es: 'Entrega al Siguiente Día — Cómo la Logramos en Realidad',
+      },
+      {
+        type: 'p',
+        en: 'Next-day turnaround on commercial laundry only works when the laundromat has the capacity to absorb surges without bumping retail wash-and-fold customers. CleanMax runs 25 washers and 34 dryers — built for parallel commercial loads without blocking our [drop-off wash and fold](/wash-and-fold/pricing) customers. Commercial pickups that arrive before 10 AM are washed, dried, folded, and staged for next-day delivery. Orders that arrive after 10 AM are staged overnight and returned the day after.',
+        es: 'La entrega al siguiente día en lavandería comercial solo funciona cuando la lavandería tiene la capacidad de absorber aumentos sin desplazar a los clientes de lavado y doblado al detalle. CleanMax opera 25 lavadoras y 34 secadoras — construidas para cargas comerciales en paralelo sin bloquear a nuestros clientes de [lavado y doblado de entrega](/es/wash-and-fold/pricing). Las recolecciones comerciales que llegan antes de las 10 AM se lavan, secan, doblan y se preparan para entrega al siguiente día. Los pedidos que llegan después de las 10 AM se preparan durante la noche y se entregan al día siguiente.',
+      },
+      {
+        type: 'h2',
+        en: 'How to Get a Commercial Laundry Quote',
+        es: 'Cómo Obtener una Cotización de Lavandería Comercial',
+      },
+      {
+        type: 'p',
+        en: 'The quickest path is our [commercial quote form](/commercial-quote) — we ask for your industry, estimated weekly volume, and pickup address, and respond with a per-pound rate and suggested schedule within one business day. For a phone conversation, call (909) 248-7305 and ask for the commercial desk. No long-term contracts; most businesses start with one trial pickup before committing to a recurring schedule.',
+        es: 'El camino más rápido es nuestro [formulario de cotización comercial](/es/commercial-quote) — le preguntamos por su industria, volumen semanal estimado y dirección de recolección, y respondemos con una tarifa por libra y un horario sugerido dentro de un día hábil. Para una conversación telefónica, llame al (909) 248-7305 y pida el mostrador comercial. Sin contratos de largo plazo; la mayoría de los negocios comienza con una recolección de prueba antes de comprometerse a un horario recurrente.',
+      },
+    ],
+    ctaHeadingEn: 'Get Your Commercial Laundry Quote',
+    ctaHeadingEs: 'Obtenga Su Cotización de Lavandería Comercial',
+    ctaLinks: [
+      {
+        href: '/commercial-quote',
+        labelEn: 'Request a quote',
+        labelEs: 'Solicitar cotización',
+      },
+      {
+        href: '/commercial-laundry',
+        labelEn: 'See commercial laundry services',
+        labelEs: 'Ver servicios de lavandería comercial',
+      },
+    ],
+  },
+
+  // ─── POST 14 ──────────────────────────────────────────────────────────────
+  {
+    slug: 'restaurant-linen-service-inland-empire-2026',
+    title: 'Restaurant Linen Service in the Inland Empire: 2026 Guide',
+    titleEs: 'Servicio de Textiles para Restaurantes en el Inland Empire: Guía 2026',
+    publishDate: '2026-04-23',
+    excerpt:
+      'Inland Empire restaurants from Pomona to Rancho Cucamonga rely on commercial linen service to keep aprons, tablecloths, and bar towels clean. Here is what it costs in 2026 and how to choose a partner.',
+    excerptEs:
+      'Los restaurantes del Inland Empire, desde Pomona hasta Rancho Cucamonga, dependen del servicio comercial de textiles para mantener delantales, manteles y toallas de bar limpios. Aquí está lo que cuesta en 2026 y cómo elegir un socio.',
+    sections: [
+      {
+        type: 'h2',
+        en: 'What Inland Empire Restaurants Actually Send Out',
+        es: 'Lo que los Restaurantes del Inland Empire Realmente Envían',
+      },
+      {
+        type: 'p',
+        en: 'Restaurant linen service in the Inland Empire is a working-kitchen necessity, not a luxury. A typical full-service restaurant in Pomona, Claremont, Rancho Cucamonga, or Ontario sends out six categories of textiles every week: aprons (front and back of house), bar towels, bar mats, kitchen side towels, cloth napkins, and tablecloths. Some add chef coats, server uniforms, and floor mats on a longer rotation. Each category has a different wash cycle, a different tolerance for stain treatment, and a different replacement schedule — which is why general wash-and-fold does not substitute for dedicated [restaurant commercial laundry](/commercial-laundry/restaurant/pomona).',
+        es: 'El servicio de textiles para restaurantes en el Inland Empire es una necesidad operativa, no un lujo. Un restaurante típico de servicio completo en Pomona, Claremont, Rancho Cucamonga u Ontario envía seis categorías de textiles cada semana: delantales (de salón y cocina), toallas de bar, tapetes de bar, toallas de cocina, servilletas de tela y manteles. Algunos agregan chaquetas de chef, uniformes de meseros y tapetes de piso en una rotación más larga. Cada categoría tiene un ciclo de lavado diferente, una tolerancia distinta al tratamiento de manchas, y un calendario de reemplazo distinto — por eso el lavado y doblado general no sustituye a la [lavandería comercial especializada para restaurantes](/es/commercial-laundry/restaurant/pomona).',
+      },
+      {
+        type: 'h2',
+        en: '2026 Cost Benchmarks Across the Inland Empire',
+        es: 'Referencias de Costo 2026 en el Inland Empire',
+      },
+      {
+        type: 'p',
+        en: 'Restaurant linen service pricing in the Inland Empire hovers in a tight band for 2026. A full-service restaurant doing 80 covers per night typically generates 100–150 pounds of laundry per week. At CleanMax, that works out to roughly $155–$215 per week, all-in (pickup fee plus per-pound). Fast-casual or counter-service spots run lighter — 50–80 pounds weekly, $95–$130 all-in. High-volume banquet kitchens or catering operations push past 300 pounds weekly and qualify for volume-tier pricing.',
+        es: 'El precio del servicio de textiles para restaurantes en el Inland Empire se mantiene en un rango estrecho para 2026. Un restaurante de servicio completo con 80 cubiertos por noche típicamente genera 100–150 libras de lavandería por semana. En CleanMax, eso resulta en aproximadamente $155–$215 por semana, todo incluido (tarifa de recolección más precio por libra). Los lugares de casual rápido o servicio de mostrador son más ligeros — 50–80 libras semanales, $95–$130 todo incluido. Las cocinas de banquetes de alto volumen o las operaciones de catering superan las 300 libras semanales y califican para precios por tier de volumen.',
+      },
+      {
+        type: 'p',
+        en: 'These benchmarks come from actual Inland Empire restaurant accounts. Costs further from Pomona can climb if the provider tacks on mileage — our flat $35 pickup fee covers cities across our [full service area](/commercial-laundry), including Claremont, La Verne, San Dimas, Montclair, Upland, Ontario, Chino, Chino Hills, Diamond Bar, Walnut, and Rancho Cucamonga.',
+        es: 'Estas referencias provienen de cuentas reales de restaurantes del Inland Empire. Los costos más lejos de Pomona pueden subir si el proveedor agrega millaje — nuestra tarifa fija de $35 cubre ciudades en toda nuestra [área de servicio](/es/commercial-laundry), incluyendo Claremont, La Verne, San Dimas, Montclair, Upland, Ontario, Chino, Chino Hills, Diamond Bar, Walnut y Rancho Cucamonga.',
+      },
+      {
+        type: 'h2',
+        en: 'How to Choose a Restaurant Linen Partner',
+        es: 'Cómo Elegir un Socio de Textiles para Restaurantes',
+      },
+      {
+        type: 'p',
+        en: 'There are three common models in the Inland Empire: national rental programs (Cintas, Alsco, Aramark), rent-and-launder local providers, and launder-only providers like CleanMax. The right fit depends on who owns the textiles.',
+        es: 'Hay tres modelos comunes en el Inland Empire: programas nacionales de renta (Cintas, Alsco, Aramark), proveedores locales de renta y lavado, y proveedores solo de lavado como CleanMax. El mejor ajuste depende de quién es dueño de los textiles.',
+      },
+      {
+        type: 'ul',
+        items: [
+          {
+            en: 'Rental programs: the provider owns the linens and rotates them weekly. Predictable cost, zero replacement risk, but long contracts (typically 5 years) and price escalators. Best for multi-unit operators who want a single invoice.',
+            es: 'Programas de renta: el proveedor es dueño de los textiles y los rota semanalmente. Costo predecible, sin riesgo de reemplazo, pero contratos largos (típicamente 5 años) y escaladores de precio. Mejor para operadores de múltiples unidades que quieren una sola factura.',
+          },
+          {
+            en: 'Rent-and-launder locals: smaller operators with lighter contracts, but still own the textiles. More flexible than national programs, less inventory depth.',
+            es: 'Locales de renta y lavado: operadores más pequeños con contratos más ligeros, pero aún son dueños de los textiles. Más flexible que los programas nacionales, menos profundidad de inventario.',
+          },
+          {
+            en: 'Launder-only (CleanMax): you own the textiles, we wash and return them. No contract lock-in, no price escalators, highest flexibility. Best for operators who already have their own aprons and linens — or who want brand control over uniforms.',
+            es: 'Solo lavado (CleanMax): usted es dueño de los textiles, nosotros los lavamos y los devolvemos. Sin contrato, sin escaladores de precio, máxima flexibilidad. Mejor para operadores que ya tienen sus propios delantales y textiles — o que quieren control de marca sobre los uniformes.',
+          },
+        ],
+      },
+      {
+        type: 'h2',
+        en: 'Compliance Notes for California Kitchens',
+        es: 'Notas de Cumplimiento para Cocinas de California',
+      },
+      {
+        type: 'p',
+        en: 'California Retail Food Code requires that linens used in food prep be washed at temperatures that kill bacteria and stored in a way that prevents re-contamination. Commercial washers like the Wascomat units at CleanMax run hot-water cycles well above the 140°F threshold that home washers rarely hit. We return laundry in sealed, clean-liner bags — never loose in a shared truck bed — so it arrives at your back door the same way it left the dryer.',
+        es: 'El Código de Alimentos al Detalle de California requiere que los textiles usados en preparación de alimentos se laven a temperaturas que maten bacterias y se almacenen de una manera que prevenga recontaminación. Las lavadoras comerciales como las unidades Wascomat en CleanMax corren ciclos de agua caliente muy por encima del umbral de 140°F que las lavadoras caseras rara vez alcanzan. Devolvemos la lavandería en bolsas selladas con forro limpio — nunca sueltas en la cama compartida de un camión — para que llegue a su puerta trasera de la misma manera que salió de la secadora.',
+      },
+      {
+        type: 'h2',
+        en: 'Pickup Schedules That Actually Work for Restaurants',
+        es: 'Horarios de Recolección que Realmente Funcionan para Restaurantes',
+      },
+      {
+        type: 'p',
+        en: 'The best schedule depends on your service volume and textile inventory. A restaurant with two rotations of aprons per station can get away with once-weekly pickup. A bar with high bar-towel burn through usually needs twice-weekly — Monday to handle the weekend, and Thursday to reset for the next weekend. We also run split schedules: one pickup for the kitchen textiles, a second offset pickup for the dining room linens, so tablecloths do not get held up by a bigger apron load.',
+        es: 'El mejor horario depende de su volumen de servicio e inventario de textiles. Un restaurante con dos rotaciones de delantales por estación puede manejarse con una recolección semanal. Un bar con alto desgaste de toallas usualmente necesita dos veces por semana — lunes para manejar el fin de semana, y jueves para resetear para el siguiente fin de semana. También operamos horarios divididos: una recolección para los textiles de cocina, una segunda recolección en día distinto para los textiles del comedor, para que los manteles no se retrasen por una carga más grande de delantales.',
+      },
+      {
+        type: 'h2',
+        en: 'What a First Pickup Looks Like',
+        es: 'Cómo se Ve una Primera Recolección',
+      },
+      {
+        type: 'p',
+        en: 'Most Inland Empire restaurants start with a single trial pickup before committing to a recurring schedule. We send a driver at a time you pick, weigh the load on arrival, wash it to spec, and deliver it back the next day with a detailed invoice. If the rate and turnaround fit, we set up the recurring schedule on the second visit. There is no onboarding fee and no contract — just a standing pickup you can adjust or pause on a week of notice. Get started by filling out the [commercial quote form](/commercial-quote) or calling the commercial desk at (909) 248-7305.',
+        es: 'La mayoría de los restaurantes del Inland Empire comienza con una sola recolección de prueba antes de comprometerse a un horario recurrente. Enviamos un conductor a la hora que usted elija, pesamos la carga al llegar, la lavamos a sus especificaciones, y la regresamos al día siguiente con una factura detallada. Si la tarifa y el tiempo de entrega encajan, establecemos el horario recurrente en la segunda visita. No hay tarifa de onboarding ni contrato — solo una recolección recurrente que puede ajustar o pausar con una semana de aviso. Comience llenando el [formulario de cotización comercial](/es/commercial-quote) o llamando al mostrador comercial al (909) 248-7305.',
+      },
+    ],
+    ctaHeadingEn: 'Start Restaurant Linen Service in the Inland Empire',
+    ctaHeadingEs: 'Comience el Servicio de Textiles para Restaurantes en el Inland Empire',
+    ctaLinks: [
+      {
+        href: '/commercial-laundry/restaurant/pomona',
+        labelEn: 'See restaurant commercial laundry',
+        labelEs: 'Ver lavandería comercial para restaurantes',
+      },
+      {
+        href: '/commercial-quote',
+        labelEn: 'Request a quote',
+        labelEs: 'Solicitar cotización',
+      },
+    ],
+  },
 ];

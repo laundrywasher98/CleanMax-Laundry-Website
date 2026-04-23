@@ -100,7 +100,7 @@ export default function BlogPostRenderer({ post }: Props) {
                       <span className="text-brand-blue font-bold mt-0.5 shrink-0">
                         ·
                       </span>
-                      <span>{lang(item)}</span>
+                      <span>{renderWithLinks(lang(item))}</span>
                     </li>
                   ))}
                 </ul>
