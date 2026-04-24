@@ -1632,28 +1632,28 @@ export const blogPosts: BlogPost[] = [
         type: 'ul',
         items: [
           {
-            en: 'Restaurant linens (tablecloths, napkins, aprons, bar towels): $1.10–$1.35 per pound. See our [restaurant commercial laundry page](/commercial-laundry/restaurant/pomona).',
-            es: 'Textiles de restaurante (manteles, servilletas, delantales, toallas de bar): $1.10–$1.35 por libra. Vea nuestra [página de lavandería comercial para restaurantes](/es/commercial-laundry/restaurant/pomona).',
+            en: 'Restaurant linens (tablecloths, napkins, aprons, bar towels): $1.10–$1.35 per pound. See our [restaurant commercial laundry page](/commercial-laundry/restaurants/pomona).',
+            es: 'Textiles de restaurante (manteles, servilletas, delantales, toallas de bar): $1.10–$1.35 por libra. Vea nuestra [página de lavandería comercial para restaurantes](/es/commercial-laundry/restaurants/pomona).',
           },
           {
-            en: 'Gym towels and microfiber: $1.15–$1.40 per pound. See [gym commercial laundry](/commercial-laundry/gym/pomona).',
-            es: 'Toallas de gimnasio y microfibra: $1.15–$1.40 por libra. Vea [lavandería comercial para gimnasios](/es/commercial-laundry/gym/pomona).',
+            en: 'Gym towels and microfiber: $1.15–$1.40 per pound. See [gym commercial laundry](/commercial-laundry/gyms/pomona).',
+            es: 'Toallas de gimnasio y microfibra: $1.15–$1.40 por libra. Vea [lavandería comercial para gimnasios](/es/commercial-laundry/gyms/pomona).',
           },
           {
-            en: 'Airbnb and short-term rental turns (sheets, towels, duvet covers): $1.20–$1.45 per pound. See [Airbnb commercial laundry](/commercial-laundry/airbnb/pomona).',
-            es: 'Rotaciones de Airbnb y rentas de corto plazo (sábanas, toallas, fundas de edredón): $1.20–$1.45 por libra. Vea [lavandería comercial para Airbnb](/es/commercial-laundry/airbnb/pomona).',
+            en: 'Airbnb and short-term rental turns (sheets, towels, duvet covers): $1.20–$1.45 per pound. See [Airbnb commercial laundry](/commercial-laundry/airbnb-vacation-rentals/pomona).',
+            es: 'Rotaciones de Airbnb y rentas de corto plazo (sábanas, toallas, fundas de edredón): $1.20–$1.45 por libra. Vea [lavandería comercial para Airbnb](/es/commercial-laundry/airbnb-vacation-rentals/pomona).',
           },
           {
-            en: 'Salon and spa towels (bleach-safe cycles): $1.25–$1.50 per pound. See [salon commercial laundry](/commercial-laundry/salon/pomona).',
-            es: 'Toallas de salón y spa (ciclos con cloro): $1.25–$1.50 por libra. Vea [lavandería comercial para salones](/es/commercial-laundry/salon/pomona).',
+            en: 'Salon and spa towels (bleach-safe cycles): $1.25–$1.50 per pound. See [salon commercial laundry](/commercial-laundry/salons-spas/pomona).',
+            es: 'Toallas de salón y spa (ciclos con cloro): $1.25–$1.50 por libra. Vea [lavandería comercial para salones](/es/commercial-laundry/salons-spas/pomona).',
           },
           {
-            en: 'Medical-office textiles (scrubs, exam-room linens, non-biohazard only): $1.35–$1.60 per pound. See [medical commercial laundry](/commercial-laundry/medical-office/pomona).',
-            es: 'Textiles de consultorio médico (scrubs, sábanas de sala de examen, sin riesgo biológico): $1.35–$1.60 por libra. Vea [lavandería comercial médica](/es/commercial-laundry/medical-office/pomona).',
+            en: 'Medical-office textiles (scrubs, exam-room linens, non-biohazard only): $1.35–$1.60 per pound. See [medical commercial laundry](/commercial-laundry/medical-offices/pomona).',
+            es: 'Textiles de consultorio médico (scrubs, sábanas de sala de examen, sin riesgo biológico): $1.35–$1.60 por libra. Vea [lavandería comercial médica](/es/commercial-laundry/medical-offices/pomona).',
           },
           {
-            en: 'Hotel bulk linens (volume-tier pricing): $0.95–$1.25 per pound. See [hotel commercial laundry](/commercial-laundry/hotel/pomona).',
-            es: 'Sábanas de hotel en volumen (precios por tier de volumen): $0.95–$1.25 por libra. Vea [lavandería comercial para hoteles](/es/commercial-laundry/hotel/pomona).',
+            en: 'Hotel bulk linens (volume-tier pricing): $0.95–$1.25 per pound. See [hotel commercial laundry](/commercial-laundry/hotels-hospitality/pomona).',
+            es: 'Sábanas de hotel en volumen (precios por tier de volumen): $0.95–$1.25 por libra. Vea [lavandería comercial para hoteles](/es/commercial-laundry/hotels-hospitality/pomona).',
           },
         ],
       },
@@ -1732,8 +1732,8 @@ export const blogPosts: BlogPost[] = [
       },
       {
         type: 'p',
-        en: 'Restaurant linen service in the Inland Empire is a working-kitchen necessity, not a luxury. A typical full-service restaurant in Pomona, Claremont, Rancho Cucamonga, or Ontario sends out six categories of textiles every week: aprons (front and back of house), bar towels, bar mats, kitchen side towels, cloth napkins, and tablecloths. Some add chef coats, server uniforms, and floor mats on a longer rotation. Each category has a different wash cycle, a different tolerance for stain treatment, and a different replacement schedule — which is why general wash-and-fold does not substitute for dedicated [restaurant commercial laundry](/commercial-laundry/restaurant/pomona).',
-        es: 'El servicio de textiles para restaurantes en el Inland Empire es una necesidad operativa, no un lujo. Un restaurante típico de servicio completo en Pomona, Claremont, Rancho Cucamonga u Ontario envía seis categorías de textiles cada semana: delantales (de salón y cocina), toallas de bar, tapetes de bar, toallas de cocina, servilletas de tela y manteles. Algunos agregan chaquetas de chef, uniformes de meseros y tapetes de piso en una rotación más larga. Cada categoría tiene un ciclo de lavado diferente, una tolerancia distinta al tratamiento de manchas, y un calendario de reemplazo distinto — por eso el lavado y doblado general no sustituye a la [lavandería comercial especializada para restaurantes](/es/commercial-laundry/restaurant/pomona).',
+        en: 'Restaurant linen service in the Inland Empire is a working-kitchen necessity, not a luxury. A typical full-service restaurant in Pomona, Claremont, Rancho Cucamonga, or Ontario sends out six categories of textiles every week: aprons (front and back of house), bar towels, bar mats, kitchen side towels, cloth napkins, and tablecloths. Some add chef coats, server uniforms, and floor mats on a longer rotation. Each category has a different wash cycle, a different tolerance for stain treatment, and a different replacement schedule — which is why general wash-and-fold does not substitute for dedicated [restaurant commercial laundry](/commercial-laundry/restaurants/pomona).',
+        es: 'El servicio de textiles para restaurantes en el Inland Empire es una necesidad operativa, no un lujo. Un restaurante típico de servicio completo en Pomona, Claremont, Rancho Cucamonga u Ontario envía seis categorías de textiles cada semana: delantales (de salón y cocina), toallas de bar, tapetes de bar, toallas de cocina, servilletas de tela y manteles. Algunos agregan chaquetas de chef, uniformes de meseros y tapetes de piso en una rotación más larga. Cada categoría tiene un ciclo de lavado diferente, una tolerancia distinta al tratamiento de manchas, y un calendario de reemplazo distinto — por eso el lavado y doblado general no sustituye a la [lavandería comercial especializada para restaurantes](/es/commercial-laundry/restaurants/pomona).',
       },
       {
         type: 'h2',
@@ -1812,7 +1812,7 @@ export const blogPosts: BlogPost[] = [
     ctaHeadingEs: 'Comience el Servicio de Textiles para Restaurantes en el Inland Empire',
     ctaLinks: [
       {
-        href: '/commercial-laundry/restaurant/pomona',
+        href: '/commercial-laundry/restaurants/pomona',
         labelEn: 'See restaurant commercial laundry',
         labelEs: 'Ver lavandería comercial para restaurantes',
       },

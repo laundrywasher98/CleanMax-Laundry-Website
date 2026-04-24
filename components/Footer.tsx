@@ -227,7 +227,15 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="font-sans text-xs text-white/30">{t("footer_copyright")}</p>
-          <p className="font-sans text-xs text-white/20">{t("footer_address_line")}</p>
+          <div className="flex items-center gap-4">
+            <Link
+              href={lh("/sitemap")}
+              className="font-sans text-xs text-white/30 hover:text-brand-blue transition-colors"
+            >
+              {t("footer_sitemap")}
+            </Link>
+            <p className="font-sans text-xs text-white/20">{t("footer_address_line")}</p>
+          </div>
         </div>
       </div>
     </footer>

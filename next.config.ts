@@ -39,6 +39,27 @@ const nextConfig: NextConfig = {
     const map = (sources: string[], destination: string) =>
       sources.map((source) => ({ source, destination, permanent: true }));
 
+    const industryMerge: Array<[string, string]> = [
+      ["restaurant", "restaurants"],
+      ["gym", "gyms"],
+      ["airbnb", "airbnb-vacation-rentals"],
+      ["salon", "salons-spas"],
+      ["medical-office", "medical-offices"],
+      ["hotel", "hotels-hospitality"],
+    ];
+    const industryRedirects = industryMerge.flatMap(([oldSlug, newSlug]) => [
+      {
+        source: `/commercial-laundry/${oldSlug}/pomona`,
+        destination: `/commercial-laundry/${newSlug}/pomona`,
+        permanent: true,
+      },
+      {
+        source: `/es/commercial-laundry/${oldSlug}/pomona`,
+        destination: `/es/commercial-laundry/${newSlug}/pomona`,
+        permanent: true,
+      },
+    ]);
+
     return [
       ...map(toHome, "/"),
       ...map(toPricing, "/wash-and-fold/pricing"),
@@ -48,6 +69,7 @@ const nextConfig: NextConfig = {
       { source: "/es/pickup-delivery", destination: "/es/commercial-laundry", permanent: true },
       { source: "/about-1", destination: "/about", permanent: true },
       { source: "/blog-1", destination: "/blog", permanent: true },
+      ...industryRedirects,
     ];
   },
 };

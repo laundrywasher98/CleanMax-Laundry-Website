@@ -5,6 +5,11 @@ import { blogPosts } from "@/data/blogPosts";
 
 const BASE_URL = "https://www.cleanmaxlaundry.com";
 
+// Bump when templated page content (city/industry/static) is meaningfully
+// rewritten — NOT on every build. Sending `new Date()` on every deploy tells
+// Google every URL changed today and weakens the signal.
+const LAST_CONTENT_REVISION = new Date("2026-04-24");
+
 // Every EN path gets a mirrored /es path. hreflang alternates are emitted
 // per entry so Google knows the two URLs are language-equivalent.
 type Entry = {
@@ -25,16 +30,17 @@ function toBilingualSitemap(entries: Entry[]): MetadataRoute.Sitemap {
         es: esUrl,
       },
     };
+    const lastModified = entry.lastModified ?? LAST_CONTENT_REVISION;
     out.push({
       url: enUrl,
-      lastModified: entry.lastModified ?? new Date(),
+      lastModified,
       changeFrequency: entry.changeFrequency,
       priority: entry.priority,
       alternates,
     });
     out.push({
       url: esUrl,
-      lastModified: entry.lastModified ?? new Date(),
+      lastModified,
       changeFrequency: entry.changeFrequency,
       priority: entry.priority,
       alternates,
@@ -54,6 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/testimonials", changeFrequency: "weekly", priority: 0.7 },
     { path: "/blog", changeFrequency: "weekly", priority: 0.6 },
     { path: "/about", changeFrequency: "monthly", priority: 0.5 },
+    { path: "/sitemap", changeFrequency: "monthly", priority: 0.3 },
   ];
 
   // Generate city-level entries for each service pattern
