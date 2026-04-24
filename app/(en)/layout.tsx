@@ -24,13 +24,13 @@ const barlow = Barlow({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.cleanmaxlaundry.com"),
-  title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
+  title: "Pomona Laundromat, Wash & Fold & Commercial Laundry | CleanMax",
   description:
     "CleanMax Laundry offers self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern machines. $1.50/lb.",
   keywords:
     "laundromat Pomona CA, wash and fold Pomona, commercial laundry Pomona, self service laundry, CleanMax Laundry",
   openGraph: {
-    title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
+    title: "Pomona Laundromat, Wash & Fold & Commercial Laundry | CleanMax",
     description:
       "Self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern Wascomat machines.",
     url: "https://www.cleanmaxlaundry.com",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CleanMax Laundry | Laundromat & Wash and Fold in Pomona, CA",
+    title: "Pomona Laundromat, Wash & Fold & Commercial Laundry | CleanMax",
     description:
       "Self-service laundry, wash & fold drop-off, and commercial laundry pickup in Pomona, CA. Open daily. Modern Wascomat machines.",
     images: ["https://www.cleanmaxlaundry.com/images/og-card-cleanmax.jpg"],
