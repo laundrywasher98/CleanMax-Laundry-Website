@@ -170,13 +170,6 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
       name: c.name,
     })),
     hasOfferCatalog: buildServiceCatalogSchema(lang),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: SITE_AGGREGATE_RATING.ratingValue,
-      reviewCount: SITE_AGGREGATE_RATING.reviewCount,
-      bestRating: SITE_AGGREGATE_RATING.bestRating,
-      worstRating: SITE_AGGREGATE_RATING.worstRating,
-    },
     sameAs: [
       "https://www.instagram.com/cleanmaxlaundry_pomona",
       "https://www.facebook.com/profile.php?id=61588438208705",
@@ -194,6 +187,22 @@ export const SITE_AGGREGATE_RATING = {
   bestRating: 5,
   worstRating: 1,
 };
+
+// Render only on pages displaying reviews — global aggregateRating triggers GSC "multiple aggregate ratings".
+export function buildBusinessRatingSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "DryCleaningOrLaundry",
+    "@id": `${BASE_URL}/#business`,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: SITE_AGGREGATE_RATING.ratingValue,
+      reviewCount: SITE_AGGREGATE_RATING.reviewCount,
+      bestRating: SITE_AGGREGATE_RATING.bestRating,
+      worstRating: SITE_AGGREGATE_RATING.worstRating,
+    },
+  };
+}
 
 type CommercialServiceArgs = {
   city?: { name: string; slug: string };
@@ -305,19 +314,8 @@ export function buildArticleSchema({
     description,
     datePublished: publishDate,
     dateModified: publishDate,
-    author: {
-      "@type": "Organization",
-      name: "CleanMax Laundry",
-      url: BASE_URL,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "CleanMax Laundry",
-      logo: {
-        "@type": "ImageObject",
-        url: `${BASE_URL}/images/logo.png`,
-      },
-    },
+    author: { "@id": `${BASE_URL}/#business` },
+    publisher: { "@id": `${BASE_URL}/#business` },
     image: `${BASE_URL}${image ?? "/images/og-card-cleanmax.jpg"}`,
     inLanguage: lang === "es" ? "es-US" : "en-US",
   };

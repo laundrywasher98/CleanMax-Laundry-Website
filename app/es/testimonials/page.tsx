@@ -1,5 +1,7 @@
 import TestimonialsContent from "@/components/TestimonialsContent";
+import JsonLd from "@/components/JsonLd";
 import { buildMetadata } from "@/lib/seo";
+import { buildBusinessRatingSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "Reseñas — La Lavandería Mejor Calificada de Pomona | CleanMax Laundry",
@@ -12,5 +14,10 @@ export const metadata = buildMetadata({
 });
 
 export default function TestimonialsPageEs() {
-  return <TestimonialsContent />;
+  return (
+    <>
+      <JsonLd data={buildBusinessRatingSchema()} />
+      <TestimonialsContent />
+    </>
+  );
 }
