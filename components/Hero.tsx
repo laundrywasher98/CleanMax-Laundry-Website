@@ -38,7 +38,7 @@ export default function Hero() {
             href={GOOGLE_MAPS_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:opacity-70 transition-opacity"
+            className="inline-block py-1 underline decoration-brand-blue/40 underline-offset-4 hover:decoration-brand-blue transition-colors"
           >
             {t("hero_location")}
           </a>

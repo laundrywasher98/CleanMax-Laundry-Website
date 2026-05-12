@@ -160,7 +160,7 @@ export default function TestimonialsContent() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://google.com/maps?kgmid=/g/11ghp0sn7j&hl=en-US&shem=ptotplc,rimspwouoe&shndl=30&kgs=1ca36a2bb5afb016&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KZ1uImQjM8OAMf9yth4h9VXb&daddr=1009+E+Holt+Ave,+Pomona,+CA+91767"
+              href="https://www.google.com/search?q=CleanMax+Laundry#mpd=~10018355130056917489/customers/reviews"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
