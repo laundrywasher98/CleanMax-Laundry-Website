@@ -125,9 +125,10 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
         ? "CleanMax Laundry ofrece lavandería de autoservicio, servicio de lavado y doblado, y recolección de lavandería comercial en Pomona, CA, atendiendo a todo el Valle de Pomona y al Inland Empire."
         : "CleanMax Laundry offers self-service laundry, wash & fold drop-off, and commercial laundry pickup and delivery in Pomona, CA, serving the full Pomona Valley and Inland Empire.",
     url: BASE_URL,
-    telephone: "(909) 248-7305",
+    telephone: "+19092487305",
     email: "laundry@cleanmaxlaundry.com",
     image: `${BASE_URL}/images/cleanmax-laundromat-pomona-interior-wide-02.webp`,
+    logo: `${BASE_URL}/images/logo.png`,
     address: {
       "@type": "PostalAddress",
       streetAddress: "1009 E Holt Ave",
@@ -138,8 +139,8 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 34.0581,
-      longitude: -117.7441,
+      latitude: 34.0630415,
+      longitude: -117.7303864,
     },
     openingHoursSpecification: [
       {
@@ -180,10 +181,10 @@ export function buildLocalBusinessSchema(lang: Language = "en") {
 }
 
 // Site-wide rating — keep in sync with Google Business Profile.
-// Last synced: 2026-04-16 (4.8★ / 99 reviews). Update as new reviews accumulate.
+// Last synced: 2026-05-12 (4.8★ / 106 reviews — synced from agency-provided GBP data).
 export const SITE_AGGREGATE_RATING = {
   ratingValue: 4.8,
-  reviewCount: 99,
+  reviewCount: 106,
   bestRating: 5,
   worstRating: 1,
 };
@@ -201,6 +202,42 @@ export function buildBusinessRatingSchema() {
       bestRating: SITE_AGGREGATE_RATING.bestRating,
       worstRating: SITE_AGGREGATE_RATING.worstRating,
     },
+    review: [
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "celina Mal" },
+        reviewBody: "Crean max laundry",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Kaylie Hollander" },
+        reviewBody:
+          "The washers were very clean and reasonably priced and the manager was very nice.",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "dayy" },
+        reviewBody:
+          "Clean.fast. Brand new appliances will most definitely be returning the best in Pomona.",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "Jose" },
+        reviewBody:
+          "Really great service, the people who help here and are really nice, i recomend coming here.",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      },
+      {
+        "@type": "Review",
+        author: { "@type": "Person", name: "jay rodriguez" },
+        reviewBody:
+          "Congratulations to the City of Pomona on the reopening of CleanMax Laundromat! 🎉\n\nMax Clark did an excellent job retooling and bringing this laundromat back to life. It's great to see continued investment in the community and a refreshed space for local residents. 👏",
+        reviewRating: { "@type": "Rating", ratingValue: 5, bestRating: 5 },
+      },
+    ],
   };
 }
 
