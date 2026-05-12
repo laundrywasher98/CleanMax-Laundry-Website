@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useTranslation } from "@/contexts/LanguageContext";
 import { localizeHref } from "@/lib/href";
 
-const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
+const GOOGLE_MAPS_URL = "https://google.com/maps?kgmid=/g/11ghp0sn7j&hl=en-US&shem=ptotplc,rimspwouoe&shndl=30&kgs=1ca36a2bb5afb016&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KZ1uImQjM8OAMf9yth4h9VXb&daddr=1009+E+Holt+Ave,+Pomona,+CA+91767";
 
 export default function Hero() {
   const { t, language } = useTranslation();
@@ -34,7 +34,14 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
         <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-blue mb-6">
-          {t("hero_location")}
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-70 transition-opacity"
+          >
+            {t("hero_location")}
+          </a>
         </p>
         <h1 className="font-display font-black text-6xl sm:text-7xl md:text-8xl lg:text-9xl uppercase leading-none tracking-tight mb-6">
           {t("hero_headline")}

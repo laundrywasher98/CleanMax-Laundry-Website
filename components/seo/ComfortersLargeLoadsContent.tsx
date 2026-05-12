@@ -52,7 +52,7 @@ export default function ComfortersLargeLoadsContent() {
               {t("services_wf_title")}
             </Link>
             <a
-              href="https://share.google/qOCjH4ihGEyqeLJLT"
+              href="https://google.com/maps?kgmid=/g/11ghp0sn7j&hl=en-US&shem=ptotplc,rimspwouoe&shndl=30&kgs=1ca36a2bb5afb016&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KZ1uImQjM8OAMf9yth4h9VXb&daddr=1009+E+Holt+Ave,+Pomona,+CA+91767"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"

@@ -5,7 +5,7 @@ import { useTranslation } from "@/contexts/LanguageContext";
 import SeoFaq from "@/components/seo/SeoFaq";
 import { localizeHref } from "@/lib/href";
 
-const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
+const GOOGLE_MAPS_URL = "https://google.com/maps?kgmid=/g/11ghp0sn7j&hl=en-US&shem=ptotplc,rimspwouoe&shndl=30&kgs=1ca36a2bb5afb016&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KZ1uImQjM8OAMf9yth4h9VXb&daddr=1009+E+Holt+Ave,+Pomona,+CA+91767";
 
 export default function WashFoldPricingContent() {
   const { t, language } = useTranslation();

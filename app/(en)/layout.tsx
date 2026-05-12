@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import Analytics from "@/components/Analytics";
+import GtmNoScript from "@/components/GtmNoScript";
 import { buildLocalBusinessSchema } from "@/lib/schema";
 import "../globals.css";
 
@@ -82,6 +83,7 @@ export default function EnRootLayout({
         <Analytics />
       </head>
       <body className="antialiased">
+        <GtmNoScript />
         <LanguageProvider initialLanguage="en">
           <Navbar />
           {children}

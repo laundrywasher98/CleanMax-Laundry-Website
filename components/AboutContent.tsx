@@ -6,7 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import { buildPersonSchema } from "@/lib/schema";
 import { localizeHref } from "@/lib/href";
 
-const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
+const GOOGLE_MAPS_URL = "https://google.com/maps?kgmid=/g/11ghp0sn7j&hl=en-US&shem=ptotplc,rimspwouoe&shndl=30&kgs=1ca36a2bb5afb016&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KZ1uImQjM8OAMf9yth4h9VXb&daddr=1009+E+Holt+Ave,+Pomona,+CA+91767";
 
 const OWNER_NAME = "The CleanMax Team";
 const OWNER_TITLE_EN = "Locally Owned & Operated";
@@ -154,7 +154,14 @@ export default function AboutContent() {
             {t("about_cta_heading")}
           </h2>
           <p className="font-sans text-white/60 text-base mb-2">
-            {t("about_address")}
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              {t("about_address")}
+            </a>
           </p>
           <p className="font-sans text-white/60 text-base mb-8">
             {t("about_hours")}

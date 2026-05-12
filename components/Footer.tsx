@@ -6,7 +6,7 @@ import { useTranslation } from "@/contexts/LanguageContext";
 import { cities } from "@/data/cities";
 import { localizeHref } from "@/lib/href";
 
-const GOOGLE_MAPS_URL = "https://share.google/qOCjH4ihGEyqeLJLT";
+const GOOGLE_MAPS_URL = "https://google.com/maps?kgmid=/g/11ghp0sn7j&hl=en-US&shem=ptotplc,rimspwouoe&shndl=30&kgs=1ca36a2bb5afb016&um=1&ie=UTF-8&fb=1&gl=us&sa=X&geocode=KZ1uImQjM8OAMf9yth4h9VXb&daddr=1009+E+Holt+Ave,+Pomona,+CA+91767";
 
 const socialLinks = [
   {
@@ -110,8 +110,15 @@ export default function Footer() {
               {t("footer_visit_heading")}
             </h3>
             <ul className="space-y-3">
-              <li className="font-sans text-sm text-white/70">
-                1009 E Holt Ave<br />Pomona, CA 91767
+              <li>
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-sans text-sm text-white/70 hover:text-brand-blue transition-colors"
+                >
+                  1009 E Holt Ave<br />Pomona, CA 91767
+                </a>
               </li>
               <li>
                 <a
@@ -234,7 +241,14 @@ export default function Footer() {
             >
               {t("footer_sitemap")}
             </Link>
-            <p className="font-sans text-xs text-white/20">{t("footer_address_line")}</p>
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-sans text-xs text-white/20 hover:text-brand-blue transition-colors"
+            >
+              {t("footer_address_line")}
+            </a>
           </div>
         </div>
       </div>
