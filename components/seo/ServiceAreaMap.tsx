@@ -23,8 +23,8 @@ export default function ServiceAreaMap({
       <Image
         src="/images/service-area-map.png"
         alt={t("seo_map_alt")}
-        width={900}
-        height={560}
+        width={1240}
+        height={664}
         className="w-full rounded"
         loading="lazy"
       />
