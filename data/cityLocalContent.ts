@@ -443,6 +443,390 @@ export const cityLocalContent: CityLocalContent[] = [
       es: "Montclair es nuestro vecino de al lado. Holt Ave conecta directamente desde Pomona hasta Montclair, haciendo de CleanMax la opción obvia para residentes y negocios a lo largo de todo el corredor. Montclair Place y el distrito comercial circundante generan una demanda constante de lavandería comercial.",
     },
   },
+  {
+    slug: "alhambra",
+    neighborhoods: {
+      en: ["Downtown Alhambra", "Alhambra Heights", "Bean Hollow", "Alhambra Park area"],
+      es: ["Centro de Alhambra", "Alhambra Heights", "Bean Hollow", "Área de Alhambra Park"],
+    },
+    landmarks: {
+      en: ["Almansor Park", "Alhambra Civic Center Library", "Main Street dining corridor", "Alhambra Historical Society Museum"],
+      es: ["Almansor Park", "Biblioteca del Centro Cívico de Alhambra", "Corredor gastronómico de Main Street", "Museo de la Sociedad Histórica de Alhambra"],
+    },
+    crossStreets: "about 30 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 30 minutes west via the 10 Freeway.",
+      es: "Unos 30 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "Alhambra's dense mix of restaurants along Main Street and Valley Blvd, plus family neighborhoods near Almansor Park, keep our wash-and-fold pickup and commercial linen routes busy. Small restaurant owners in particular rely on CleanMax for consistent, affordable uniform and linen service.",
+      es: "La densa mezcla de restaurantes de Alhambra a lo largo de Main Street y Valley Blvd, junto con los vecindarios familiares cerca de Almansor Park, mantienen ocupadas nuestras rutas de recolección de lavado y doblado y lencería comercial. Los dueños de pequeños restaurantes en particular confían en CleanMax para un servicio de uniformes y lencería consistente y asequible.",
+    },
+    intro: {
+      en: "Alhambra is one of the most food-forward cities in the San Gabriel Valley, and that restaurant density drives a lot of our commercial laundry business — tablecloths, kitchen towels, and uniforms picked up on a recurring schedule. Families throughout Alhambra Heights and near Almansor Park also use our wash-and-fold pickup.",
+      es: "Alhambra es una de las ciudades más gastronómicas del Valle de San Gabriel, y esa densidad de restaurantes impulsa gran parte de nuestro negocio de lavandería comercial — manteles, toallas de cocina y uniformes recogidos en un horario recurrente. Las familias en Alhambra Heights y cerca de Almansor Park también usan nuestro servicio de lavado y doblado con recolección.",
+    },
+  },
+  {
+    slug: "arcadia",
+    neighborhoods: {
+      en: ["Santa Anita area", "Arcadia Highlands", "Baldwin Stocker", "Rancho Santa Anita"],
+      es: ["Área de Santa Anita", "Arcadia Highlands", "Baldwin Stocker", "Rancho Santa Anita"],
+    },
+    landmarks: {
+      en: ["Santa Anita Park", "Los Angeles County Arboretum and Botanic Garden", "Westfield Santa Anita", "Santa Anita Golf Course"],
+      es: ["Santa Anita Park", "Arboreto y Jardín Botánico del Condado de Los Ángeles", "Westfield Santa Anita", "Campo de Golf Santa Anita"],
+    },
+    crossStreets: "about 20 minutes northwest via the 210 Freeway",
+    driveFromPomona: {
+      en: "About 20 minutes northwest via the 210 Freeway.",
+      es: "Unos 20 minutos al noroeste por la autopista 210.",
+    },
+    localHook: {
+      en: "Arcadia's horse-racing crowd at Santa Anita Park, shoppers at Westfield Santa Anita, and families throughout Arcadia Highlands all feed into steady demand for our wash-and-fold and commercial pickup — especially restaurants and hospitality businesses near the track.",
+      es: "El público de las carreras de caballos en Santa Anita Park, los compradores de Westfield Santa Anita y las familias de Arcadia Highlands generan una demanda constante para nuestro lavado y doblado y recolección comercial — especialmente restaurantes y negocios de hospitalidad cerca del hipódromo.",
+    },
+    intro: {
+      en: "Arcadia combines a major regional draw — Santa Anita Park and the Arboretum — with quiet residential neighborhoods. CleanMax serves both ends: commercial linen pickup for restaurants and hotels near the track, and wash-and-fold drop-off for families throughout the city.",
+      es: "Arcadia combina un gran atractivo regional — Santa Anita Park y el Arboreto — con tranquilos vecindarios residenciales. CleanMax atiende ambos extremos: recolección de lencería comercial para restaurantes y hoteles cerca del hipódromo, y lavado y doblado de entrega para familias en toda la ciudad.",
+    },
+  },
+  {
+    slug: "baldwin-park",
+    neighborhoods: {
+      en: ["Central Baldwin Park", "Vineland area", "Puente Ave corridor", "Ramona Blvd corridor"],
+      es: ["Baldwin Park Central", "Área de Vineland", "Corredor de Puente Ave", "Corredor de Ramona Blvd"],
+    },
+    landmarks: {
+      en: ["Original In-N-Out Burger site", "Morgan Park", "Baldwin Park Metrolink Station", "Barnes Park"],
+      es: ["Sitio original de In-N-Out Burger", "Morgan Park", "Estación Metrolink de Baldwin Park", "Barnes Park"],
+    },
+    crossStreets: "about 20 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 20 minutes west via the 10 Freeway.",
+      es: "Unos 20 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "Baldwin Park's dense residential neighborhoods along Ramona Blvd and Puente Ave keep our wash-and-fold pickup route full, and small auto shops and restaurants near the Metrolink station use our commercial service for uniforms and shop towels.",
+      es: "Los densos vecindarios residenciales de Baldwin Park a lo largo de Ramona Blvd y Puente Ave mantienen ocupada nuestra ruta de recolección de lavado y doblado, y los pequeños talleres mecánicos y restaurantes cerca de la estación Metrolink usan nuestro servicio comercial para uniformes y toallas de taller.",
+    },
+    intro: {
+      en: "Baldwin Park is a working-class San Gabriel Valley city with deep community roots — it's where the very first In-N-Out Burger stand opened. CleanMax's flat-rate wash-and-fold and commercial pickup are a natural fit for the city's families and small businesses.",
+      es: "Baldwin Park es una ciudad trabajadora del Valle de San Gabriel con profundas raíces comunitarias — es donde abrió el primer local de In-N-Out Burger. El lavado y doblado a tarifa fija y la recolección comercial de CleanMax encajan naturalmente con las familias y pequeños negocios de la ciudad.",
+    },
+  },
+  {
+    slug: "duarte",
+    neighborhoods: {
+      en: ["Royal Oaks", "Mel Canyon", "Downtown Duarte", "Northwoods"],
+      es: ["Royal Oaks", "Mel Canyon", "Centro de Duarte", "Northwoods"],
+    },
+    landmarks: {
+      en: ["City of Hope National Medical Center", "Royal Oaks Park", "Duarte Historical Museum", "Encanto Park"],
+      es: ["City of Hope National Medical Center", "Royal Oaks Park", "Museo Histórico de Duarte", "Encanto Park"],
+    },
+    crossStreets: "about 25 minutes northwest via the 210 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes northwest via the 210 Freeway.",
+      es: "Unos 25 minutos al noroeste por la autopista 210.",
+    },
+    localHook: {
+      en: "City of Hope's staff and patient families are a steady source of wash-and-fold and commercial demand in Duarte, and residential neighborhoods around Royal Oaks and Mel Canyon round out our customer base.",
+      es: "El personal de City of Hope y las familias de pacientes son una fuente constante de demanda de lavado y doblado y comercial en Duarte, y los vecindarios residenciales alrededor de Royal Oaks y Mel Canyon completan nuestra base de clientes.",
+    },
+    intro: {
+      en: "Duarte is anchored by City of Hope National Medical Center, one of the region's largest employers, alongside quiet foothill neighborhoods. CleanMax handles both hospital-adjacent commercial accounts and everyday wash-and-fold drop-offs from Duarte families.",
+      es: "Duarte está anclado por City of Hope National Medical Center, uno de los empleadores más grandes de la región, junto con tranquilos vecindarios en las estribaciones. CleanMax maneja tanto cuentas comerciales adyacentes al hospital como entregas cotidianas de lavado y doblado de las familias de Duarte.",
+    },
+  },
+  {
+    slug: "el-monte",
+    neighborhoods: {
+      en: ["Flair Park", "Cherrylee", "Norwood Village", "Downtown El Monte"],
+      es: ["Flair Park", "Cherrylee", "Norwood Village", "Centro de El Monte"],
+    },
+    landmarks: {
+      en: ["El Monte Historical Museum", "\"End of the Santa Fe Trail\" monument", "Whittier Narrows Recreation Area", "El Monte Airport"],
+      es: ["Museo Histórico de El Monte", "Monumento \"Fin del Sendero de Santa Fe\"", "Área Recreativa Whittier Narrows", "Aeropuerto de El Monte"],
+    },
+    crossStreets: "about 25 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes west via the 10 Freeway.",
+      es: "Unos 25 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "El Monte's mix of light-industrial businesses and dense family neighborhoods makes it one of our busiest combined commercial and wash-and-fold routes — machine shops and restaurants along Valley Blvd need uniform service, while families near Flair Park drop off weekly loads.",
+      es: "La mezcla de negocios industriales ligeros y vecindarios familiares densos de El Monte lo convierte en una de nuestras rutas combinadas de comercial y lavado y doblado más ocupadas — talleres mecánicos y restaurantes a lo largo de Valley Blvd necesitan servicio de uniformes, mientras que las familias cerca de Flair Park dejan cargas semanales.",
+    },
+    intro: {
+      en: "El Monte, historically known as the End of the Santa Fe Trail, is a dense San Gabriel Valley hub with a strong Spanish-speaking community. CleanMax's bilingual service and flat-rate pricing make us a natural choice for both households and the many small businesses along Valley Blvd and Peck Rd.",
+      es: "El Monte, conocido históricamente como el Fin del Sendero de Santa Fe, es un centro denso del Valle de San Gabriel con una fuerte comunidad hispanohablante. El servicio bilingüe y los precios fijos de CleanMax nos convierten en una opción natural tanto para los hogares como para los muchos pequeños negocios a lo largo de Valley Blvd y Peck Rd.",
+    },
+  },
+  {
+    slug: "south-el-monte",
+    neighborhoods: {
+      en: ["Central South El Monte", "Rimgrove", "Durfee Ave corridor"],
+      es: ["South El Monte Central", "Rimgrove", "Corredor de Durfee Ave"],
+    },
+    landmarks: {
+      en: ["Whittier Narrows Recreation Area", "Rio Hondo College (nearby)", "Zamora Park", "Whittier Narrows Nature Center"],
+      es: ["Área Recreativa Whittier Narrows", "Rio Hondo College (cercano)", "Zamora Park", "Centro de Naturaleza Whittier Narrows"],
+    },
+    crossStreets: "about 25 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes west via the 10 Freeway.",
+      es: "Unos 25 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "South El Monte's small manufacturing and warehouse businesses along Durfee Ave rely on CleanMax's commercial pickup for shop towels and uniforms, and families near Whittier Narrows use our wash-and-fold drop-off.",
+      es: "Los pequeños negocios de manufactura y almacenes de South El Monte a lo largo de Durfee Ave confían en la recolección comercial de CleanMax para toallas de taller y uniformes, y las familias cerca de Whittier Narrows usan nuestro servicio de lavado y doblado con entrega.",
+    },
+    intro: {
+      en: "South El Monte is a compact, industrial-leaning city bordering the Whittier Narrows Recreation Area. CleanMax handles commercial uniform accounts for the warehouses and shops along Durfee Ave, plus household wash-and-fold for the surrounding neighborhoods.",
+      es: "South El Monte es una ciudad compacta de tendencia industrial que limita con el Área Recreativa Whittier Narrows. CleanMax maneja cuentas comerciales de uniformes para los almacenes y talleres a lo largo de Durfee Ave, además de lavado y doblado para los vecindarios circundantes.",
+    },
+  },
+  {
+    slug: "hacienda-heights",
+    neighborhoods: {
+      en: ["Hacienda Heights Central", "Turnbull Canyon", "Newhall Heights"],
+      es: ["Hacienda Heights Central", "Turnbull Canyon", "Newhall Heights"],
+    },
+    landmarks: {
+      en: ["Hsi Lai Temple", "Schabarum Regional Park", "Hacienda Heights Community Center", "Los Robles Hills"],
+      es: ["Templo Hsi Lai", "Parque Regional Schabarum", "Centro Comunitario de Hacienda Heights", "Los Robles Hills"],
+    },
+    crossStreets: "about 20 minutes west via the 60 Freeway",
+    driveFromPomona: {
+      en: "About 20 minutes west via the 60 Freeway.",
+      es: "Unos 20 minutos al oeste por la autopista 60.",
+    },
+    localHook: {
+      en: "Hsi Lai Temple visitors and the many family neighborhoods around Schabarum Regional Park make Hacienda Heights a steady wash-and-fold market for CleanMax, with weekend drop-offs especially popular.",
+      es: "Los visitantes del Templo Hsi Lai y los numerosos vecindarios familiares alrededor del Parque Regional Schabarum hacen de Hacienda Heights un mercado constante de lavado y doblado para CleanMax, con entregas de fin de semana especialmente populares.",
+    },
+    intro: {
+      en: "Hacienda Heights is an unincorporated community best known for the Hsi Lai Temple and its family-oriented neighborhoods near Schabarum Regional Park. CleanMax's wash-and-fold pickup is a convenient option for busy households throughout the area.",
+      es: "Hacienda Heights es una comunidad no incorporada conocida sobre todo por el Templo Hsi Lai y sus vecindarios orientados a familias cerca del Parque Regional Schabarum. El lavado y doblado con recolección de CleanMax es una opción conveniente para los hogares ocupados de la zona.",
+    },
+  },
+  {
+    slug: "la-puente",
+    neighborhoods: {
+      en: ["Bassett-adjacent area", "Valinda-adjacent area", "Central La Puente"],
+      es: ["Área adyacente a Bassett", "Área adyacente a Valinda", "La Puente Central"],
+    },
+    landmarks: {
+      en: ["La Puente Park", "Hurley Park", "La Puente City Hall", "Bassett High School area"],
+      es: ["La Puente Park", "Hurley Park", "Ayuntamiento de La Puente", "Área de Bassett High School"],
+    },
+    crossStreets: "about 20 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 20 minutes west via the 10 Freeway.",
+      es: "Unos 20 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "La Puente's tight-knit residential neighborhoods around La Puente Park and Hurley Park are a reliable base of wash-and-fold customers, and we work with a handful of small shops and restaurants along Hacienda Blvd for commercial linen service.",
+      es: "Los vecindarios residenciales unidos de La Puente alrededor de La Puente Park y Hurley Park son una base confiable de clientes de lavado y doblado, y trabajamos con algunos pequeños comercios y restaurantes a lo largo de Hacienda Blvd para servicio de lencería comercial.",
+    },
+    intro: {
+      en: "La Puente is a close-knit residential city in the San Gabriel Valley with a strong Spanish-speaking community. CleanMax's bilingual, flat-rate wash-and-fold service is a straightforward fit for families throughout the city.",
+      es: "La Puente es una ciudad residencial muy unida en el Valle de San Gabriel con una fuerte comunidad hispanohablante. El servicio bilingüe de lavado y doblado a tarifa fija de CleanMax encaja perfectamente con las familias de toda la ciudad.",
+    },
+  },
+  {
+    slug: "monrovia",
+    neighborhoods: {
+      en: ["Old Town Monrovia", "North Monrovia", "Monrovia Canyon area", "Wild Rose"],
+      es: ["Old Town Monrovia", "Monrovia Norte", "Área de Monrovia Canyon", "Wild Rose"],
+    },
+    landmarks: {
+      en: ["Old Town Monrovia (Myrtle Ave)", "Monrovia Canyon Park", "Aztec Hotel", "Monrovia Historical Museum"],
+      es: ["Old Town Monrovia (Myrtle Ave)", "Monrovia Canyon Park", "Hotel Aztec", "Museo Histórico de Monrovia"],
+    },
+    crossStreets: "about 25 minutes northwest via the 210 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes northwest via the 210 Freeway.",
+      es: "Unos 25 minutos al noroeste por la autopista 210.",
+    },
+    localHook: {
+      en: "Old Town Monrovia's restaurants and boutiques along Myrtle Ave lean on CleanMax for uniform and linen service, and families throughout Monrovia's foothill neighborhoods use our wash-and-fold pickup to skip laundry day entirely.",
+      es: "Los restaurantes y boutiques de Old Town Monrovia a lo largo de Myrtle Ave confían en CleanMax para servicio de uniformes y lencería, y las familias en los vecindarios del pie de la montaña de Monrovia usan nuestro servicio de lavado y doblado con recolección para evitar el día de lavandería por completo.",
+    },
+    intro: {
+      en: "Monrovia's historic Old Town district is one of the most walkable, restaurant-dense strips in the San Gabriel Valley foothills. CleanMax's commercial pickup keeps those restaurants stocked with clean linens, while nearby residential streets are steady wash-and-fold customers.",
+      es: "El histórico distrito de Old Town de Monrovia es una de las zonas más transitables y con mayor densidad de restaurantes en las estribaciones del Valle de San Gabriel. La recolección comercial de CleanMax mantiene a esos restaurantes abastecidos de lencería limpia, mientras que las calles residenciales cercanas son clientes constantes de lavado y doblado.",
+    },
+  },
+  {
+    slug: "pasadena",
+    neighborhoods: {
+      en: ["Old Pasadena", "South Lake", "East Pasadena", "Linda Vista", "Bungalow Heaven"],
+      es: ["Old Pasadena", "South Lake", "Pasadena Este", "Linda Vista", "Bungalow Heaven"],
+    },
+    landmarks: {
+      en: ["Rose Bowl Stadium", "Old Pasadena", "Caltech", "Norton Simon Museum", "Pasadena Playhouse"],
+      es: ["Estadio Rose Bowl", "Old Pasadena", "Caltech", "Museo Norton Simon", "Pasadena Playhouse"],
+    },
+    crossStreets: "about 30 minutes northwest via the 210 Freeway",
+    driveFromPomona: {
+      en: "About 30 minutes northwest via the 210 Freeway.",
+      es: "Unos 30 minutos al noroeste por la autopista 210.",
+    },
+    localHook: {
+      en: "Pasadena's dense restaurant and hospitality scene around Old Pasadena and South Lake drives a lot of our commercial linen and uniform pickup, and neighborhoods throughout the city use our wash-and-fold service for a break from laundry day.",
+      es: "La densa escena de restaurantes y hospitalidad de Pasadena alrededor de Old Pasadena y South Lake impulsa gran parte de nuestra recolección de lencería y uniformes comerciales, y los vecindarios de toda la ciudad usan nuestro servicio de lavado y doblado para un descanso del día de lavandería.",
+    },
+    intro: {
+      en: "Pasadena is the largest and best-known city in the San Gabriel Valley, home to the Rose Bowl, Caltech, and a thriving restaurant and hotel scene in Old Pasadena. CleanMax's commercial pickup serves that hospitality density, while our wash-and-fold reaches families throughout the city's many distinct neighborhoods.",
+      es: "Pasadena es la ciudad más grande y conocida del Valle de San Gabriel, sede del Rose Bowl, Caltech y una próspera escena de restaurantes y hoteles en Old Pasadena. La recolección comercial de CleanMax atiende esa densidad de hospitalidad, mientras que nuestro lavado y doblado llega a familias en los muchos vecindarios distintivos de la ciudad.",
+    },
+  },
+  {
+    slug: "rosemead",
+    neighborhoods: {
+      en: ["Garvey area", "Northside", "Southeast Rosemead", "Rosemead Central"],
+      es: ["Área de Garvey", "Northside", "Rosemead Sureste", "Rosemead Central"],
+    },
+    landmarks: {
+      en: ["Rosemead Park", "Whitmore Park", "Rosemead Historical Museum area", "Garvey Community Center"],
+      es: ["Rosemead Park", "Whitmore Park", "Área del Museo Histórico de Rosemead", "Centro Comunitario Garvey"],
+    },
+    crossStreets: "about 25 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes west via the 10 Freeway.",
+      es: "Unos 25 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "Rosemead's dense mix of restaurants along Valley Blvd and Garvey Ave and its family-heavy neighborhoods make it a strong combined market for our commercial pickup and wash-and-fold drop-off.",
+      es: "La densa mezcla de restaurantes de Rosemead a lo largo de Valley Blvd y Garvey Ave, junto con sus vecindarios llenos de familias, lo convierten en un fuerte mercado combinado para nuestra recolección comercial y entrega de lavado y doblado.",
+    },
+    intro: {
+      en: "Rosemead is a diverse, centrally located San Gabriel Valley city with a busy restaurant corridor along Valley Blvd. CleanMax serves both the commercial linen needs of those restaurants and the everyday wash-and-fold needs of Rosemead families.",
+      es: "Rosemead es una ciudad diversa y centralmente ubicada del Valle de San Gabriel con un concurrido corredor de restaurantes a lo largo de Valley Blvd. CleanMax atiende tanto las necesidades de lencería comercial de esos restaurantes como las necesidades cotidianas de lavado y doblado de las familias de Rosemead.",
+    },
+  },
+  {
+    slug: "san-gabriel",
+    neighborhoods: {
+      en: ["San Gabriel Square area", "Downtown San Gabriel", "Grapevine", "Las Tunas corridor"],
+      es: ["Área de San Gabriel Square", "Centro de San Gabriel", "Grapevine", "Corredor de Las Tunas"],
+    },
+    landmarks: {
+      en: ["Mission San Gabriel Arcángel", "San Gabriel Square (\"Asian Times Square\")", "San Gabriel Mission Playhouse", "Vincent Lugo Park"],
+      es: ["Misión San Gabriel Arcángel", "San Gabriel Square (\"Times Square Asiático\")", "San Gabriel Mission Playhouse", "Vincent Lugo Park"],
+    },
+    crossStreets: "about 30 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 30 minutes west via the 10 Freeway.",
+      es: "Unos 30 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "San Gabriel's dense restaurant scene around San Gabriel Square keeps our commercial linen pickup busy, and the historic neighborhoods near the Mission are steady wash-and-fold customers.",
+      es: "La densa escena de restaurantes de San Gabriel alrededor de San Gabriel Square mantiene ocupada nuestra recolección de lencería comercial, y los vecindarios históricos cerca de la Misión son clientes constantes de lavado y doblado.",
+    },
+    intro: {
+      en: "San Gabriel is one of the oldest cities in the region, anchored by the historic Mission San Gabriel Arcángel and one of the most concentrated restaurant districts in the San Gabriel Valley at San Gabriel Square. CleanMax's commercial pickup is a natural fit for that restaurant density.",
+      es: "San Gabriel es una de las ciudades más antiguas de la región, anclada por la histórica Misión San Gabriel Arcángel y uno de los distritos de restaurantes más concentrados del Valle de San Gabriel en San Gabriel Square. La recolección comercial de CleanMax encaja naturalmente con esa densidad de restaurantes.",
+    },
+  },
+  {
+    slug: "san-marino",
+    neighborhoods: {
+      en: ["Lacy Park area", "San Marino Central", "Huntington Middle neighborhood"],
+      es: ["Área de Lacy Park", "San Marino Central", "Vecindario de Huntington Middle"],
+    },
+    landmarks: {
+      en: ["The Huntington Library, Art Museum, and Botanical Gardens", "Lacy Park", "San Marino City Hall", "Southwestern Academy"],
+      es: ["The Huntington Library, Art Museum, and Botanical Gardens", "Lacy Park", "Ayuntamiento de San Marino", "Southwestern Academy"],
+    },
+    crossStreets: "about 30 minutes west via the 210 Freeway",
+    driveFromPomona: {
+      en: "About 30 minutes west via the 210 Freeway.",
+      es: "Unos 30 minutos al oeste por la autopista 210.",
+    },
+    localHook: {
+      en: "San Marino's upscale, low-density neighborhoods near the Huntington and Lacy Park value a reliable, careful wash-and-fold service — CleanMax's flat-rate pricing and attentive handling fit that expectation well.",
+      es: "Los vecindarios de alto nivel y baja densidad de San Marino cerca del Huntington y Lacy Park valoran un servicio de lavado y doblado confiable y cuidadoso — el precio fijo y el manejo atento de CleanMax encajan bien con esa expectativa.",
+    },
+    intro: {
+      en: "San Marino is one of the most affluent, well-manicured cities in the San Gabriel Valley, home to the Huntington Library and Botanical Gardens. Residents here choose CleanMax's wash-and-fold for the same reason they choose anything else in San Marino — consistent quality and careful handling.",
+      es: "San Marino es una de las ciudades más acomodadas y bien cuidadas del Valle de San Gabriel, sede de The Huntington Library and Botanical Gardens. Los residentes aquí eligen el lavado y doblado de CleanMax por la misma razón que eligen cualquier otra cosa en San Marino — calidad constante y manejo cuidadoso.",
+    },
+  },
+  {
+    slug: "sierra-madre",
+    neighborhoods: {
+      en: ["Downtown Sierra Madre", "Canyon area", "Sierra Madre Villa"],
+      es: ["Centro de Sierra Madre", "Área del Cañón", "Sierra Madre Villa"],
+    },
+    landmarks: {
+      en: ["Downtown Sierra Madre (Baldwin Ave)", "Mt. Wilson Trail trailhead", "Sierra Madre Community Park", "Sierra Madre Playhouse"],
+      es: ["Centro de Sierra Madre (Baldwin Ave)", "Inicio del sendero Mt. Wilson Trail", "Sierra Madre Community Park", "Sierra Madre Playhouse"],
+    },
+    crossStreets: "about 25 minutes northwest via the 210 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes northwest via the 210 Freeway.",
+      es: "Unos 25 minutos al noroeste por la autopista 210.",
+    },
+    localHook: {
+      en: "Sierra Madre is a small, tight-knit foothill town, and CleanMax's wash-and-fold pickup is popular with residents who'd rather spend a Saturday on the Mt. Wilson Trail than at a laundromat.",
+      es: "Sierra Madre es un pequeño pueblo unido en las estribaciones, y el lavado y doblado con recolección de CleanMax es popular entre los residentes que prefieren pasar un sábado en el sendero Mt. Wilson en lugar de en una lavandería.",
+    },
+    intro: {
+      en: "Sierra Madre is one of the smallest, most tight-knit cities we serve — a walkable foothill town at the base of the Mt. Wilson Trail. CleanMax's pickup-and-delivery wash-and-fold saves residents the drive to a larger neighboring city just to do laundry.",
+      es: "Sierra Madre es una de las ciudades más pequeñas y unidas que atendemos — un pueblo transitable en las estribaciones al pie del sendero Mt. Wilson. El lavado y doblado con recolección y entrega de CleanMax les ahorra a los residentes el viaje a una ciudad vecina más grande solo para lavar la ropa.",
+    },
+  },
+  {
+    slug: "temple-city",
+    neighborhoods: {
+      en: ["Temple City Central", "Live Oak area", "Camellia Square"],
+      es: ["Temple City Central", "Área de Live Oak", "Camellia Square"],
+    },
+    landmarks: {
+      en: ["Live Oak Park", "Temple City Camellia Festival grounds", "Temple City Park", "Rosemead Blvd corridor"],
+      es: ["Live Oak Park", "Terrenos del Festival de la Camelia de Temple City", "Temple City Park", "Corredor de Rosemead Blvd"],
+    },
+    crossStreets: "about 25 minutes west via the 10 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes west via the 10 Freeway.",
+      es: "Unos 25 minutos al oeste por la autopista 10.",
+    },
+    localHook: {
+      en: "Temple City's family-oriented neighborhoods around Live Oak Park make it a steady wash-and-fold market, with weekly drop-offs common among busy households along Rosemead Blvd.",
+      es: "Los vecindarios orientados a familias de Temple City alrededor de Live Oak Park lo convierten en un mercado constante de lavado y doblado, con entregas semanales comunes entre los hogares ocupados a lo largo de Rosemead Blvd.",
+    },
+    intro: {
+      en: "Temple City is a quiet, family-friendly San Gabriel Valley community best known for Live Oak Park and its annual Camellia Festival. CleanMax's wash-and-fold pickup is a convenient fit for busy households throughout the city.",
+      es: "Temple City es una tranquila comunidad familiar del Valle de San Gabriel conocida sobre todo por Live Oak Park y su Festival anual de la Camelia. El lavado y doblado con recolección de CleanMax es una opción conveniente para los hogares ocupados de toda la ciudad.",
+    },
+  },
+  {
+    slug: "whittier",
+    neighborhoods: {
+      en: ["Uptown Whittier", "East Whittier", "South Whittier-adjacent area", "Whittier Hills"],
+      es: ["Uptown Whittier", "Whittier Este", "Área adyacente a South Whittier", "Whittier Hills"],
+    },
+    landmarks: {
+      en: ["Uptown Whittier (Greenleaf Ave)", "Whittier College", "Whittier Narrows Recreation Area", "Whittier Museum"],
+      es: ["Uptown Whittier (Greenleaf Ave)", "Whittier College", "Área Recreativa Whittier Narrows", "Museo de Whittier"],
+    },
+    crossStreets: "about 25 minutes west via the 60 Freeway",
+    driveFromPomona: {
+      en: "About 25 minutes west via the 60 Freeway.",
+      es: "Unos 25 minutos al oeste por la autopista 60.",
+    },
+    localHook: {
+      en: "Uptown Whittier's restaurants and shops along Greenleaf Ave keep our commercial linen pickup busy, and Whittier College brings a steady stream of student wash-and-fold customers each semester.",
+      es: "Los restaurantes y comercios de Uptown Whittier a lo largo de Greenleaf Ave mantienen ocupada nuestra recolección de lencería comercial, y Whittier College trae un flujo constante de clientes estudiantiles de lavado y doblado cada semestre.",
+    },
+    intro: {
+      en: "Whittier is anchored by the walkable Uptown district and Whittier College, giving CleanMax a mix of commercial restaurant accounts along Greenleaf Ave and student wash-and-fold demand each semester, plus everyday drop-offs from families throughout the Whittier Hills.",
+      es: "Whittier está anclado por el transitable distrito de Uptown y Whittier College, lo que le da a CleanMax una mezcla de cuentas comerciales de restaurantes a lo largo de Greenleaf Ave y demanda estudiantil de lavado y doblado cada semestre, además de entregas cotidianas de familias en toda la zona de Whittier Hills.",
+    },
+  },
 ];
 
 export function getCityLocalContent(slug: string): CityLocalContent | undefined {

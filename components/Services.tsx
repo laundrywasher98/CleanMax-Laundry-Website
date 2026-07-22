@@ -35,8 +35,8 @@ const serviceData: Array<{
     titleKey: "services_commercial_title",
     descKey: "services_commercial_desc",
     detailKey: "services_commercial_detail",
-    photo: "/images/cleanmax-laundromat-pomona-folding-counter-02.webp",
-    alt: "Commercial-capacity folding counter with laundry tips signage at CleanMax Laundromat Pomona, CA",
+    photo: "/images/cleanmax-laundromat-pomona-washfold.webp",
+    alt: "Folded and bagged commercial linens ready for pickup at CleanMax Laundromat in Pomona, CA",
     href: "/commercial-laundry",
   },
 ];
@@ -62,8 +62,14 @@ export default function Services() {
           {serviceData.map((service) => (
             <div
               key={service.titleKey}
-              className="border border-brand-dark/10 flex flex-col"
+              className="relative border border-brand-dark/10 flex flex-col hover:border-brand-blue/40 transition-colors"
             >
+              <Link
+                href={localizeHref(service.href, language)}
+                className="absolute inset-0 z-0"
+                aria-label={t(service.titleKey)}
+              />
+
               {/* Photo */}
               <div className="relative h-56 overflow-hidden">
                 <Image
@@ -90,7 +96,7 @@ export default function Services() {
                   {service.pricingLinkKey && (
                     <Link
                       href={localizeHref("/wash-and-fold/pricing", language)}
-                      className="font-sans font-semibold text-xs text-brand-dark/40 hover:text-brand-blue transition-colors whitespace-nowrap"
+                      className="relative z-10 font-sans font-semibold text-xs text-brand-dark/40 hover:text-brand-blue transition-colors whitespace-nowrap"
                     >
                       {t(service.pricingLinkKey)}
                     </Link>

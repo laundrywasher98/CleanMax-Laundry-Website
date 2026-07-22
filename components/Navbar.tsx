@@ -50,14 +50,18 @@ export default function Navbar() {
   const serviceLinks = [
     { label: t("nav_self_service_laundry"), href: `${linkPrefix}/laundromat/pomona` },
     { label: t("nav_wash_and_fold"), href: `${linkPrefix}/wash-and-fold/pomona` },
-    { label: t("nav_wash_fold_pricing"), href: `${linkPrefix}/wash-and-fold/pricing` },
-    { label: t("nav_comforters"), href: `${linkPrefix}/comforters-large-loads` },
     { label: t("nav_commercial_laundry"), href: `${linkPrefix}/commercial-laundry` },
     { label: t("nav_get_quote"), href: `${linkPrefix}/commercial-quote` },
   ];
 
-  // All cities sorted alphabetically for the dropdown
+  // All cities sorted alphabetically, grouped by region for the dropdown
   const allCities = [...cities].sort((a, b) => a.name.localeCompare(b.name));
+  const sgvCities = allCities.filter((c) => c.region === "San Gabriel Valley");
+  const ieCities = allCities.filter((c) => c.region === "Inland Empire");
+  const cityGroups = [
+    { label: t("region_san_gabriel_valley"), list: sgvCities },
+    { label: t("region_inland_empire"), list: ieCities },
+  ];
 
   return (
     <header
@@ -155,16 +159,25 @@ export default function Navbar() {
 
             {locationsOpen && (
               <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg border border-brand-dark/10 z-50">
-                <div className="grid grid-cols-2 max-h-80 overflow-y-auto">
-                  {allCities.map((city) => (
-                    <Link
-                      key={city.slug}
-                      href={`${linkPrefix}/locations/${city.slug}`}
-                      onClick={() => setLocationsOpen(false)}
-                      className="block px-4 py-2.5 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5"
-                    >
-                      {city.name}
-                    </Link>
+                <div className="max-h-80 overflow-y-auto">
+                  {cityGroups.map((group) => (
+                    <div key={group.label}>
+                      <p className="px-4 pt-3 pb-1 font-sans font-semibold text-[11px] uppercase tracking-widest text-brand-dark/40 bg-brand-surface sticky top-0">
+                        {group.label}
+                      </p>
+                      <div className="grid grid-cols-2">
+                        {group.list.map((city) => (
+                          <Link
+                            key={city.slug}
+                            href={`${linkPrefix}/locations/${city.slug}`}
+                            onClick={() => setLocationsOpen(false)}
+                            className="block px-4 py-2.5 font-sans text-sm text-brand-dark hover:bg-brand-surface hover:text-brand-blue transition-colors border-b border-brand-dark/5"
+                          >
+                            {city.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
                 <Link
@@ -287,15 +300,22 @@ export default function Navbar() {
             <p className="font-sans font-semibold text-xs uppercase tracking-widest text-brand-dark/40 mt-6 mb-2">
               {t("nav_locations")}
             </p>
-            {allCities.map((city) => (
-              <Link
-                key={city.slug}
-                href={`${linkPrefix}/locations/${city.slug}`}
-                onClick={() => setMenuOpen(false)}
-                className="font-sans text-sm text-brand-dark hover:text-brand-blue transition-colors py-2 border-b border-brand-dark/5"
-              >
-                {city.name}
-              </Link>
+            {cityGroups.map((group) => (
+              <div key={group.label}>
+                <p className="font-sans font-semibold text-[11px] uppercase tracking-widest text-brand-dark/30 mt-3 mb-1">
+                  {group.label}
+                </p>
+                {group.list.map((city) => (
+                  <Link
+                    key={city.slug}
+                    href={`${linkPrefix}/locations/${city.slug}`}
+                    onClick={() => setMenuOpen(false)}
+                    className="font-sans text-sm text-brand-dark hover:text-brand-blue transition-colors py-2 border-b border-brand-dark/5 block"
+                  >
+                    {city.name}
+                  </Link>
+                ))}
+              </div>
             ))}
             <Link
               href={`${linkPrefix}/locations`}

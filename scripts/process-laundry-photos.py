@@ -80,6 +80,8 @@ RENAME_MAP = {
                    "Bilingual Wascomat self-service washer instructions at CleanMax Laundromat Pomona, CA"),
     "IMG_8894":   ("cleanmax-laundromat-pomona-change-bill-changer-bilingual",
                    "Bilingual CHANGE/CAMBIO bill changer area at CleanMax Laundromat Pomona, CA"),
+    "washfold":   ("cleanmax-laundromat-pomona-washfold",
+                   "Folded and bagged commercial linens ready for pickup at CleanMax Laundromat in Pomona, CA"),
 }
 
 # --- Helpers ---

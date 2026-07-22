@@ -67,7 +67,7 @@ export default function LaundromatCityContent({ city }: Props) {
               {t("seo_cta_directions")}
             </a>
             <Link
-              href={localizeHref("/wash-and-fold/pricing", language)}
+              href={localizeHref("/comforters-large-loads", language)}
               className="inline-flex items-center justify-center gap-2 border border-brand-dark/20 text-brand-dark font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:border-brand-blue hover:text-brand-blue transition-colors"
             >
               {t("seo_view_pricing")}

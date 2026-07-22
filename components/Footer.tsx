@@ -47,6 +47,10 @@ const socialLinks = [
   },
 ];
 
+const sortedCities = [...cities].sort((a, b) => a.name.localeCompare(b.name));
+const sgvCities = sortedCities.filter((c) => c.region === "San Gabriel Valley");
+const ieCities = sortedCities.filter((c) => c.region === "Inland Empire");
+
 export default function Footer() {
   const { t, language } = useTranslation();
   const lh = (path: string) => localizeHref(path, language);
@@ -208,18 +212,30 @@ export default function Footer() {
             <h3 className="font-display font-black text-sm uppercase tracking-widest text-white/40 mb-5">
               {t("footer_service_areas")}
             </h3>
-            <ul className="space-y-1.5 columns-2 gap-4">
-              {cities.map((city) => (
-                <li key={city.slug}>
-                  <Link
-                    href={lh(`/locations/${city.slug}`)}
-                    className="font-sans text-sm text-white/50 hover:text-brand-blue transition-colors"
-                  >
-                    {city.name}
-                  </Link>
-                </li>
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { label: t("region_san_gabriel_valley"), list: sgvCities },
+                { label: t("region_inland_empire"), list: ieCities },
+              ].map((group) => (
+                <div key={group.label}>
+                  <p className="font-sans font-semibold text-[11px] uppercase tracking-widest text-white/30 mb-2">
+                    {group.label}
+                  </p>
+                  <ul className="space-y-1.5">
+                    {group.list.map((city) => (
+                      <li key={city.slug}>
+                        <Link
+                          href={lh(`/locations/${city.slug}`)}
+                          className="font-sans text-sm text-white/50 hover:text-brand-blue transition-colors"
+                        >
+                          {city.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
             <Link
               href={lh("/locations")}
               className="inline-block mt-5 font-sans text-xs font-semibold uppercase tracking-widest text-brand-blue hover:opacity-70 transition-opacity"

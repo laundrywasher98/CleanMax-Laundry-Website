@@ -6,6 +6,8 @@ import { cities } from "@/data/cities";
 import { localizeHref } from "@/lib/href";
 
 const sortedCities = [...cities].sort((a, b) => a.name.localeCompare(b.name));
+const sgvCities = sortedCities.filter((c) => c.region === "San Gabriel Valley");
+const ieCities = sortedCities.filter((c) => c.region === "Inland Empire");
 
 export default function LocationsIndexContent() {
   const { language } = useTranslation();
@@ -38,46 +40,56 @@ export default function LocationsIndexContent() {
             {isEs ? "Lavandería en Todas las Ciudades que Servimos" : "All Cities We Serve"}
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sortedCities.map((city) => (
-              <div
-                key={city.slug}
-                className="bg-white border border-brand-dark/10 p-6 hover:border-brand-blue/40 hover:shadow-sm transition-all"
-              >
-                <Link
-                  href={lh(`/locations/${city.slug}`)}
-                  className="block font-display font-black text-xl uppercase text-brand-dark hover:text-brand-blue transition-colors mb-1"
-                >
-                  {city.name}
-                </Link>
-                <p className="font-sans text-xs text-brand-dark/50 mb-4">
-                  {city.county} {isEs ? "Condado" : "County"} · {city.zip}
-                </p>
+          {[
+            { label: isEs ? "Valle de San Gabriel" : "San Gabriel Valley", list: sgvCities },
+            { label: isEs ? "Inland Empire" : "Inland Empire", list: ieCities },
+          ].map((group) => (
+            <div key={group.label} className="mb-14 last:mb-0">
+              <h3 className="font-display font-black text-lg uppercase text-brand-dark/50 mb-6">
+                {group.label}
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {group.list.map((city) => (
+                  <div
+                    key={city.slug}
+                    className="bg-white border border-brand-dark/10 p-6 hover:border-brand-blue/40 hover:shadow-sm transition-all"
+                  >
+                    <Link
+                      href={lh(`/locations/${city.slug}`)}
+                      className="block font-display font-black text-xl uppercase text-brand-dark hover:text-brand-blue transition-colors mb-1"
+                    >
+                      {city.name}
+                    </Link>
+                    <p className="font-sans text-xs text-brand-dark/50 mb-4">
+                      {city.county} {isEs ? "Condado" : "County"} · {city.zip}
+                    </p>
 
-                {/* Sub-service links */}
-                <div className="flex flex-wrap gap-2">
-                  <Link
-                    href={lh(`/laundromat/${city.slug}`)}
-                    className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
-                  >
-                    {isEs ? "Lavandería" : "Laundromat"}
-                  </Link>
-                  <Link
-                    href={lh(`/wash-and-fold/${city.slug}`)}
-                    className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
-                  >
-                    {isEs ? "Lavado y Doblado" : "Wash & Fold"}
-                  </Link>
-                  <Link
-                    href={lh(`/commercial-laundry/${city.slug}`)}
-                    className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
-                  >
-                    {isEs ? "Comercial" : "Commercial"}
-                  </Link>
-                </div>
+                    {/* Sub-service links */}
+                    <div className="flex flex-wrap gap-2">
+                      <Link
+                        href={lh(`/laundromat/${city.slug}`)}
+                        className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
+                      >
+                        {isEs ? "Lavandería" : "Laundromat"}
+                      </Link>
+                      <Link
+                        href={lh(`/wash-and-fold/${city.slug}`)}
+                        className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
+                      >
+                        {isEs ? "Lavado y Doblado" : "Wash & Fold"}
+                      </Link>
+                      <Link
+                        href={lh(`/commercial-laundry/${city.slug}`)}
+                        className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-brand-blue border border-brand-blue/30 px-3 py-1.5 hover:bg-brand-blue hover:text-white transition-colors"
+                      >
+                        {isEs ? "Comercial" : "Commercial"}
+                      </Link>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
