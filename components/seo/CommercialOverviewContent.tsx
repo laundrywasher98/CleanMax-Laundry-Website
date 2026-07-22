@@ -46,6 +46,12 @@ export default function CommercialOverviewContent() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
+            <Link
+              href={`${prefix}/commercial-quote`}
+              className="inline-flex items-center justify-center gap-2 bg-brand-blue text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:opacity-90 transition-opacity"
+            >
+              {t("nav_get_quote")}
+            </Link>
             <EmailUsButton
               className="inline-flex items-center justify-center gap-2 bg-brand-dark text-white font-sans font-semibold text-sm uppercase tracking-widest px-8 py-4 hover:bg-brand-blue transition-colors"
             >
